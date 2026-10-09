@@ -1,0 +1,30 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/chipseq-peak-calling"
+version = "0.1.0"
+description = "Implement a ChIP-seq peak caller scored by F1 against a hidden gold standard."
+keywords = ["chipseq", "peak-calling", "f1"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "medium"
+metric = "f1"
+generated_by = "bioforge-harbor"
+source_paper_id = "epmc-PMC1234567"
+source_doi = "10.0000/test.1234"
+source_pmcid = "PMC1234567"
+source_url = "https://europepmc.org/article/PMC/1234567"
+source_abstract_digest = "abc123def456"
+
+[agent]
+timeout_sec = 600.0
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
