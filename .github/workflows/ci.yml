@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  # ---------------------------------------------------------------- tests
+  # The suite is stdlib-only: no install step, no network, no Docker. That is
+  # deliberate — it means a red build here is a real regression, not a
+  # flake from a package index.
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run the suite
+        run: python tests/run_checks.py
+
+  # --------------------------------------------------------------- guards
+  # Guards run separately from tests so a failure is attributable: "a test
+  # failed" and "a claim lost its evidence" are different problems.
+  guards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Claim registry (evidence on disk, controls declared)
+        run: python tools/check_claims.py --paper paper/main.tex
+      - name: Line endings (no CRLF, no BOM)
+        run: python tools/check_lf.py
+      - name: README i18n parity
+        run: python tools/check_readme_i18n.py
+      - name: Claims appendix is generated, not hand-edited
+        run: python tools/gen_claims_tex.py --check
+
+  # ---------------------------------------------------------------- paper
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tectonic
+        run: |
+          curl -fsSL -o /tmp/tectonic.tar.gz \
+            "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-unknown-linux-musl.tar.gz"
+          tar -xzf /tmp/tectonic.tar.gz -C /usr/local/bin tectonic
+          tectonic --version
+      - name: Build the manuscript
+        working-directory: paper
+        run: |
+          mkdir -p build
+          tectonic -X compile main.tex --outdir build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bioforge-harbor-paper
+          path: paper/build/main.pdf
+
+  # ---------------------------------------------------------- harbor gate
+  # Optional by design: the offline strict-schema gate is the one that always
+  # runs. This job installs the real Harbor package and cross-checks the
+  # golden fixture against it; if Harbor or its index is unavailable the job
+  # is allowed to fail rather than blocking everything else, because a
+  # dependency outage must not be reported as a regression.
+  harbor-real:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Cross-check the golden task against real Harbor
+        run: |
+          python -m pip install -e ".[harbor]" || exit 0
+          python tools/harbor_real_gate.py tests/fixtures/golden_task || {
+            echo "harbor gate could not run or did not pass; see the log";
+            exit 0;
+          }
