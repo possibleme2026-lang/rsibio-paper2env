@@ -1,0 +1,73 @@
+{
+  "blueprint_1": {
+    "$comment": "TaskBlueprint wire format (Construction output / emitter input).",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["task_name", "instruction_md", "dockerfile", "test_files", "provenance"],
+    "properties": {
+      "task_name": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*/[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+      "version": { "type": "string" },
+      "instruction_md": { "type": "string", "minLength": 1 },
+      "dockerfile": { "type": "string", "minLength": 1 },
+      "test_files": { "type": "object", "additionalProperties": { "type": "string" }, "minProperties": 1 },
+      "solution_files": { "type": "object", "additionalProperties": { "type": "string" } },
+      "env_files": { "type": "object", "additionalProperties": { "type": "string" } },
+      "task_toml": { "type": "object" },
+      "category": { "type": "string" },
+      "difficulty": { "type": "string" },
+      "keywords": { "type": "array", "items": { "type": "string" } },
+      "metric": { "type": "string" },
+      "notes": { "type": "array", "items": { "type": "string" } },
+      "provenance": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["paper_id"],
+        "properties": {
+          "paper_id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string" },
+          "doi": { "type": "string" },
+          "pmcid": { "type": "string" },
+          "url": { "type": "string" },
+          "abstract_digest": { "type": "string" },
+          "source_db": { "type": "string" }
+        }
+      }
+    }
+  },
+  "paper_record_1": {
+    "$comment": "Corpus entry consumed by every stage.",
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["paper_id", "title"],
+    "properties": {
+      "paper_id": { "type": "string", "minLength": 1 },
+      "title": { "type": "string", "minLength": 1 },
+      "abstract": { "type": "string" },
+      "doi": { "type": "string" },
+      "pmcid": { "type": "string" },
+      "pub_year": { "type": "integer" },
+      "published": { "type": "string" },
+      "source_db": { "type": "string" },
+      "open_access": { "type": "boolean" },
+      "license": { "type": "string" },
+      "has_code_link": { "type": "boolean" },
+      "has_data_link": { "type": "boolean" },
+      "subjects": { "type": "array", "items": { "type": "string" } },
+      "venue": { "type": "string" },
+      "url": { "type": "string" }
+    }
+  },
+  "stage_report_1": {
+    "$comment": "Common envelope every stage report must satisfy.",
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["stage", "status"],
+    "properties": {
+      "stage": { "type": "string", "minLength": 1 },
+      "status": { "enum": ["ok", "warning", "failed", "unverified"] },
+      "errors": { "type": "array", "items": { "type": "string" } },
+      "warnings": { "type": "array", "items": { "type": "string" } },
+      "lost_semantics": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}

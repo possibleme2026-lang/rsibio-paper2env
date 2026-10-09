@@ -1,0 +1,18 @@
+BioForge-Harbor (rsibio-paper2env)
+Copyright 2026 RisingSI
+
+This product includes data retrieved from third-party sources:
+
+- Europe PMC REST API (https://europepmc.org/). Metadata and open-access
+  content remain under the licenses of their original publishers; Europe PMC
+  terms of use apply to bulk retrieval.
+- PubMed / PMC E-utilities (NCBI). Attribution and NCBI data-disclaimer terms
+  apply.
+- bioRxiv / medRxiv APIs. Preprints are shared under their authors' chosen
+  licenses (commonly CC-BY); check per-paper terms before redistribution.
+
+Generated Harbor task environments embed snippets of source-paper metadata
+(title, DOI, abstract digest) for provenance only; they do not redistribute
+full-text content.
+
+The RisingSI name and logo are not licensed for use beyond attribution.

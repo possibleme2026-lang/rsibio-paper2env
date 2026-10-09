@@ -1,0 +1,56 @@
+{
+  "hitCount": 3,
+  "cursorMarker": "na",
+  "nextCursor": "na",
+  "resultList": {
+    "result": [
+      {
+        "id": "12345678",
+        "pmcid": "PMC1234567",
+        "doi": "10.1093/bioinformatics.2023.001",
+        "title": "BenchMark: a comprehensive evaluation of single-cell RNA-seq clustering methods",
+        "abstractText": "We present a benchmark of 14 clustering methods for single-cell RNA-seq data. Using 12 public datasets we evaluate methods by adjusted Rand index and F1 score against expert annotations. scanpy and Seurat pipelines were standardized across methods. Our results show that no single method dominates across all datasets, and we provide a reproducible pipeline with AUROC and F1 metrics for each method.",
+        "pubYear": "2023",
+        "pubDate": "2023-01-15",
+        "journalTitle": "Bioinformatics",
+        "isOpenAccess": "Y",
+        "licence": "CC BY",
+        "inEPMC": "Y",
+        "hasSupplFiles": true,
+        "subjectTerms": ["transcriptomics", "clustering"],
+        "source": "MED"
+      },
+      {
+        "id": "23456789",
+        "pmcid": "PMC2345678",
+        "doi": "10.1016/j.jmb.2019.05.002",
+        "title": "Crystal structure of a novel metalloenzyme at 1.8 angstrom resolution",
+        "abstractText": "We report the crystal structure of a metalloenzyme determined by X-ray diffraction. The structure reveals a novel active site geometry. This is a purely experimental structural biology study with no computational method, algorithm, or analysis pipeline proposed, and no standardized input/output benchmark.",
+        "pubYear": "2019",
+        "pubDate": "2019-06-01",
+        "journalTitle": "Journal of Molecular Biology",
+        "isOpenAccess": "N",
+        "licence": "",
+        "inEPMC": "N",
+        "subjectTerms": ["structural biology"],
+        "source": "MED"
+      },
+      {
+        "id": "34567890",
+        "pmcid": "",
+        "doi": "10.1101/2024.07.01.600000",
+        "title": "DeepVariant-quality variant calling with limited GPU memory for pathogenicity prediction",
+        "abstractText": "We introduce a memory-efficient deep learning approach for variant annotation and pathogenicity prediction. Evaluated on ClinVar with AUROC and F1, our method matches state-of-the-art while running on consumer hardware. Code and data are openly released. The pipeline accepts VCF input and outputs pathogenicity scores.",
+        "pubYear": "2024",
+        "pubDate": "2024-07-05",
+        "journalTitle": "bioRxiv",
+        "isOpenAccess": "Y",
+        "licence": "CC BY-NC",
+        "inEPMC": "Y",
+        "hasSupplFiles": true,
+        "subjectTerms": ["genomics", "variant calling"],
+        "source": "PPR"
+      }
+    ]
+  }
+}

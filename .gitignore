@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# pipeline runtime state (per-paper run dirs, resumable)
+runs/
+out/
+
+# paper build artifacts
+paper/build/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# local caches
+.cache/
+.pytest_cache/
+tmp/

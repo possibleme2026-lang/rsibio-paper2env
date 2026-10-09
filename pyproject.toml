@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioforge-harbor"
+version = "0.1.0"
+description = "BioForge-Harbor: automated construction of life-science agent environments from published literature (Harbor-format)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "RisingSI" }]
+keywords = ["agents", "benchmark", "harbor", "bioinformatics", "self-improvement", "environments"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+# Zero hard dependencies: the whole framework runs on the stdlib only.
+dependencies = []
+
+[project.optional-dependencies]
+# Real Harbor cross-validation gate (optional; the embedded strict JSON Schema
+# is the first line of defense and needs nothing installed).
+harbor = ["harbor>=0.24"]
+# Richer JSON Schema validation for the embedded schemas (optional; a minimal
+# stdlib validator covers the used subset when jsonschema is absent).
+jsonschema = ["jsonschema>=4"]
+dev = ["jsonschema>=4"]
+
+[project.scripts]
+bioforge = "bioforge_harbor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bioforge_harbor = ["schemas/*.json"]

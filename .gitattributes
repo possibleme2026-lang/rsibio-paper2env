@@ -1,0 +1,13 @@
+# Byte-exact LF everywhere: containers choke on CRLF shell scripts.
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.tex text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+Dockerfile text eol=lf
+*.png binary
+*.pdf binary
