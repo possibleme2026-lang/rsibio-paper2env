@@ -1,0 +1,1 @@
+{"baseline_metric": 0.82, "paper_reported_metric": 0.85, "second_channel_metric": 0.80, "tolerance": 0.15, "runnable": true, "notes": "mock independent baseline"}

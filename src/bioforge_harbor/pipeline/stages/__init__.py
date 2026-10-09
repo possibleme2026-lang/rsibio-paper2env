@@ -1,11 +1,12 @@
-"""Pipeline stages: the five roles from BioForge-Harbor paper section 3.2."""
+"""Pipeline stages: the five roles from BioForge-Harbor paper section 3.2.
+
+Import order matters: the registry primitives are defined *first*, then each
+stage module is imported and self-registers via @register at import time.
+"""
 
 from __future__ import annotations
 
-from . import curator  # noqa: F401
-
-# Registry mapping stage name -> callable(state, ctx) -> StageResult.
-# Populated incrementally as stages are added (M3: curate; M5: the rest).
+# Registry mapping stage name -> callable(ctx, record) -> StageResult.
 STAGE_ORDER = ("curate", "construct", "reproduce", "review", "package")
 
 _REGISTRY: dict[str, object] = {}
@@ -26,3 +27,11 @@ def get_stage(name: str):
 
 def registered() -> list[str]:
     return sorted(_REGISTRY)
+
+
+# --- self-registering stage modules (must come after register is defined) ---
+from . import curator      # noqa: E402,F401  (curate is corpus-level; orchestrated by runner)
+from . import constructor  # noqa: E402,F401
+from . import reproducer   # noqa: E402,F401
+from . import reviewer     # noqa: E402,F401
+from . import packager     # noqa: E402,F401

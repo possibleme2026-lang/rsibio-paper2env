@@ -1,0 +1,1 @@
+{"pass": true, "reason": "gold standard lives only in tests/, agent cannot read it at solve time"}
