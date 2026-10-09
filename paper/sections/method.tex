@@ -1,0 +1,115 @@
+\section{Method: the \sys\ Pipeline}
+\label{sec:method}
+
+\subsection{Design principles}
+\label{sec:principles}
+
+\begin{enumerate}
+  \item \textbf{Focus on computable subfields.} Prioritize computational biology
+        and bioinformatics, where papers describe algorithms, models, or
+        analysis pipelines with standardized inputs and outputs.
+  \item \textbf{Automation-first, expert-review-as-backstop.} The multi-agent
+        pipeline generates environments; human experts review a subset for
+        fidelity and shortcut resistance.
+  \item \textbf{Standardized output.} All environments are packaged as \harbor\
+        tasks supporting containerized execution, automated scoring, and result
+        storage.
+  \item \textbf{Verification before packaging.} No environment is published
+        unless it passes the four gates of \S\ref{sec:gates}. A missing
+        dependency or an absent grader reports \textsc{Unverified}, never a pass.
+\end{enumerate}
+
+\subsection{Pipeline architecture}
+\label{sec:architecture}
+
+\begin{quote}
+Literature Acquisition $\rightarrow$ Paper Parsing $\rightarrow$ Environment
+Construction $\rightarrow$ Baseline Reproduction $\rightarrow$ Quality Review
+$\rightarrow$ \harbor\ Packaging $\rightarrow$ Evaluation \& Iteration
+\end{quote}
+
+\paragraph{Curator Agent (new).}
+Screens Europe PMC, PMC, and bioRxiv for papers meeting computability criteria:
+open-access full text, computational biology/bioinformatics classification,
+available code or data, and defined evaluation metrics (F1, AUROC, RMSE, etc.).
+Target: 1,000 papers screened, 200 selected. In the released framework the
+screening rules are deterministic (licence, publication year, abstract length,
+subfield keyword); a model is consulted \emph{only} for boundary papers that
+pass every rule except the computational classification, so the selection is
+reproducible and auditable.
+
+\paragraph{Construction Agent.}
+Generates the Dockerfile, dependency installation, task description, input data,
+and evaluation script, producing an initial executable environment. Its output is
+schema-checked against a strict blueprint schema before anything is written to
+disk.
+
+\paragraph{Reproduction Agent.}
+Independently reimplements the paper's method to establish a baseline score
+through a \emph{second channel} that does not see the construction agent's own
+claimed numbers; agreement between the two channels---not either channel
+alone---is the signal. If the environment fails to run, an automated debugging
+loop attempts resolution; persistent failures are flagged for expert
+intervention.
+
+\paragraph{Review Agent.}
+Checks fidelity to the source paper, resistance to shortcut strategies, baseline
+stability, and safety. Biosafety screening is \emph{deterministic and
+fail-closed}: a dual-use denylist is applied to the task objective before any
+model is consulted, and a match blocks packaging outright (claim~\cid{C3}). An
+ambiguous or erroring review is recorded as a finding, never as a silent pass.
+
+\paragraph{Packager Agent (new).}
+Converts validated environments into \harbor\ task directories, re-verifying at
+the last gate and writing a machine-readable manifest line per environment---the
+artifact that Stage~1 tooling consumes.
+
+\paragraph{Human Expert.}
+Reviews a curated subset of environments, focusing on methodological fidelity
+and evaluator validity.
+
+\subsection{\harbor\ task format}
+\label{sec:format}
+
+We target \harbor~0.24's on-disk layout, which the released framework
+cross-validates against directly (claim~\cid{C2}):
+
+\begin{verbatim}
+tasks/<slug>/
+  task.toml               # Harbor TaskConfig, schema_version = "1.4"
+  instruction.md          # the task as the agent sees it
+  environment/Dockerfile  # pre-configured bioinformatics toolchain
+  tests/test.sh           # agent execution entrypoint -> grader
+  tests/grade.py          # automated scorer (F1 / AUROC / RMSE / ...)
+  solution/               # reference solution
+  rubric.md               # expert-authored rubric (optional)
+\end{verbatim}
+
+\footnotetext{Earlier descriptions of \harbor\ task sets used a
+\texttt{task.yaml} + \texttt{inputs/} + \texttt{run.sh} + \texttt{evaluator/}
+layout. We follow the format that \harbor~0.24 actually validates, and our
+emitter is checked against the upstream \texttt{TaskConfig} model rather than
+against that earlier description.}
+
+\paragraph{Why the format matters for verification.}
+\harbor's \texttt{TaskConfig} model ignores unknown keys by default, so a
+mistyped resource key (e.g.\ \texttt{cpu} where \texttt{cpus} is meant) is
+\emph{silently dropped} and the task runs with unintended limits. Our first
+verification gate is therefore an embedded JSON Schema with
+\texttt{additionalProperties: false} at every level, which rejects such a key
+outright (claim~\cid{C1}).
+
+\subsection{Subfield prioritization}
+
+Initial rollout focuses on subfields with high standardization and clear
+evaluation metrics: single-cell RNA-seq analysis; variant annotation and
+pathogenicity prediction; protein structure prediction; phylogenetic analysis;
+biological image segmentation; and gene regulatory network inference.
+
+\subsection{Safety}
+
+All generated tasks are restricted to \emph{computational analysis}. Dual-use
+objectives (gain-of-function, pathogen enhancement, and related terms) are
+rejected by a deterministic denylist applied before any model call, and any hit
+blocks packaging (claim~\cid{C3}). This is a floor, not a ceiling: it catches
+the objective stated in the task text, and expert review remains the backstop.

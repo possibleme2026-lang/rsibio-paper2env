@@ -1,0 +1,39 @@
+\begin{abstract}
+
+We present \sys, a multi-agent pipeline that automatically transforms published
+life-science research papers into executable evaluation environments
+standardized on the \harbor\ framework, and a four-stage protocol for
+rigorously validating their effectiveness. The bottleneck for training and
+evaluating self-improving AI agents in the life sciences is not the
+availability of papers---Europe PMC alone indexes over 37~million
+publications---but the cost of converting them into verifiable, executable
+tasks. RSI-Forge demonstrated that a three-agent pipeline (construction,
+reproduction, review) can turn papers into executable environments at scale,
+producing 210 environments across 18 fields, 90 of which were reviewed by human
+experts \cite{rsi-forge}. \harbor\ provides the containerized evaluation
+infrastructure \cite{harbor}, with existing life-science task sets such as
+DrugDiscoveryBench (82 \harbor-formatted tasks) \cite{drugdiscoverybench} and
+Terminal-Bench-Science \cite{tbscience}. The missing piece is an automated
+bridge between them. \sys\ closes that gap. We propose a four-stage validation
+protocol---\emph{environment quality verification} $\rightarrow$
+\emph{weight-free self-improvement} $\rightarrow$ \emph{harness optimization}
+$\rightarrow$ \emph{post-training with held-out benchmarks}---that aligns with
+RSI-Forge's evidence chain while adding the causal evidence needed to claim
+that generated environments improve model capabilities, not merely provide
+improvement signals.
+
+We additionally release the pipeline itself as an open-source framework.
+Because the empirical stages are expensive and not yet executed, we separate
+sharply between what is \emph{implemented and verified} (the pipeline, its
+four-gate verifier, and the protocol implementation; claims~\cid{C1}--\cid{C8}
+in Appendix~B are measured and each names the test that measures it) and what
+is \emph{anticipated} (all ten empirical claims \cid{P1}--\cid{P10} are
+registered as \texttt{planned}). No number in this manuscript is presented as a
+measurement unless a script in the released repository produces it.
+
+\bigskip
+\noindent\textbf{Keywords:} agent environments, bioinformatics, Harbor,
+self-improvement, benchmark construction, reinforcement learning with
+verifiable rewards.
+
+\end{abstract}

@@ -1,0 +1,31 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+\sys\ addresses a concrete gap: while RSI-Forge \cite{rsi-forge} demonstrates
+that papers can be automatically converted into executable environments, and
+\harbor\ \cite{harbor} provides standardized infrastructure for agent evaluation
+with existing life-science task sets, \emph{no public work bridges these
+components systematically}. We propose a pipeline and a four-stage validation
+protocol that progresses from environment quality verification through
+weight-free self-improvement and harness optimization to post-training with
+held-out benchmarks. The protocol aligns with RSI-Forge's existing evidence
+chain while adding the causal evidence---post-training effects on unseen
+tasks---required to claim that generated environments improve model
+capabilities, not merely provide improvement signals. The initial rollout
+focuses on computational biology and bioinformatics, the subfields where
+automation is most feasible and impact is most immediate.
+
+Because the empirical stages are expensive, we have separated the claim space
+explicitly: the pipeline, its verification gates, and the protocol
+implementation are released and measured (Appendix~\ref{app:claims}), while
+every empirical number remains registered as \emph{planned} with the control arm
+it will be measured against. The ledger is the contract with the reader: no
+number becomes a result until a script in the repository produces it.
+
+\paragraph{Author contributions.} Conceptualization, methodology, software,
+writing---original draft preparation.
+
+\paragraph{Competing interests.} The authors declare no competing interests.
+
+\paragraph{Data availability.} Pipeline code and generated \harbor\
+environments will be released upon publication.

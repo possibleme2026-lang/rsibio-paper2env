@@ -1,0 +1,33 @@
+\section{Risks and Mitigations}
+\label{sec:risks}
+
+\begin{table*}[t]
+\centering
+\caption{Risks and the mitigation built into the pipeline or protocol.}
+\label{tab:risks}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Risk & Mitigation \\
+\midrule
+Data/code unavailability & Prioritize open-access papers; degrade to synthetic
+  data or partial tasks \\
+Complex environment dependencies & Container snapshots; Conda/Spack resolution;
+  LLM-driven debugging loops \\
+Evaluator shortcuts & Multi-evaluator voting; adversarial testing; expert
+  review; shortcut probes reported in both directions (claim~\cid{C7}) \\
+Biosafety concerns & Computational analysis only; prohibited tasks; a
+  deterministic denylist applied before any model call (claim~\cid{C3}) \\
+High compute cost & Cached images; parallel sandboxes; subfield-priority
+  rollout \\
+Limited expert resources & Review only critical environments; auto-generated
+  rubrics for expert refinement \\
+Benchmark contamination & Time-based splits; held-out papers locked before
+  training; contamination audits (claims~\cid{C6}, \cid{P10}) \\
+Silent environment defects & Four verification gates with an explicit
+  \textsc{Unverified} state; nothing is packaged unverified (\S\ref{sec:gates}) \\
+Numbers outrunning evidence & Machine-readable claim ledger
+  (Appendix~\ref{app:claims}); a claim cannot be marked measured without
+  evidence on disk \\
+\bottomrule
+\end{tabular}
+\end{table*}

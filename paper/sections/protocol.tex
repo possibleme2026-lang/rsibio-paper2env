@@ -1,0 +1,164 @@
+\section{Four-Stage Validation Protocol}
+\label{sec:protocol}
+
+The protocol is ordered by the strength of evidence it yields: an environment
+that merely runs (Stage~1) is not yet evidence that it teaches anything
+(Stage~2), which is not yet evidence about \emph{what} is being optimized
+(Stage~3), which is not yet evidence of causal capability gain (Stage~4). Each
+stage is implemented in the released framework and produces one machine-readable
+report.
+
+\subsection{Stage 1: environment quality verification (no weight updates)}
+\label{sec:stage1}
+
+\paragraph{Goal.} Verify that generated environments are executable,
+reproducible, and faithful to their source papers.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Stage~1 metrics. ``Direction'' is stated explicitly because two of
+these read in opposite senses: a higher shortcut \emph{success} rate is worse.
+The symbol under each metric is its name in \texttt{validation/metrics.py}, so
+any reported number can be checked against the implementation.}
+\label{tab:stage1}
+\begin{tabular}{@{}p{1.55in}p{3.5in}c@{}}
+\toprule
+Metric & Definition & Dir. \\
+\midrule
+Construction success rate\newline \texttt{build\_success\_rate}
+  & Fraction of environments that build and run without error & $\uparrow$ \\
+Baseline reproduction consistency\newline
+  \texttt{baseline\_\allowbreak reproduction\_\allowbreak consistency}
+  & Deviation from paper-reported results & $\uparrow$ \\
+Expert approval rate\newline \texttt{expert\_approval\_rate}
+  & Fraction of environments approved by human reviewers & $\uparrow$ \\
+Shortcut success rate\footnotemark\newline \texttt{shortcut\_success\_rate}
+  & Fraction of environments where the evaluator is deceived by a trivial
+    strategy & $\downarrow$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\footnotetext{The draft nomenclature calls this ``shortcut detection rate''
+while defining it as the fraction where the evaluator \emph{is deceived}---a
+defect rate that decreases as quality improves. We keep the definition and
+rename the quantity to match its direction; the implementation reports both
+\texttt{shortcut\_success\_rate} ($\downarrow$) and
+\texttt{shortcut\_detection\_rate} $= 1 - \text{success}$ ($\uparrow$) so either
+convention can be read from the report without re-deriving it
+(claim~\cid{C7}).}
+
+Every Stage~1 metric returns \texttt{None}---not $0.0$---on empty input, so an
+empty set can never be transcribed as a score of zero (claim~\cid{C5}).
+
+\paragraph{Controls.} Expert-manually constructed environments
+(DrugDiscoveryBench \cite{drugdiscoverybench}, Terminal-Bench-Science
+\cite{tbscience}) serve as the gold standard; claims~\cid{P1}--\cid{P4} name the
+control arm each rate is measured against.
+
+\paragraph{Execution modes.} The runner consumes a per-environment results
+manifest (offline scoring), can build and run each container directly when
+Docker is present, or merges both (disk inventory for existence, external facts
+for execution). When Docker is absent the affected environments are reported
+\textsc{Unverified}; they are counted, never dropped and never counted as
+successes.
+
+\subsection{Stage 2: weight-free self-improvement (no weight updates)}
+\label{sec:stage2}
+
+\paragraph{Goal.} Verify that environments provide genuine improvement signals
+across sequential attempts.
+
+\paragraph{Protocol.} Following RSI-Forge's design, $N$ models perform $K$
+sequential attempts per environment, inheriting code and notes but \emph{without
+weight updates}. We measure the first-attempt improvement rate
+(claim~\cid{P5}), the fraction of environments where some model exceeds the
+reproduced baseline (claim~\cid{P6}), and the continuous improvement rate.
+The scheduler is deterministic---environment-major, then round, then model---so a
+run is reproducible, and it supports a dry-run mode that emits the full
+execution plan without invoking any model.
+
+\paragraph{Expected outcome.} Replication of RSI-Forge's finding of $\geq 84\%$
+first-attempt improvement in life-science environments \cite{rsi-forge}.
+
+\subsection{Stage 3: harness optimization (no weight updates)}
+\label{sec:stage3}
+
+\paragraph{Goal.} Verify that agents can improve through optimization of
+external components---prompts, tools, memory, control flow---without weight
+changes.
+
+\paragraph{Protocol.} Evaluate on HarnessOpt-Bench-style tasks
+\cite{harnessoptbench} measuring whether models can self-modify their execution
+harness, and compare harness variants across OfficeQA \cite{officeqa}, GAIA
+\cite{gaia}, and life-science \harbor\ tasks. The key finding to test is whether
+model differences exceed harness differences, as HarnessOpt-Bench reports, or
+whether the opposite holds in life-science domains where domain toolchains
+(Bioconductor, samtools) may dominate (claim~\cid{P7}).
+
+\paragraph{Implementation note.} The comparison decomposes observed spread into
+between-model and between-harness components on a model $\times$ harness grid.
+This decomposition is only interpretable on a \emph{complete rectangular} grid:
+with missing cells the two components acquire different constant offsets and
+``which axis dominates'' becomes an artifact of which cells happen to be filled.
+We therefore require a complete grid before reporting the comparison; this is
+recorded as a known limitation in Appendix~\ref{app:limits}.
+
+\subsection{Stage 4: post-training with held-out benchmarks (weight updates)}
+\label{sec:stage4}
+
+\paragraph{Goal.} Produce causal evidence that generated environments improve
+model capabilities on unseen tasks.
+
+\paragraph{Training data.} Automatically generated \harbor\ environments from
+papers published \textbf{before 2024}.
+
+\paragraph{Held-out benchmark.} Environments generated from papers published
+\textbf{2025--2026}, \emph{locked before training begins}. The lock records the
+corpus digest, the split parameters, and the membership of every arm; a later
+change to the corpus fails verification instead of silently drifting to match
+whatever the training set ended up containing (claim~\cid{C6}). Supplement with
+expert-manual tasks (DrugDiscoveryBench, Terminal-Bench-Science) and public
+scientific benchmarks (BixBench \cite{bixbench}, LAB-Bench \cite{labbench},
+ScienceAgentBench \cite{scienceagentbench}) after confirming no contamination.
+
+\paragraph{Training methods.}
+\begin{itemize}
+  \item \textbf{RLVR}: for tasks with verifiable metrics (AUROC, F1, RMSE,
+        peak-calling accuracy) \cite{rlvr,gvpo,entropyaware}.
+  \item \textbf{RaR (Rubrics as Rewards)}: for composite or subjective tasks
+        where no single standard answer exists \cite{rar}.
+  \item \textbf{SFT / rejection sampling}: generate trajectories with a strong
+        model and distill to the target model.
+\end{itemize}
+
+\begin{table}[t]
+\centering
+\caption{Stage~4 control arms. Every comparative claim names the arm it is
+measured against (Appendix~\ref{app:claims}); a claim without a control is not
+reportable in this manuscript.}
+\label{tab:controls}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Control & Purpose \\
+\midrule
+No environment training & Baseline capability \\
+Random environment training & Environment signal vs.\ generic training \\
+Expert environment training & Upper bound from manual curation \\
+Auto environment training & Effect of automation (\cid{P8}) \\
+Auto + expert-reviewed training & Effect of expert review (\cid{P9}) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Evaluation benchmarks.} Life-science agent benchmarks (BixBench,
+LAB-Bench, ScienceAgentBench, DrugDiscoveryBench, Terminal-Bench-Science,
+RSI-Exam, GAIA); self-built held-out \harbor\ environments from 2025--2026
+papers; and real end-to-end workflows (single-cell analysis, variant
+annotation, protein structure prediction).
+
+\paragraph{Statistical rigor.} Multiple random seeds; confidence intervals;
+compute-matched controls; ablations over environment count, domain diversity,
+evaluator strictness, and expert review proportion; and a contamination check
+confirming that benchmark tasks do not appear in training papers or environments
+(claim~\cid{P10}).

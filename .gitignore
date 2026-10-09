@@ -7,6 +7,9 @@ dist/
 .venv/
 venv/
 
+# local tooling binaries downloaded for builds (e.g. tectonic.exe, ~50MB)
+.tools/
+
 # pipeline runtime state (per-paper run dirs, resumable)
 runs/
 out/

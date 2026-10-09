@@ -1,0 +1,71 @@
+\section{The Released Framework: Verification and Reproducibility}
+\label{sec:artifact}
+
+The pipeline is released as a dependency-free Python package (standard library
+only; Python $\geq 3.12$). Its purpose in this paper is not to report results
+but to make the protocol \emph{executable and checkable}: every stage below is
+runnable, and every structural claim in Appendix~\ref{app:claims} names the test
+that establishes it.
+
+\subsection{Four verification gates}
+\label{sec:gates}
+
+Every emitted task directory must pass all four gates before it can be
+packaged.
+
+\begin{enumerate}
+  \item \textbf{Strict schema.} An embedded JSON Schema with
+        \texttt{additionalProperties: false} at every level. This is what
+        catches \harbor's silent key-drop (claim~\cid{C1}).
+  \item \textbf{Layout sanity.} The files \texttt{harbor run} actually needs,
+        in the places it expects them.
+  \item \textbf{Upstream cross-check.} Optional: the task directory is loaded
+        with the real \harbor\ models when \harbor\ is installed. When it is
+        absent the gate reports \textsc{Unverified}---a third state, distinct
+        from pass and fail, so an environment can never be credited as verified
+        on a machine that could not check it (claim~\cid{C2}).
+  \item \textbf{Hygiene.} LF line endings and no path escaping the task
+        directory. A stray CRLF turns a \texttt{tests/test.sh} into a syntax
+        error inside a Linux container, and nothing upstream reports that
+        clearly.
+\end{enumerate}
+
+\subsection{Resumability and provenance}
+
+Stage progress is persisted per paper after every stage, so a crashed run
+resumes and a resumed run issues \emph{zero} model calls (claim~\cid{C4}). Each
+packaged environment carries its source paper's identifier and licence in
+\texttt{task.toml} provenance, and the set-level manifest records the metric and
+verification status of every environment.
+
+\subsection{Offline reproducibility}
+
+The full pipeline and all four protocol stages have offline paths: a replay
+backend (canned responses), a dry-run backend (schema-valid synthetic output),
+and manifest-driven scoring for Stage~1. Consequently the entire surface is
+exercised in continuous integration without a model, a container runtime, or
+network access (claim~\cid{C8}), and a reviewer can reproduce any run
+deterministically.
+
+\subsection{Limitations of the artifact}
+\label{app:limits}
+
+\begin{itemize}
+  \item No environment has been constructed from a live paper and no model has
+        been run in the released version; all empirical claims are
+        \texttt{planned}.
+  \item Variance decomposition is reliable only on complete model $\times$
+        harness grids (\S\ref{sec:stage3}).
+  \item The n-gram contamination probe can miss a verbatim leak when a probe
+        text is shorter than the n-gram window, because a short probe's single
+        gram cannot match an 8-gram of the training text. Reported overlap is
+        therefore a lower bound.
+  \item Harness deltas treat an absent key as $0.0$, so ``did not participate''
+        can be read as ``regressed''.
+  \item Stage~1 summaries do not yet expose the review and probe denominators,
+        so the reviewed-only denominator of the expert approval rate is not
+        auditable from the report alone.
+\end{itemize}
+
+\noindent These are tracked in the repository and are re-checked before any
+number is transcribed into this manuscript.

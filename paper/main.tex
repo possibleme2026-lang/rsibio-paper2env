@@ -1,0 +1,70 @@
+% ============================================================================
+%  BioForge-Harbor — arXiv manuscript
+%  Build:  tectonic -X compile main.tex   (or: sh build.sh)
+%
+%  Two rules this manuscript obeys by construction:
+%    1. Every claim id that appears in the text (C1..C8, P1..P10) is
+%       registered in ../claims.json; tools/check_claims.py fails if not.
+%    2. Appendix B (claims ledger) is GENERATED from claims.json by
+%       tools/gen_claims_tex.py, so the ledger cannot drift from the registry.
+% ============================================================================
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hypertexnames=false]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue}
+
+% --- macros ---------------------------------------------------------------
+\newcommand{\sys}{\textsc{BioForge-Harbor}}
+\newcommand{\harbor}{\textsc{Harbor}}
+\newcommand{\cid}[1]{\textsf{#1}}          % claim id, cross-refs claims.json
+\newcommand{\todo}[1]{\textcolor{blue}{[#1]}}
+
+\title{\sys: Automating the Construction of\\Life-Science Agent Environments from\\Published Literature}
+
+\begin{document}
+
+% --- title block (logo + institution) -------------------------------------
+\begin{center}
+  \includegraphics[width=0.22\textwidth]{figures/risingsi-logo.png}\\[0.5em]
+  {\large RisingSI}\\[1.2em]
+  {\LARGE\bfseries \sys: Automating the Construction of\\
+  Life-Science Agent Environments from\\
+  Published Literature}\\[1.0em]
+  {\large RisingSI}\\[0.4em]
+  {\normalsize \url{https://github.com/possibleme2026-lang/rsibio-paper2env}}
+\end{center}
+
+\vspace{0.5em}
+\hrule
+\vspace{0.8em}
+
+\input{sections/abstract}
+
+\hrule
+\vspace{0.8em}
+
+\tableofcontents
+\bigskip
+\hrule
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/method}
+\input{sections/protocol}
+\input{sections/expected}
+\input{sections/artifact}
+\input{sections/risks}
+\input{sections/conclusion}
+
+\appendix
+\input{sections/appendix}
+\input{sections/claims_ledger}
+
+\input{sections/references}
+
+\end{document}

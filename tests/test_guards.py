@@ -22,6 +22,8 @@ import check_lf
 import check_readme_i18n
 
 CLAIMS = ROOT / "claims.json"
+PAPER = ROOT / "paper" / "main.tex"
+LEDGER = ROOT / "paper" / "sections" / "claims_ledger.tex"
 
 
 # --------------------------------------------------------------------------
@@ -94,6 +96,30 @@ class TestClaimsGuard(unittest.TestCase):
         paper.write_text("See P99 for the headline number.", encoding="utf-8")
         problems = check_claims.check(data, root=ROOT, paper=paper)
         self.assertTrue(any("P99" in p for p in problems), problems)
+
+
+# --------------------------------------------------------------------------
+# the manuscript itself
+# --------------------------------------------------------------------------
+@unittest.skipUnless(PAPER.is_file(), "paper/main.tex not present")
+class TestManuscript(unittest.TestCase):
+    def test_every_claim_id_in_the_paper_is_registered(self):
+        data = json.loads(CLAIMS.read_text(encoding="utf-8"))
+        self.assertEqual(check_claims.check(data, root=ROOT, paper=PAPER), [])
+
+    def test_claims_ledger_is_in_sync_with_the_registry(self):
+        # Appendix B is generated; if someone edits claims.json without
+        # regenerating it, the appendix is silently wrong
+        self.assertTrue(LEDGER.is_file(), "claims_ledger.tex missing")
+        import gen_claims_tex
+        text = gen_claims_tex.render(json.loads(CLAIMS.read_text(encoding="utf-8")))
+        self.assertEqual(LEDGER.read_text(encoding="utf-8"), text)
+
+    def test_paper_declares_no_measured_number_without_evidence(self):
+        claims = json.loads(CLAIMS.read_text(encoding="utf-8"))["claims"]
+        for c in claims:
+            if c["status"] == "measured":
+                self.assertTrue(c["evidence"], f"{c['id']}: measured with no evidence")
 
 
 # --------------------------------------------------------------------------

@@ -1,0 +1,72 @@
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Automated environment construction from papers}
+
+RSI-Forge introduced a multi-agent pipeline that turns published papers into
+executable environments for self-improvement \cite{rsi-forge}. Three agents
+coordinate \emph{construction, reproduction, and review}: a construction agent
+generates code and task definitions; a reproduction agent independently
+reimplements the method to establish a baseline score; and a review agent checks
+task validity and evaluator reliability. The pipeline produced 210 environments
+across 18 fields, including 90 reviewed by independent human domain experts.
+
+In a key experiment, four models performed three sequential attempts across 120
+environments, inheriting code and notes but \emph{without weight updates}. At
+least one model improved after the first attempt in \textbf{84\% of
+environments}, and in \textbf{68 of 120} environments model performance exceeded
+the reproduced baseline---demonstrating that these environments provide genuine
+improvement signals. \sys\ adopts the same three roles and adds two: a
+\emph{Curator} that screens the literature before any generation cost is
+incurred, and a \emph{Packager} that promotes validated environments into the
+standardized \harbor\ layout (\S\ref{sec:method}).
+
+\subsection{\harbor\ and containerized agent evaluation}
+
+\harbor\ is a framework from the creators of Terminal-Bench for evaluating and
+optimizing agents and language models in container environments \cite{harbor}.
+Terminal-Bench~2.0 emphasizes \emph{task validation quality} to ensure reliable
+and reproducible agent evaluation \cite{terminalbench}. \harbor\ has been
+adopted by external benchmarks; for example, CompileBench migrated to \harbor\
+to standardize agent evaluation for compiling open-source projects
+\cite{compilebench}.
+
+\subsection{Life-science agent benchmarks}
+
+DrugDiscoveryBench measures how AI agents handle computational tasks in
+early-stage drug discovery, with 82 verifiable, domain-expert-curated tasks
+spanning target identification to structure--activity analysis
+\cite{drugdiscoverybench}. BixBench provides over 50 real-world scenarios and
+nearly 300 open-ended questions in computational biology, with model accuracies
+as low as 17\% in complex bioinformatics workflows \cite{bixbench}.
+ScienceAgentBench includes 102 scientific data-analysis tasks across
+computational biology, geoscience, psychology, and materials science
+\cite{scienceagentbench}. LAB-Bench provides a further set of literature-scale
+biological reasoning tasks \cite{labbench}. All of these are hand-built; none is
+generated from the literature automatically.
+
+\subsection{Reinforcement learning with verifiable and rubric-based rewards}
+
+\textbf{RLVR (Reinforcement Learning with Verifiable Rewards)} has emerged as a
+paradigm for equipping LLMs with agentic capabilities through verifiable reward
+signals \cite{rlvr}. Recent work extends RLVR through group verification-based
+policy optimization (GVPO) \cite{gvpo} and entropy-aware training
+\cite{entropyaware}. \textbf{Rubrics as Rewards (RaR)} addresses the limitation
+of RLVR in domains without a single standard answer by using structured,
+checklist-style rubrics as interpretable reward signals \cite{rar}. RaR achieves
+relative improvements of up to 31\% on HealthBench and 7\% on GPQA-Diamond over
+LLM-as-judge baselines. Stage~4 of our protocol (\S\ref{sec:stage4}) is designed
+to use both regimes, because life-science tasks split cleanly into those with a
+verifiable metric (AUROC, F1, RMSE, peak-calling accuracy) and those requiring a
+rubric.
+
+\subsection{Held-out benchmarks and contamination}
+
+Benchmark contamination---where test data appears in training corpora---can
+inflate performance estimates by as much as 10 percentage points
+\cite{contamination}. Truly held-out evaluation requires data the model has
+\emph{definitively never encountered}, often approximated through time-based
+splits or newly released examination questions. Our Stage~4 therefore trains only
+on environments derived from papers published before 2024 and evaluates on
+environments derived from 2025--2026 papers, \emph{locked before training
+begins} and audited for n-gram overlap (\S\ref{sec:stage4}, claim~\cid{P10}).

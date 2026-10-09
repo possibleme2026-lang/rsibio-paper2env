@@ -1,0 +1,73 @@
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{The bottleneck is not papers. It is environments.}
+
+Life-science research produces an unprecedented volume of computationally
+specified methods. Europe PMC offers programmatic access to over 37~million
+publications, including 3.2~million fully open-access articles
+\cite{europepmc}. PubMed Central, bioRxiv, and medRxiv provide additional APIs
+for bulk retrieval. The raw material for constructing agent environments is
+abundant and openly accessible.
+
+The bottleneck lies in the \emph{transformation from paper to executable
+environment}. An executable environment requires not only a code implementation
+of the method but also a reliable evaluator that distinguishes genuine
+methodological contributions from shortcuts. A benchmark study of biomedical
+paper reproduction (ClaroAI-Bench) found that \emph{environment reconstruction
+is the dimension with the highest disagreement among evaluators}, exceeding
+even code availability as a source of variance \cite{claroaibench}. Papers with
+accessible data and code achieve reproducibility scores $2.9\times$ higher than
+those with restricted access, but a substantial fraction of published work does
+not meet this threshold.
+
+\subsection{\harbor\ provides the execution substrate.}
+
+The \harbor\ framework, developed by Laude Institute (creators of
+Terminal-Bench), provides a standardized substrate for agent evaluation in
+containerized environments \cite{harbor}. \harbor\ is the official harness for
+Terminal-Bench~2.0 \cite{terminalbench} and supports arbitrary agents including
+Claude Code and open-source models. In the life sciences, \harbor-compatible
+task sets already exist:
+
+\begin{itemize}
+  \item \textbf{DrugDiscoveryBench} (Scale AI): 82 \harbor-formatted tasks
+        spanning target identification, patent mining, cheminformatics, and
+        structural reasoning, each graded by an LLM judge against
+        expert-authored rubrics \cite{drugdiscoverybench}.
+  \item \textbf{Terminal-Bench-Science}: 70 expert-curated research workflow
+        tasks covering life sciences, physics, and earth sciences
+        \cite{tbscience}.
+  \item \textbf{BioAgent Gym}: a biomedical agent repository with a native
+        \harbor\ leaderboard \cite{bioagentgym}.
+  \item \textbf{RSI-Exam}: evaluation infrastructure that runs directly on
+        \harbor\ for assessing long-horizon self-improvement and generalization
+        to unseen data \cite{rsiexam}.
+\end{itemize}
+
+These task sets are \emph{manually curated by domain experts}. The missing
+component is automation: a pipeline that can generate \harbor\ tasks directly
+from the published literature.
+
+\subsection{Contribution}
+
+We propose \sys, comprising:
+
+\begin{enumerate}
+  \item A \textbf{multi-agent pipeline} that ingests open-access life-science
+        papers and outputs \harbor-formatted executable environments with
+        automated evaluators.
+  \item A \textbf{four-stage validation protocol} that progresses from
+        environment quality verification through weight-free self-improvement
+        and harness optimization to post-training with held-out benchmarks.
+  \item A \textbf{scoped rollout plan} focused on computational biology and
+        bioinformatics, the subfields where papers are most readily convertible
+        to executable tasks.
+\end{enumerate}
+
+A fourth contribution is pragmatic but load-bearing: we release the pipeline as
+a dependency-free open-source framework in which every environment must pass
+four verification gates before it can be packaged (\S\ref{sec:artifact}). The
+framework's structural claims are measured by its own test suite
+(Appendix~\ref{app:claims}); its empirical claims are explicitly registered as
+not-yet-measured.

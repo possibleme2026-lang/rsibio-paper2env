@@ -1,0 +1,19 @@
+\section{Open Questions}
+
+\begin{itemize}
+  \item How to automatically determine whether a paper is ``computable''? Our
+        current answer is a deterministic rule set with a model consulted only
+        on boundary papers; whether that boundary decision can be made reliably
+        remains open.
+  \item How to design evaluators that are both faithful and shortcut-resistant?
+        Fidelity and shortcut-resistance can pull in opposite directions: an
+        evaluator strict enough to reject shortcuts may also reject valid
+        alternative solutions.
+  \item How to handle tasks requiring proprietary data or GPU clusters?
+  \item How to balance automation scale against expert review depth? The
+        Stage~4 control arms (\cid{P8}, \cid{P9}) are designed to measure
+        exactly this trade-off rather than assume it.
+  \item How to prevent generated environments from enabling dangerous
+        biological research? Our denylist is a floor; it inspects the stated
+        objective, not the reachable capability.
+\end{itemize}

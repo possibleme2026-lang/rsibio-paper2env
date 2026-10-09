@@ -1,0 +1,42 @@
+\section{Expected Results and Contributions}
+\label{sec:expected}
+
+\subsection{Contributions}
+
+\begin{enumerate}
+  \item \textbf{First automated pipeline} from life-science papers to
+        \harbor-formatted executable environments.
+  \item \textbf{Open-source environment set}: 100+ executable, verifiable
+        \harbor\ tasks spanning computational biology subfields.
+  \item \textbf{Causal evaluation}: evidence of whether automatically generated
+        environments improve model capabilities on held-out scientific
+        benchmarks.
+  \item \textbf{Generalizable methodology}: a pipeline architecture extensible
+        to physics, chemistry, and earth sciences.
+  \item \textbf{Community infrastructure}: complementary to DrugDiscoveryBench,
+        Terminal-Bench-Science, and BioAgent Gym.
+\end{enumerate}
+
+\subsection{Anticipated findings}
+
+The following are \emph{expectations}, not measurements. Each is registered in
+Appendix~\ref{app:claims} with status \texttt{planned} together with the control
+arm it must be measured against; none of them is reported as a result anywhere
+in this manuscript.
+
+\begin{itemize}
+  \item \textbf{Stage 1}: construction success rate of 60--80\% for
+        computational biology papers with available code; expert approval rate
+        of 70--85\% for the reviewed subset (\cid{P1}, \cid{P3}).
+  \item \textbf{Stage 2}: replication of RSI-Forge's $\geq$84\% first-attempt
+        improvement rate in life-science environments (\cid{P5}).
+  \item \textbf{Stage 3}: model differences exceeding harness differences,
+        consistent with HarnessOpt-Bench \cite{harnessoptbench}, unless
+        domain-specific toolchains (e.g.\ Bioconductor, samtools) dominate
+        (\cid{P7}).
+  \item \textbf{Stage 4}: statistically significant improvement on held-out
+        benchmarks for RLVR and RaR training compared to no-environment
+        controls, with the strongest gains in tasks matching the training
+        subfields and partial transfer to cross-subfield tasks (\cid{P8},
+        \cid{P9}).
+\end{itemize}
