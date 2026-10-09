@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "note": "Every number or assertion that may appear in the paper must be registered here first. `tools/check_claims.py` fails the build if a claim is marked measured without evidence on disk, or if a comparative claim has no control group. Status 'planned' is honest: this repo ships the framework and its offline tests, not a executed study.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "The strict JSON Schema gate rejects a mistyped Harbor TaskConfig key (e.g. `cpu` where `cpus` is meant) instead of letting pydantic silently drop it.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_verifier.py", "src/bioforge_harbor/schemas/task_toml_1_4.json"]
+    },
+    {
+      "id": "C2",
+      "statement": "The golden Harbor task fixture cross-validates against real harbor 0.24.0 when it is installed, and the gate reports UNVERIFIED rather than passing when it is absent.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/fixtures/golden_task", "tools/harbor_real_gate.py"]
+    },
+    {
+      "id": "C3",
+      "statement": "The dual-use denylist blocks packaging of a task whose objective matches it, fail-closed, before any model is consulted.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_pipeline.py", "src/bioforge_harbor/pipeline/stages/reviewer.py"]
+    },
+    {
+      "id": "C4",
+      "statement": "Resuming a completed run issues zero backend calls; no stage is silently re-executed.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_pipeline.py", "src/bioforge_harbor/pipeline/runner.py"]
+    },
+    {
+      "id": "C5",
+      "statement": "Every Stage 1-4 metric returns None on empty input instead of 0.0, so an empty set can never be read as a score of zero.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_metrics.py", "src/bioforge_harbor/validation/metrics.py"]
+    },
+    {
+      "id": "C6",
+      "statement": "The held-out split is bound to a corpus digest before any training; a later corpus change makes the lock fail verification instead of drifting.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_stage4.py", "src/bioforge_harbor/validation/stage4_heldout.py"]
+    },
+    {
+      "id": "C7",
+      "statement": "Shortcut probing is reported in both directions (success DOWN, detection UP) so a defect rate cannot be transcribed into a table as a win.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_metrics.py", "src/bioforge_harbor/validation/metrics.py"]
+    },
+    {
+      "id": "C8",
+      "statement": "Every CLI command family has an offline green path: no model, no Docker, no network.",
+      "kind": "structural",
+      "status": "measured",
+      "metric": null,
+      "control": null,
+      "evidence": ["tests/test_cli.py"]
+    },
+    {
+      "id": "P1",
+      "statement": "Constructed environments build and run at a rate comparable to human-authored Harbor tasks on the same paper sample (paper 4.1).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "build_success_rate",
+      "control": "human-authored Harbor tasks built from the same paper sample",
+      "evidence": []
+    },
+    {
+      "id": "P2",
+      "statement": "Baselines re-derived by the Reproduction agent agree with the numbers reported in the source papers (paper 4.1).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "baseline_reproduction_consistency",
+      "control": "paper-reported metric as reference, tolerance declared per environment",
+      "evidence": []
+    },
+    {
+      "id": "P3",
+      "statement": "Domain experts approve constructed environments at a rate above the random-paper control (paper 4.1).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "expert_approval_rate",
+      "control": "environments built from randomly sampled off-topic papers, reviewed blind",
+      "evidence": []
+    },
+    {
+      "id": "P4",
+      "statement": "Trivial shortcut strategies are caught by the constructed evaluators (paper 4.1).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "shortcut_detection_rate",
+      "control": "same evaluators probed with the reference solution (must pass) as the positive control",
+      "evidence": []
+    },
+    {
+      "id": "P5",
+      "statement": "Agents improve after the first attempt within an environment, with no weight updates (paper 4.2).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "first_attempt_improvement_rate",
+      "control": "same model and environment, no inherited notes or code from the previous attempt",
+      "evidence": []
+    },
+    {
+      "id": "P6",
+      "statement": "In a majority of environments some model exceeds the reproduced baseline (paper 4.2).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "exceeded_baseline_rate",
+      "control": "reproduced baseline score for the same environment",
+      "evidence": []
+    },
+    {
+      "id": "P7",
+      "statement": "Between-model variance exceeds between-harness variance on the constructed grid (paper 4.3).",
+      "kind": "comparative",
+      "status": "planned",
+      "metric": "variance_decomposition",
+      "control": "the same models under the baseline harness configuration, complete rectangular grid only",
+      "evidence": []
+    },
+    {
+      "id": "P8",
+      "statement": "Environments built from auto-selected papers outperform environments built from randomly selected papers on held-out benchmarks (paper 4.4).",
+      "kind": "comparative",
+      "status": "planned",
+      "metric": "control_contrast",
+      "control": "random_environment arm and no_environment arm, identical training recipe",
+      "evidence": []
+    },
+    {
+      "id": "P9",
+      "statement": "Adding the Review agent improves held-out scores over un-reviewed auto-built environments (paper 4.4).",
+      "kind": "comparative",
+      "status": "planned",
+      "metric": "control_contrast",
+      "control": "auto_environment arm without human review, identical training recipe",
+      "evidence": []
+    },
+    {
+      "id": "P10",
+      "statement": "Held-out 2025-2026 papers share no long n-gram spans with the training corpus, so Stage 4 gains are interpretable (paper 4.4).",
+      "kind": "rate",
+      "status": "planned",
+      "metric": "ngram_contamination",
+      "control": "same probe run against pre-cutoff papers as a positive control for the detector",
+      "evidence": []
+    }
+  ]
+}
