@@ -52,7 +52,6 @@ def _backend_from_args(args):
     return make_backend(kind, provider=getattr(args, "provider", None),
                         model=getattr(args, "model", None))
 
-
 # --------------------------------------------------------------------------
 # pipeline commands
 # --------------------------------------------------------------------------
@@ -158,7 +157,8 @@ def build_parser() -> argparse.ArgumentParser:
     r = sub.add_parser("run", help="run the full per-paper pipeline")
     r.add_argument("--corpus", required=True)
     r.add_argument("--runs-dir", default="runs")
-    r.add_argument("--backend", default="mock", choices=["mock", "dryrun", "pi"])
+    r.add_argument("--backend", default="mock",
+                   choices=["mock", "dryrun", "pi", "tierflow"])
     r.add_argument("--mock-responses", default=None)
     r.add_argument("--provider", default=None)
     r.add_argument("--model", default=None)
