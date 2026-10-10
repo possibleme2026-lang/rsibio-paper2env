@@ -4,7 +4,7 @@
 一条流水线：把开放获取的生物信息学论文转成 [Harbor](https://pypi.org/project/harbor/) 格式的
 任务目录，并配一套四阶段协议来检验这些环境到底值不值得拿来训练。
 
-RisingSI · Apache-2.0
+RsiingSI · Apache-2.0
 
 > **当前状态。** 本版本交付的是框架本身及其离线测试。尚未从真实论文构造过任何环境，也尚未跑过
 > 任何模型：`claims.json` 里所有经验性数字都被刻意标为 `status=planned`。结构性论断（`C1`–`C8`）
@@ -156,7 +156,7 @@ tools/           守卫：claims、CRLF/BOM、README 双语、真实 Harbor 门
 ## 引用
 
 ```text
-RisingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
+RsiingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
 Environments from Published Literature. 2026.
 https://github.com/possibleme2026-lang/rsibio-paper2env
 ```

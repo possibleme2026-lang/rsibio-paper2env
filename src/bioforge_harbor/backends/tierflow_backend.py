@@ -41,7 +41,7 @@ from .jsonx import extract_json
 
 DEFAULT_BASE_URL = "https://tierflow.cn/v1"
 DEFAULT_MODEL = "tierflow_pro"
-USER_AGENT = "rsibio-paper2env/0.1 (research; contact: RisingSI)"
+USER_AGENT = "rsibio-paper2env/0.1 (research; contact: RsiingSI)"
 
 
 class TierflowUnavailable(BackendError):

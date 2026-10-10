@@ -5,7 +5,7 @@ A pipeline that turns open-access bioinformatics papers into [Harbor](https://py
 task directories, and a four-stage protocol for checking whether those environments are
 actually worth training on.
 
-RisingSI · Apache-2.0
+RsiingSI · Apache-2.0
 
 > **Status.** This release is the framework and its offline test suite. No environment has
 > been constructed from a live paper and no model has been run yet: every empirical number
@@ -165,7 +165,7 @@ source paper's identifier and licence in `task.toml` provenance. Code is Apache-
 ## Citation
 
 ```text
-RisingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
+RsiingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
 Environments from Published Literature. 2026.
 https://github.com/possibleme2026-lang/rsibio-paper2env
 ```

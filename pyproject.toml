@@ -9,7 +9,7 @@ description = "rsibio-paper2env: automated construction of life-science agent en
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "Apache-2.0" }
-authors = [{ name = "RisingSI" }]
+authors = [{ name = "RsiingSI" }]
 keywords = ["agents", "benchmark", "harbor", "bioinformatics", "self-improvement", "environments"]
 classifiers = [
     "Development Status :: 3 - Alpha",

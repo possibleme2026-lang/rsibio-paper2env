@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Callable
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest"
-USER_AGENT = "rsibio-paper2env/0.1 (research; contact: RisingSI)"
+USER_AGENT = "rsibio-paper2env/0.1 (research; contact: RsiingSI)"
 
 # Fields we always request. Kept explicit so a silent upstream schema change
 # shows up as a missing key rather than a subtly-empty record.
