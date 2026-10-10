@@ -1,4 +1,4 @@
-# BioForge-Harbor
+# rsibio-paper2env
 
 **Automated construction of life-science agent environments from published literature.**
 A pipeline that turns open-access bioinformatics papers into [Harbor](https://pypi.org/project/harbor/)-format
@@ -17,7 +17,7 @@ RisingSI · Apache-2.0
 Reinforcement-learning environments for scientific agents are written by hand, one at a time,
 and the bottleneck is not ideas — it is labour. Papers already contain the method, the data,
 the metric and the evaluation protocol; the gap is turning prose into a runnable, *verifiable*
-task. BioForge-Harbor closes that gap with two properties that matter more than throughput:
+task. rsibio-paper2env closes that gap with two properties that matter more than throughput:
 
 - **No fake green.** A task that does not pass verification is reported as failed, never shipped
   quietly. A missing Docker daemon or an absent `harbor` install yields `UNVERIFIED`, not a pass.
@@ -165,7 +165,7 @@ source paper's identifier and licence in `task.toml` provenance. Code is Apache-
 ## Citation
 
 ```text
-RisingSI. BioForge-Harbor: Automating the Construction of Life-Science Agent
+RisingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
 Environments from Published Literature. 2026.
 https://github.com/possibleme2026-lang/rsibio-paper2env
 ```

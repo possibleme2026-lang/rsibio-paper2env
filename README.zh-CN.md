@@ -1,4 +1,4 @@
-# BioForge-Harbor
+# rsibio-paper2env
 
 **把已发表的文献自动构造成生命科学智能体环境。**
 一条流水线：把开放获取的生物信息学论文转成 [Harbor](https://pypi.org/project/harbor/) 格式的
@@ -13,7 +13,7 @@ RisingSI · Apache-2.0
 ## 为什么
 
 面向科学智能体的强化学习环境靠人工逐个手写，瓶颈不在想法而在人力。论文里本来就写清了方法、
-数据、指标与评测协议，缺的是把散文变成可运行、且**可验证**的任务这一步。BioForge-Harbor 补上
+数据、指标与评测协议，缺的是把散文变成可运行、且**可验证**的任务这一步。rsibio-paper2env 补上
 这一步，并坚持两条比吞吐更重要的性质：
 
 - **不做假绿。** 没通过验证的任务一律报失败，绝不悄悄交付。Docker 守护进程缺失或 `harbor` 没装，
@@ -156,7 +156,7 @@ tools/           守卫：claims、CRLF/BOM、README 双语、真实 Harbor 门
 ## 引用
 
 ```text
-RisingSI. BioForge-Harbor: Automating the Construction of Life-Science Agent
+RisingSI. rsibio-paper2env: Automating the Construction of Life-Science Agent
 Environments from Published Literature. 2026.
 https://github.com/possibleme2026-lang/rsibio-paper2env
 ```

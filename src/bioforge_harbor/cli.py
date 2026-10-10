@@ -144,7 +144,7 @@ def _passthrough_handlers() -> dict[str, Any]:
 # --------------------------------------------------------------------------
 def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser(prog="bioforge",
-                                 description="BioForge-Harbor pipeline + validation protocol")
+                                 description="rsibio-paper2env pipeline + validation protocol")
     ap.add_argument("--version", action="version", version=f"bioforge-harbor {__version__}")
     sub = ap.add_subparsers(dest="command", required=True)
 

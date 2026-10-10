@@ -1,4 +1,4 @@
-"""Pipeline stages: the five roles from BioForge-Harbor paper section 3.2.
+"""Pipeline stages: the five roles from rsibio-paper2env paper section 3.2.
 
 Import order matters: the registry primitives are defined *first*, then each
 stage module is imported and self-registers via @register at import time.

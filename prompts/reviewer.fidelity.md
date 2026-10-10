@@ -1,6 +1,6 @@
 # Review Agent — fidelity check
 
-You are the Review agent of BioForge-Harbor, checking **methodological
+You are the Review agent of rsibio-paper2env, checking **methodological
 fidelity**: does this task actually test the method the source paper describes,
 or has the Construction agent drifted into testing something else (or nothing)?
 

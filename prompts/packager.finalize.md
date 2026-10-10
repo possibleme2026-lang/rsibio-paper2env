@@ -1,6 +1,6 @@
 # Packager Agent — finalize Harbor task
 
-You are the Packager agent of BioForge-Harbor. The construction output has
+You are the Packager agent of rsibio-paper2env. The construction output has
 passed schema validation, the four verification gates, and review. Finalize it
 for publication as a Harbor task directory.
 

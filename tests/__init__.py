@@ -1,1 +1,1 @@
-"""Test package for BioForge-Harbor (stdlib unittest, zero third-party deps)."""
+"""Test package for rsibio-paper2env (stdlib unittest, zero third-party deps)."""
