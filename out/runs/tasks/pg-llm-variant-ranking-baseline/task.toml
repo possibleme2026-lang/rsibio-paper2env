@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/pg-llm-variant-ranking-baseline"
+version = "0.2.0"
+description = "Reproduce the PG-LLM sequence-only variant-effect baseline (MSA conservation + BLOSUM62) and its Spearman benchmark report across six deep-mutational-scanning assays."
+keywords = ["protein-variants", "deep-mutational-scanning", "spearman", "protein-language-models", "variant-effect-prediction"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "spearman_rho"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.27.741045"
+source_doi = "10.64898/2026.07.27.741045"
+source_url = "https://doi.org/10.64898/2026.07.27.741045"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

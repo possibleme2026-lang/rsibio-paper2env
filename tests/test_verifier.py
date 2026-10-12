@@ -158,8 +158,15 @@ class TestGoldenFixture(unittest.TestCase):
     def test_golden_files_lf(self):
         g = ROOT / "fixtures" / "golden_task"
         for f in g.rglob("*"):
-            if f.is_file():
-                self.assertNotIn(b"\r", f.read_bytes(), str(f))
+            if not f.is_file():
+                continue
+            # gold_gen.py is imported elsewhere in the suite, so __pycache__
+            # appears inside the fixture at runtime. Those are generated
+            # bytecode, not shipped fixture files -- check_lf.py classifies
+            # .pyc as binary and skips __pycache__ for the same reason.
+            if "__pycache__" in f.parts or f.suffix == ".pyc":
+                continue
+            self.assertNotIn(b"\r", f.read_bytes(), str(f))
 
 
 if __name__ == "__main__":

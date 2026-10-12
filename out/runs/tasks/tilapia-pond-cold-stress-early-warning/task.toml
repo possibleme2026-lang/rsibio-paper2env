@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/tilapia-pond-cold-stress-early-warning"
+version = "0.2.0"
+description = "Multi-lead cold-stress early warning for a tilapia nursery pond from 6-hourly manual temperature readings."
+keywords = ["aquaculture", "cold-stress", "time-series-forecasting", "early-warning", "f1"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "f1"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 40.0
+source_paper_id = "10.64898/2026.08.01.742243"
+source_doi = "10.64898/2026.08.01.742243"
+source_url = "https://doi.org/10.64898/2026.08.01.742243"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

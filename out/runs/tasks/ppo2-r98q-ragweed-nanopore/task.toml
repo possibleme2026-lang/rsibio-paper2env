@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/ppo2-r98q-ragweed-nanopore"
+version = "0.2.0"
+description = "Detect PPO2 codon 98 resistance mutations from Nanopore amplicon reads and design an R98Q allele-specific primer pair."
+keywords = ["herbicide resistance", "PPO2", "Nanopore sequencing", "allele-specific PCR", "variant calling"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "fraction"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 30.0
+source_paper_id = "10.64898/2026.07.31.742095"
+source_doi = "10.64898/2026.07.31.742095"
+source_url = "https://doi.org/10.64898/2026.07.31.742095"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

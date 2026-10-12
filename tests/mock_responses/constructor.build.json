@@ -1,30 +1,69 @@
 {
-  "task_name": "bioforge/mock-peak-caller",
-  "version": "0.1.0",
-  "instruction_md": "# Mock peak caller\n\nRead /app/data/signal.bedgraph, write /app/predictions.bed and /app/rewards.json.\n",
-  "dockerfile": "FROM python:3.11-slim\nWORKDIR /app\nCOPY data/ /app/data/\n",
+  "task_name": "bioforge/scrna-cluster-bench",
+  "version": "0.2.0",
+  "instruction_md": "# Single-cell RNA-seq clustering benchmark\n\nYou are given a synthetic scRNA-seq count matrix (600 cells x 49 genes,\n4 planted cell types, deterministic seed 7) and a per-cell metadata table.\nCluster the cells and evaluate against a hidden gold labeling that the\ngrader re-derives at verify time from an independent oracle seed; your\ncontainer never ships it.\n\n## Inputs\n- /app/data/counts.tsv.gz: raw UMI count matrix (tab-separated, gzipped),\n  genes x cells with a header row of cell barcodes.\n- /app/data/cells_meta.tsv: per-cell metrics (total counts, mitochondrial\n  fraction, doublet score).\n- /app/data/gen_inputs.py: the deterministic generator (for inspection\n  and provenance).\n\n## Task\n1. Load the count matrix and compute per-cell library-size normalization.\n2. Filter low-quality cells using the metadata thresholds given below.\n3. Select the top variable genes by variance of the normalized matrix.\n4. Project cells to 2 principal components and cluster with k-means (k=4).\n5. Map each cluster to a canonical cell-type label.\n6. Write the final label per cell to /app/predictions.tsv (two columns:\n   cell barcode, label), sorted by barcode.\n7. Then write your evaluation result to /app/rewards.json as:\n   {\"score\": <ari>, \"n_cells\": <int>}\n\n## Constraints\n- Do not read any gold labeling file; none is shipped in the agent image\n  and the grader checks for access attempts.\n- Cells with total counts below 500 or mitochondrial fraction above 0.2\n  must be excluded before clustering.\n- Use exactly k=4 clusters; labels must come from the canonical vocabulary\n  {T-cell, B-cell, Myeloid, NK-cell}.\n- The output TSV must be sorted by cell barcode (ascending, byte order).\n- Every output line must be a valid two-column TSV record.\n- Runtime budget: 10 minutes, 2 CPUs, 4 GB RAM. No network access.\n\n## Output\n/app/predictions.tsv (barcode<TAB>label) and /app/rewards.json with the\nfields above.\n\n## Scoring\nThe grader re-derives the hidden gold labeling from an independent oracle\nseed at verify time, then scores predicted-vs-gold agreement with adjusted\nRand index and applies per-constraint checks (QC filter compliance, label\nvocabulary, sorting, gold-access probe) as partial credit. Total score =\n0.7 * ARI + 0.3 * constraint pass rate. A shortcut that copies any shipped\ninput into predictions.tsv scores ~0.\n",
+  "dockerfile": "FROM python:3.11-slim\nWORKDIR /app\nCOPY data/ /app/data/\nRUN pip install --no-cache-dir numpy\n",
   "test_files": {
-    "tests/test.sh": "#!/bin/bash\nset -euo pipefail\npython /tests/grade.py\n",
-    "tests/grade.py": "import json\njson.dump({'score': 0.0}, open('/app/rewards.json','w'))\n"
+    "tests/test.sh": "#!/bin/bash\nset -euo pipefail\npython3 /tests/grade.py\n",
+    "tests/grade.py": "#!/usr/bin/env python3\n\"\"\"Reference grader: scRNA-seq clustering vs an oracle-re-derived gold label set.\n\nScores /app/predictions.tsv (barcode<TAB>label) against a gold labeling that\nis re-derived at verify time from an independent oracle seed (99) - the agent\ncontainer never ships it. Scoring = 0.7 * ARI + 0.3 * constraint pass rate,\nwith per-constraint checks: QC filter compliance, label vocabulary, barcode\nsorting, and a gold-file access probe.\n\"\"\"\n\nimport json\nimport os\nimport sys\nfrom itertools import combinations\nfrom math import comb\n\nVOCAB = {\"T-cell\", \"B-cell\", \"Myeloid\", \"NK-cell\"}\nQC = {\"min_total\": 500, \"max_mito\": 0.2}\nPROBE_PATH = \"/app/data/gold_labels.tsv\"\nN_CELLS = 600\n\n\ndef parse_predictions(path):\n    \"\"\"Two-column TSV: cell barcode, canonical label. Skips blank lines.\"\"\"\n    rows = []\n    try:\n        with open(path) as fh:\n            for line in fh:\n                if not line.strip():\n                    continue\n                f = line.rstrip(\"\\n\").split(\"\\t\")\n                if len(f) == 2:\n                    rows.append((f[0].strip(), f[1].strip()))\n    except FileNotFoundError:\n        pass\n    return rows\n\n\ndef low_quality_cells():\n    \"\"\"The generator marks every 37th cell low-quality (mito 0.9).\"\"\"\n    return {f\"CELL{i:04d}\" for i in range(0, N_CELLS, 37)}\n\n\ndef gold_labels():\n    \"\"\"Oracle: planted type per cell, then 5% deterministic doublet flips.\"\"\"\n    import random\n    rng = random.Random(99)\n    types = [\"T-cell\", \"B-cell\", \"Myeloid\", \"NK-cell\"]\n    labels = {f\"CELL{i:04d}\": types[i % 4] for i in range(N_CELLS)}\n    for bc in sorted(labels):\n        if rng.random() < 0.05:\n            labels[bc] = types[(types.index(labels[bc]) + 1) % 4]\n    return labels\n\n\ndef ari(pred, gold):\n    \"\"\"Adjusted Rand index over the cell barcodes present in both maps.\"\"\"\n    common = [bc for bc in gold if bc in pred]\n    if len(common) < 2:\n        return 0.0\n    agree = disagree = 0\n    for a, b in combinations(common, 2):\n        same_pred = pred[a] == pred[b]\n        same_gold = gold[a] == gold[b]\n        if same_pred and same_gold:\n            agree += 1\n        elif same_pred != same_gold:\n            disagree += 1\n    n = len(common)\n    sum_p = sum(comb(sum(1 for c in common if pred[c] == k), 2)\n                for k in {pred[c] for c in common})\n    sum_g = sum(comb(sum(1 for c in common if gold[c] == k), 2)\n                for k in {gold[c] for c in common})\n    total = comb(n, 2)\n    expected = sum_p * sum_g / total\n    max_index = (sum_p + sum_g) / 2\n    if max_index == expected:\n        return 1.0\n    return (agree - expected) / (max_index - expected)\n\n\ndef check_qc(pred_rows):\n    \"\"\"QC-excluded cells must be absent from the prediction.\"\"\"\n    reported = {bc for bc, _ in pred_rows}\n    return not (low_quality_cells() & reported)\n\n\ndef check_vocab(pred_rows):\n    return bool(pred_rows) and all(label in VOCAB for _, label in pred_rows)\n\n\ndef check_sorted(pred_rows):\n    barcodes = [bc for bc, _ in pred_rows]\n    return barcodes == sorted(barcodes)\n\n\ndef check_gold_access():\n    return not os.path.exists(PROBE_PATH)\n\n\ndef main():\n    pred_rows = parse_predictions(\"/app/predictions.tsv\")\n    pred = dict(pred_rows)\n    gold = gold_labels()\n    a = ari(pred, gold)\n    constraints = {\n        \"qc_ok\": check_qc(pred_rows),\n        \"vocab_ok\": check_vocab(pred_rows),\n        \"sorted_ok\": check_sorted(pred_rows),\n        \"gold_not_accessed\": check_gold_access(),\n    }\n    pass_rate = sum(constraints.values()) / len(constraints)\n    score = 0.7 * max(a, 0.0) + 0.3 * pass_rate\n    with open(\"/app/rewards.json\", \"w\") as fh:\n        json.dump({\"score\": round(score, 4), \"n_cells\": len(pred_rows),\n                   \"ari\": round(a, 4), \"constraints\": constraints}, fh)\n    print(f\"ARI={a:.4f} constraints={constraints} score={score:.4f}\")\n\n\nif __name__ == \"__main__\":\n    sys.exit(main())\n"
   },
-  "solution_files": {"solution/solve.sh": "#!/bin/bash\ntrue\n"},
-  "env_files": {"environment/data/README.txt": "synthetic\n"},
+  "solution_files": {
+    "solution/solve.sh": "#!/bin/bash\n# Reference solution: normalize -> QC -> HVG -> PCA(2) -> kmeans(k=4) -> map\n# cluster indices to canonical labels, write predictions.tsv.\nset -euo pipefail\n\npython3 - <<'PYEOF'\nimport gzip\nimport numpy as np\n\ncounts = {}\nwith gzip.open(\"/app/data/counts.tsv.gz\", \"rt\") as fh:\n    header = fh.readline().rstrip(\"\\n\").split(\"\\t\")[1:]\n    for line in fh:\n        f = line.rstrip(\"\\n\").split(\"\\t\")\n        counts[f[0]] = np.array([int(x) for x in f[1:]], dtype=np.float64)\n\ngenes = sorted(counts)\nmat = np.vstack([counts[g] for g in genes])          # genes x cells\nlib = mat.sum(axis=0)\nnorm = mat / np.maximum(lib, 1) * 1e4\n\nmeta_total = {}\nmeta_mito = {}\nwith open(\"/app/data/cells_meta.tsv\") as fh:\n    next(fh)\n    for line in fh:\n        bc, tot, mito, _dbl = line.rstrip(\"\\n\").split(\"\\t\")\n        meta_total[bc] = float(tot)\n        meta_mito[bc] = float(mito)\n\n# QC thresholds mandated by the instruction\nkeep_cols = [i for i, c in enumerate(header)\n             if meta_total.get(c, 0) >= 500 and meta_mito.get(c, 1) <= 0.2]\ncells_k = [header[i] for i in keep_cols]\nnorm_k = norm[:, keep_cols]\n\n# top-20 highly variable genes\nvar = norm_k.var(axis=1)\nhvg = np.argsort(var)[-20:]\nX = norm_k[hvg].T                                    # cells x genes\n\n# PCA to 2 dims via covariance eigendecomposition\nXc = X - X.mean(axis=0)\nC = (Xc.T @ Xc) / max(len(Xc) - 1, 1)\nvals, vecs = np.linalg.eigh(C)\nP = Xc @ vecs[:, -2:]\n\n# k-means with k=4 and a fixed seed\nrng = np.random.default_rng(11)\nk = 4\ncent = P[rng.choice(len(P), k, replace=False)]\nfor _ in range(50):\n    d = ((P[:, None, :] - cent[None, :, :]) ** 2).sum(-1)\n    lab = d.argmin(1)\n    for j in range(k):\n        if (lab == j).any():\n            cent[j] = P[lab == j].mean(0)\n\ncanonical = [\"T-cell\", \"B-cell\", \"Myeloid\", \"NK-cell\"]\nmarker = {j: canonical[j % 4] for j in range(k)}\nrows = sorted(zip(cells_k, (marker[j] for j in lab)))\nwith open(\"/app/predictions.tsv\", \"w\") as fh:\n    for c, lbl in rows:\n        fh.write(c + \"\\t\" + lbl + \"\\n\")\nprint(\"wrote\", len(rows), \"labels\")\nPYEOF\n\nif [ -f /tests/grade.py ]; then python3 /tests/grade.py || true; fi\n"
+  },
+  "env_files": {
+    "environment/data/gen_inputs.py": "#!/usr/bin/env python3\n\"\"\"Deterministic generator for the shipped scRNA-seq inputs (seed 7).\n\nRe-creates counts.tsv.gz and cells_meta.tsv byte-identically. Every 37th\ncell is planted low-quality (mito 0.9) so QC filtering is verifiable. The\ngold labeling is NOT generated here: the grader re-derives it from oracle\nseed 99 inside tests/ at verify time.\n\"\"\"\n\nimport gzip\nimport sys\n\nimport numpy as np\n\nN_CELLS, N_GENE_BASE = 600, 37\nTYPES = [\"T-cell\", \"B-cell\", \"Myeloid\", \"NK-cell\"]\nMARKERS = {\n    \"T-cell\": [\"CD3D\", \"CD3E\", \"TRAC\"],\n    \"B-cell\": [\"CD79A\", \"MS4A1\", \"CD19\"],\n    \"Myeloid\": [\"LYZ\", \"S100A8\", \"FCGR3A\"],\n    \"NK-cell\": [\"NKG7\", \"GNLY\", \"KLRD1\"],\n}\n\n\ndef main():\n    out = sys.argv[1] if len(sys.argv) > 1 else \".\"\n    rng = np.random.default_rng(7)\n    barcodes = [f\"CELL{i:04d}\" for i in range(N_CELLS)]\n    genes = [f\"GENE{i:02d}\" for i in range(N_GENE_BASE)]\n    for ms in MARKERS.values():\n        genes.extend(ms)\n    true_type = [TYPES[i % 4] for i in range(N_CELLS)]\n\n    mat = rng.poisson(0.5, (len(genes), N_CELLS)).astype(int)\n    for gi, g in enumerate(genes):\n        for ci, t in enumerate(true_type):\n            if g in MARKERS[t]:\n                mat[gi, ci] += rng.poisson(12)\n\n    with gzip.open(f\"{out}/counts.tsv.gz\", \"wt\") as fh:\n        fh.write(\"gene\\t\" + \"\\t\".join(barcodes) + \"\\n\")\n        for gi, g in enumerate(genes):\n            fh.write(g + \"\\t\" + \"\\t\".join(str(x) for x in mat[gi]) + \"\\n\")\n\n    with open(f\"{out}/cells_meta.tsv\", \"w\") as fh:\n        fh.write(\"cell\\ttotal_counts\\tmito_pct\\tdoublet_score\\n\")\n        for ci, bc in enumerate(barcodes):\n            tot = int(mat[:, ci].sum())\n            mito = 0.9 if ci % 37 == 0 else float(rng.uniform(0.01, 0.15))\n            dbl = float(rng.uniform(0, 1))\n            fh.write(f\"{bc}\\t{tot}\\t{mito:.3f}\\t{dbl:.3f}\\n\")\n    print(\"regenerated counts.tsv.gz + cells_meta.tsv (deterministic)\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "environment/data/README.txt": "Synthetic scRNA-seq inputs for the clustering benchmark task.\n\ncounts.tsv.gz   genes x cells UMI count matrix (600 cells, 49 genes incl.\n                12 marker genes across 4 planted cell types; numpy seed 7).\ncells_meta.tsv  per-cell total counts / mitochondrial fraction / doublet\n                score, drawn from the same seed. Every 37th cell is\n                planted low-quality (mito 0.9) and must be QC-excluded.\ngen_inputs.py   deterministic generator for both files.\n\nThe gold labeling is NOT shipped; the grader re-derives it from an\nindependent oracle seed (99) inside tests/ at verify time.\n"
+  },
   "task_toml": {
     "schema_version": "1.4",
-    "task": {"name": "bioforge/mock-peak-caller", "version": "0.1.0",
-             "description": "mock", "keywords": ["chipseq"]},
-    "metadata": {"category": "computational-biology", "difficulty": "medium",
-                 "metric": "f1", "generated_by": "bioforge-harbor"},
-    "agent": {"timeout_sec": 600.0},
-    "verifier": {"timeout_sec": 300.0},
-    "environment": {"cpus": 2, "memory_mb": 4096, "storage_mb": 10240, "gpus": 0}
+    "task": {
+      "name": "bioforge/scrna-cluster-bench",
+      "version": "0.2.0",
+      "description": "Cluster a synthetic scRNA-seq matrix under QC constraints and match a re-derived gold labeling (ARI + partial-credit constraints).",
+      "keywords": [
+        "scrnaseq",
+        "clustering",
+        "ari"
+      ]
+    },
+    "metadata": {
+      "category": "computational-biology",
+      "difficulty": "hard",
+      "metric": "ari",
+      "generated_by": "bioforge-harbor"
+    },
+    "agent": {
+      "timeout_sec": 600.0
+    },
+    "verifier": {
+      "timeout_sec": 600.0
+    },
+    "environment": {
+      "cpus": 2,
+      "memory_mb": 4096,
+      "storage_mb": 10240,
+      "gpus": 0
+    }
   },
-  "provenance": {"paper_id": "epmc-PMC100", "title": "Mock", "doi": "10.0/x",
-                 "pmcid": "PMC100", "url": "https://europepmc.org/article/PMC/100",
-                 "source_db": "europepmc"},
+  "provenance": {
+    "paper_id": "epmc-PMC100",
+    "title": "Mock",
+    "doi": "10.0/x",
+    "pmcid": "PMC100",
+    "url": "https://europepmc.org/article/PMC/100",
+    "source_db": "europepmc"
+  },
   "category": "computational-biology",
-  "difficulty": "medium",
-  "keywords": ["chipseq"],
-  "metric": "f1",
-  "notes": ["synthetic data", "shortcut probe: gold file not agent-readable"]
+  "difficulty": "hard",
+  "keywords": [
+    "scrnaseq",
+    "clustering",
+    "ari"
+  ],
+  "metric": "ari",
+  "notes": [
+    "synthetic data (numpy seed 7); no real single-cell data shipped",
+    "shortcut probe: gold labeling re-derived at verify time from oracle seed 99, never baked into the image",
+    "grader partial credit: 0.7*ARI + 0.3*constraint pass rate"
+  ]
 }

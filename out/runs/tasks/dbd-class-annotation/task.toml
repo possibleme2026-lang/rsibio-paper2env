@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/dbd-class-annotation"
+version = "0.2.0"
+description = "Implement a statistically calibrated DBD-class annotation pipeline (exact PWM p-values, Bonferroni threshold, competitive binding resolution) and annotate 520 candidate regulatory sequences."
+keywords = ["transcription-factor", "DNA-binding-domain", "PWM", "p-value", "annotation"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "macro_f1"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.1101/2024.12.20.629625"
+source_doi = "10.1101/2024.12.20.629625"
+source_url = "https://doi.org/10.1101/2024.12.20.629625"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

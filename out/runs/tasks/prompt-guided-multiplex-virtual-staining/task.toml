@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/prompt-guided-multiplex-virtual-staining"
+version = "0.2.0"
+description = "Synthesise five subcellular channels from a single DNA channel using biological prompts, calibrated on paired training data and scored against hidden multiplex ground truth."
+keywords = ["virtual-staining", "multiplex-imaging", "semantic-supervision", "image-synthesis", "weak-supervision"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "pcc"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.07.31.741995"
+source_doi = "10.64898/2026.07.31.741995"
+source_url = "https://doi.org/10.64898/2026.07.31.741995"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

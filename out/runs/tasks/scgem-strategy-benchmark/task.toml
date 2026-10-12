@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/scgem-strategy-benchmark"
+version = "0.2.0"
+description = "Rebuild an 18-strategy single-cell GEM construction benchmark: build per-cell reaction activity models from scRNA-seq counts and GPR rules, score accuracy/robustness/specificity, and select the winning strategy."
+keywords = ["single-cell metabolism", "genome-scale metabolic model", "GPR rules", "benchmark", "scRNA-seq"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "jaccard"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.02.742346"
+source_doi = "10.64898/2026.08.02.742346"
+source_url = "https://doi.org/10.64898/2026.08.02.742346"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/mcsa-cyclic-peptide-motif"
+version = "0.2.0"
+description = "Multiple circular sequence alignment to recover conserved motif in head-to-tail cyclic peptides."
+keywords = ["MCSA", "cyclic peptides", "motif discovery", "sequence alignment"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "rotation_accuracy"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.28.741376"
+source_doi = "10.64898/2026.07.28.741376"
+source_url = "https://doi.org/10.64898/2026.07.28.741376"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/brian-diffusion-prior-streamlines"
+version = "0.2.0"
+description = "Re-implement diffusion-informed streamline propagation (BRIAN) with a three-stage per-tumour curriculum over a five-metric objective, and test it against isotropic and single-tensor nulls."
+keywords = ["diffusion-mri", "odf", "streamline-tractography", "tumour-growth-modelling", "dice", "glioblastoma"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "dice"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.30.741684"
+source_doi = "10.64898/2026.07.30.741684"
+source_url = "https://doi.org/10.64898/2026.07.30.741684"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

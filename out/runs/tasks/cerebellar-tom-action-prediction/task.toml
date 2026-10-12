@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/cerebellar-tom-action-prediction"
+version = "0.2.0"
+description = "Multivariate cerebellar morphometry analysis linking Crus II to explicit Theory of Mind and VIIB/vermis to nonverbal action prediction in early childhood."
+keywords = ["neuroimaging", "cerebellum", "theory-of-mind", "action-prediction", "FDR", "cross-validation"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "f1"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.03.742430"
+source_doi = "10.64898/2026.08.03.742430"
+source_url = "https://doi.org/10.64898/2026.08.03.742430"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

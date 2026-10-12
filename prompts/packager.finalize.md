@@ -11,7 +11,7 @@ for publication as a Harbor task directory.
    `source_pmcid`, `source_abstract_digest`.
 3. `instruction.md` states inputs, outputs, scoring rule, and constraints
    without leaking the gold standard.
-4. `tests/test.sh` is the single entrypoint and writes `/app/rewards.json`.
+4. `tests/test.sh` is the single entrypoint and writes `/logs/verifier/reward.json`.
 5. `REVIEW.md` (if present) is honest about limitations.
 
 ## Output format (STRICT)

@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/ga-gb-fold-switching-benchmark"
+version = "0.2.0"
+description = "Compute benchmark metrics comparing deep learning predictions to experimental fold-state populations in the GA/GB fold-switching system."
+keywords = ["protein-folding", "fold-switching", "benchmark", "deep-learning", "spearman", "rmse"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "mean_absolute_error"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.02.742283"
+source_doi = "10.64898/2026.08.02.742283"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

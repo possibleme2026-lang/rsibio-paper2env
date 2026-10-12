@@ -48,7 +48,7 @@ class TestEndToEnd(unittest.TestCase):
         self.assertEqual(out.status, "ok", out.to_dict())
         # set-level manifest written
         manifest = (tmp / "tasks" / "manifest.jsonl").read_text(encoding="utf-8")
-        self.assertIn("bioforge/mock-peak-caller", manifest)
+        self.assertIn("bioforge/scrna-cluster-bench", manifest)
 
     def test_state_records_all_stages(self):
         tmp = Path(tempfile.mkdtemp())

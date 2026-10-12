@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/lrt-microbiome-sampling-methods"
+version = "0.2.0"
+description = "Decontaminate 16S ASV data from oral rinse, BAL and bronchial brushing, then quantify how far sampling method drives community structure, which ASVs are method indicators, and whether cancer status is detectable."
+keywords = ["microbiome", "16S-rRNA", "ASV", "PERMANOVA", "indicator-species", "low-biomass"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "composite_constraint_score"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.08.02.742334"
+source_doi = "10.64898/2026.08.02.742334"
+source_url = "https://doi.org/10.64898/2026.08.02.742334"
+
+[agent]
+timeout_sec = 3600.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

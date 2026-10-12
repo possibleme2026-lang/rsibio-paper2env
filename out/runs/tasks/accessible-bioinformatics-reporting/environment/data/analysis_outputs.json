@@ -1,0 +1,20 @@
+{
+  "study": "RNA-seq comparing treated and control samples",
+  "differential_expression": {
+    "up": [
+      {"gene": "TP53", "log2FC": 1.8, "pvalue": 1.2e-5},
+      {"gene": "MKI67", "log2FC": 1.1, "pvalue": 4.5e-4}
+    ],
+    "down": [
+      {"gene": "CDKN1A", "log2FC": -2.1, "pvalue": 3.4e-6},
+      {"gene": "GAPDH", "log2FC": -0.3, "pvalue": 0.02}
+    ]
+  },
+  "enrichment": [
+    {"term": "p53 signaling pathway", "padj": 0.001},
+    {"term": "apoptosis", "padj": 0.002}
+  ],
+  "figures": [
+    {"id": "Fig1", "caption": "Volcano plot of differential expression"}
+  ]
+}

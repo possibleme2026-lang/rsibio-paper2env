@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/fish-morphology-life-history-phylo-prediction"
+version = "0.2.0"
+description = "Phylogenetically corrected prediction of fish life-history axes from lateral-view morphology for 50 data-deficient species."
+keywords = ["phylogenetics", "life-history", "morphology", "comparative-methods", "fisheries"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "pearson_r"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.1101/2025.11.12.688009"
+source_doi = "10.1101/2025.11.12.688009"
+source_url = "https://doi.org/10.1101/2025.11.12.688009"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

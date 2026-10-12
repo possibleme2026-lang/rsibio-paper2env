@@ -1,0 +1,1524 @@
+{
+  "records": [
+    {
+      "paper_id": "10.1101/2025.08.28.672370",
+      "title": "COMPARING THE EFFICACY OF CONVENTIONAL SURVEY METHODS TO EDNA IN A RAPID MULTI-TAXA SURVEY OF A TROPICAL RAINFOREST ECOSYSTEM",
+      "abstract": "Madagascar is globally recognized for its exceptional biodiversity and endemism yet remains severely under-sampled for many taxa. We evaluate the effectiveness of environmental DNA (eDNA) metabarcoding as a rapid, non-invasive method for surveying vertebrate biodiversity in the Makira Forest Protected Area (MFPA), comparing its performance to conventional surveys across a range of vertebrate taxa. eDNA sampling detected 158 OTUs across 17 sites, outperforming conventional surveys in birds (p = 0.000107), mammals (p = 0.000718) amphibians (p = 0.000725), reptiles (p = 0.000877) and ray-finned fish (p = 0.00788). We further examined the result for ray-finned fish by modelling species-accumulation curve asymptotes which supported this result. However, significant primer bias and amplification inconsistencies were observed, particularly in amphibian detections, and a high proportion of OTUs could not be resolved to species level due to a combination of taxonomic gaps in reference databases, DNA degradation affecting sequence quality or length, and marker-specific limitations. We demonstrate, using species accumulation curves of our eDNA data and inventoried taxa lists of the MFPA, that the widespread practice of considering only resolved OTUs, rather than all unresolved OTUs, significantly underestimates biodiversity. This study underscores both the promise and current limitations of eDNA as a tool for tropical biodiversity assessment, specifically when compared to conventional sampling techniques. Combining eDNA and conventional survey methods increased species detection rates by 66.4% in comparison to the use of visual surveys alone, highlighting their complementary strengths and reinforcing the value of integrated monitoring strategies for biodiversity-rich, data-deficient regions.",
+      "doi": "10.1101/2025.08.28.672370",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1002/edn3.70301",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "ecology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672370"
+    },
+    {
+      "paper_id": "10.1101/2025.01.29.635579",
+      "title": "SNPBag: A Foundation Model for Multitask Genome-Scale SNP Analysis",
+      "abstract": "Millions of human genomes have been genotyped by national biobanks worldwide. Training large language models (LLM) with this data may lead to a universal model of human genome with tremendous potential. Yet the quadrillions (1015) of nucleotides-- resulting from genome length multiplied by population size--pose formidable challenges for modeling. In this study, we propose a novel AI framework designed to scale with this data and support diverse analytical tasks. To demonstrate this scheme, we developed SNPBag--a foundation model focusing on single nucleotide polymorphism (SNP). With 0.8 billion parameters, it is trained on one million synthesized human genomes, corresponding to a total of 6 trillion SNP tokens. SNPBag showed superior performance in benchmarking of multiple tasks. In genotype imputation, it achieves state-of-the-art (SOTA) accuracy. In haplotype phasing, it rivals the best method with a 72-fold speedup. By encoding 6 million SNPs per genome into a 0.75 MB embedding, SNPBag enables efficient storage, transfer and downstream applications. In particular, the genome embeddings facilitate rapid ancestry inference across global populations and detection of genetic relationships up to 12th-degree relatives. Collectively, SNPBag introduces a new paradigm for scalable, unified and multitask analysis of the ever-growing human variation data.",
+      "doi": "10.1101/2025.01.29.635579",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.01.29.635579"
+    },
+    {
+      "paper_id": "10.1101/2025.07.17.665394",
+      "title": "Stretching the Limits: From Planar-Biaxial Stress-Stretch to Arterial Pressure-Diameter",
+      "abstract": "Understanding the physiological condition of the vascular system is critical to explain, treat, and manage vascular disease. Numerous experimental and computational studies characterize the mechanical behavior of arterial tissue under controlled laboratory conditions. However, translating this knowledge into physiologically realistic conditions remains challenging. Key difficulties include selecting suitable and relevant test methods, minimizing uncertainty, and ensuring robust model validation. We present a novel integrative approach to translate laboratory experiments on arterial samples into clinically relevant pressure-diameter behavior. We perform controlled planar-biaxial tests on carotid arteries under three stretch ratios and generate axial and circumferential stress-stretch data to calibrate a fiber-reinforced soft tissue model. Using an analytical thick-walled cylindrical model, we predict subject-specific pressure-diameter behavior, informed by arterial prestretches from ring opening experiments. We systematically compare predictions against extension-inflation experiments on tubes from the same artery by applying controlled pairs of axial stretch and inner pressure, while recording outer diameter. We quantify prediction error in absolute and relative stretch regimes and evaluate the importance of the load-free reference dimensions. Results show how planar-biaxial tests probe different stretch regimes compared to extension-inflation deformations, leading to extrapolation of model predictions. We demonstrate how the constitutive material parameters can be fitted to different biomechanical loading conditions and assess the sensitivity of the simulations to axial stretch and circumferential prestretch. Only when key model parameters are accurately captured and their uncertainty propagated, planar-biaxial stress-stretch data can reliably predict arterial pressure-diameter behavior.",
+      "doi": "10.1101/2025.07.17.665394",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1115/1.4070124",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioengineering"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.07.17.665394"
+    },
+    {
+      "paper_id": "10.1101/2025.05.16.654543",
+      "title": "Accounting for uncertainty in residual variances improves calibration of the Sum of Single Effects model for small sample sizes",
+      "abstract": "The Sum of Single Effects (SuSiE) model is a widely adopted method for genetic fine-mapping. We show that, in small-sample studies, the original SuSiE fitting procedure produces substantially higher rates of false positive findings. We show that a simple modification to SuSiE improves performance, especially in small-sample studies. This modification is particularly important for emerging molecular QTL applications in rare cell types and primary tissues where sample sizes are inherently limited.",
+      "doi": "10.1101/2025.05.16.654543",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.05.16.654543"
+    },
+    {
+      "paper_id": "10.1101/2025.08.20.671242",
+      "title": "A novel resistant starch supplement induced significant weight loss in obese/overweight dogs",
+      "abstract": "ObjectivesTo evaluate whether a resistant-starch containing supplement administered for 30 days would induce significant weight loss and lower body condition score (BCS) in overweight/obese dogs, compared to placebo.\n\nMethods21 home-based dogs in Norway completed the study. Study population included 15 breeds of which n=11 were male and n=10 female, ages ranged from 3 - 10 years (Mean 6.7). Weight and BCS were recorded at baseline (Day 0) and after 30 days feeding supplement A ( active ingredient). Subsequently, after a 5-day wash-out period with no supplement, all dogs received supplement B ( placebo) for a further 30 days, when they were re-weighed and BCS scored. Owners and the veterinarian overseeing the study were blinded to content of supplements.\n\nResultsThe resistant-starch-containing supplement led to statistically significant weight loss (0.45 {+/-} 0.57 kg, mean {+/-} 1SD; P = 0.002) with 17 of 21 dogs (77%) losing weight. A 0.5 unit reduction in BCS was noted (P = 0.009). Dogs lost some weight on placebo, but BCS did not change.\n\nClinical significanceThis novel supplement containing resistant-starch, beta-glucan, alpha-lipoic acid and probiotic can be used to induce weight loss in overweight/obese dogs.",
+      "doi": "10.1101/2025.08.20.671242",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "animal behavior and cognition"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.20.671242"
+    },
+    {
+      "paper_id": "10.1101/2025.08.22.671728",
+      "title": "Coherent Cross-modal Generation of Synthetic Biomedical Data to Advance Multimodal Precision Medicine",
+      "abstract": "Integration of multimodal, multi-omics data is critical for advancing precision medicine, yet its application is frequently limited by incomplete datasets where one or more modalities are missing. To address this challenge, we developed a generative framework capable of synthesizing any missing modality from an arbitrary subset of available modalities. We introduce Coherent Denoising, a novel ensemble-based generative diffusion method that aggregates predictions from multiple specialized, single-condition models and enforces consensus during the sampling process. We compare this approach against a multi-condition, generative model that uses a flexible masking strategy to handle arbitrary subsets of inputs. The results show that our architectures successfully generate high-fidelity data that preserve the complex biological signals required for downstream tasks. We demonstrate that the generated synthetic data can be used to maintain the performance of predictive models on incomplete patient profiles and can leverage counterfactual analysis to guide the prioritization of diagnostic tests. We validated the frameworks efficacy on a large-scale multimodal, multi-omics cohort from The Cancer Genome Atlas (TCGA) of over 10,000 samples spanning across 20 tumor types, using data modalities such as copy-number alterations (CNA), transcriptomics (RNA-Seq), proteomics (RPPA), and histopathology (WSI). This work establishes a robust and flexible generative framework to address sparsity in multimodal datasets, providing a key step toward improving precision oncology.\n\nAuthor SummaryTo make precision medicine a reality, doctors need to understand a patients status from many angles, using different data types like genetic information (omics) and tissue slide images (histopathology). The problem is that most patient records are incomplete, with one or more of these data types missing, which can limit the effectiveness of powerful predictive tools. We have built a generative AI system designed to learn the complex biological patterns that connect all these different data types. By looking at the patient data that is available, our system can then generate a realistic, synthetic version of any missing piece. We developed a novel method called Coherent Denoising to do this, which is flexible and helps protect patient privacy. We validated this approach on a large dataset of over 10,000 cancer patient profiles. We show that our AI-generated data is high-fidelity and can successfully complete these sparse patient profiles, allowing AI models for crucial tasks like cancer staging and survival prediction to work at their best even with incomplete patient data. We also demonstrate how this tool can be used to evaluate the potential impact of new tests, helping to prioritize which expensive diagnostic tests would be most beneficial for a patient.",
+      "doi": "10.1101/2025.08.22.671728",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pcbi.1013455",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.22.671728"
+    },
+    {
+      "paper_id": "10.1101/2025.08.11.669719",
+      "title": "Greenness-Assessed RP-HPLC Method for Budesonide Quantification in Layer-by-Layer Polymeric Nanoparticles: Validation, Stability, and Controlled Release in Colonic Delivery",
+      "abstract": "Robust and sustainable analytical tools are essential for the design, manufacture, and evaluation of advanced drug delivery systems. This study reports the first validated reversed-phase high-performance liquid chromatography (RP-HPLC) method for quantifying budesonide encapsulated within poly(lactic-co-glycolic acid) (PLGA)-based, layer-by-layer (LbL) coated nanoparticles intended for colonic delivery in inflammatory bowel disease (IBD). Using response surface methodology with a central composite design, optimal conditions were identified as acetonitrile:water (80:20, v/v) under isocratic mode, achieving complete separation within 5 min at a flow rate of 0.34 mL/min and detection at 244 nm. The method is buffer-free, rapid, and solvent-efficient, resulting in a favorable greenness profile, further confirmed by GAPI and NEMI assessments. Validation in line with ICH Q2(R2) demonstrated excellent linearity (R{superscript 2} > 0.999), precision (%RSD < 2 %), accuracy, specificity, and sensitivity (LOD: 0.04 {micro}g/mL; LOQ: 1.2 {micro}g/mL). Forced degradation studies under acidic, alkaline, oxidative, thermal, photolytic, and photostatic conditions showed that the LbL coating markedly enhanced drug stability, particularly against thermal and photostatic stress, while >75% degradation occurred in alkaline and oxidative environments. In vitro release profiling under simulated gastrointestinal conditions demonstrated sustained, pH-responsive release (20.6% over 48 h), consistent with colonic targeting. This validated, green, and stability-indicating method integrates controlled release assessment with comprehensive performance evaluation, providing a versatile platform for quality control of nanoparticulate drug delivery systems and supporting their progression from formulation development to clinical translation",
+      "doi": "10.1101/2025.08.11.669719",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1016/j.greeac.2025.100299",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "pharmacology and toxicology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.11.669719"
+    },
+    {
+      "paper_id": "10.1101/2025.05.05.652198",
+      "title": "What Helps Interface Projects in Ecology Work? Learnings on Facilitating Conditions from a Decade of Inter- and Transdisciplinary Research on Invasive Fish",
+      "abstract": "Ecological research for environmental management occupies a unique and demanding space at the interface of societal needs and academic research. Projects in this space must reconcile stakeholder involvement and real-world applicability with academic requirements such as disciplinary excellence and career advancement.\n\nHere, we present a post-hoc account of a 12-year inter- and transdisciplinary research initiative on the management of invasive gobies in central Europe. Based on a synthesis of inputs, outputs, and outcomes, we distill facilitating conditions that increased the likelihood of the project reaching its goals across political, administrative, societal, institutional, team, and individual levels. Rather than \"success factors\" in a deterministic sense, these are conditions and practices that created a favorable environment for both academic and applied outcomes. The interaction of these domains created windows of opportunity that could be seized for both scientific progress and societal impact.\n\nBy reflecting from the perspective of natural scientists directly engaged in such a project, we aim to complement existing social science frameworks with an insider view of the lived realities of inter- and transdisciplinary collaboration. Our retrospective can inform policy makers, funders, and institutions seeking to create enabling environments for interface research, and may support fellow natural scientists in proactively preparing the ground for their own initiatives.",
+      "doi": "10.1101/2025.05.05.652198",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "scientific communication and education"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.05.05.652198"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672730",
+      "title": "MIA-Jet: Multi-scale Identification Algorithm of Chromatin Jets",
+      "abstract": "The mammalian genome is organized into large-scale chromosome territories, compartments, domains, and at the smallest scale, chromatin loops and stripes. The newest element is a chromatin jet, a diffused line perpendicular to the main diagonal in the Hi-C contact map, which was reported in quiescent mammalian lymphocytes supporting a two-sided symmetric cohesin loop extrusion model. A similar structure is observed in Repli-HiC and related data, where relatively thin and straight chromatin fountains indicate coupling of DNA replication forks. However, the precise biological implications of these jet-like structures are unknown due to the limitations in computational methods. We developed MIA-Jet, a multi-scale ridge detection algorithm that can accurately detect jets of variable lengths, widths, and angles. When tested on Hi-C, Repli-HiC, ChIA-PET, ChIA-Drop, and Micro-C data in mouse, human, roundworm, and zebrafish cells, MIA-Jet outperformed existing methods. In human cells, jets were enriched in cohesin loading sites and early replication initiation zones. Applying MIA-Jet to Hi-C data generated from protein-degraded cells revealed that jets are dependent on cohesin and that depleting CTCF results in longer and less angled jets than wild-type. We envision MIA-Jet to be broadly applicable to any 3D genome mapping data, thereby providing new insights into the functional roles of chromatin jets.",
+      "doi": "10.1101/2025.08.27.672730",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672730"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672749",
+      "title": "TIPP-SD: A New Method for Species Detection in Microbiomes",
+      "abstract": "In this study, we present TIPP-SD (i.e., TIPP for Species Detection), a new technique for species detection in a microbiome sample. TIPP-SD uses a modified version of TIPP3, which is a recently developed abundance profiling tool based on maximum likelihood phylogenetic placement into marker gene taxonomies. TIPP-SD depends on a parameter (i.e., \"thresh-old\") for the required support for species detection, thus allowing us to compute a precision-recall curve as we vary this parameter. In comparing the precision-recall curves for TIPP-SD, TIPP3, Kraken2, Bracken, and Metapresence, we find that TIPP-SD improves on the other methods with respect to accuracy under conditions where some species occur in low abundance, or where there is sequencing error. Under easier conditions, TIPP-SD is close to the best of these methods. Finally, although TIPP-SD is slower than Kraken2 and Bracken, it is still fast enough to be used on large datasets.",
+      "doi": "10.1101/2025.08.27.672749",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pcbi.1014347",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672749"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672549",
+      "title": "CoCoBin: Graph-Based Metagenomic Binning via Composition-Coverage Separation",
+      "abstract": "MotivationMetagenomic binning is a critical step in metagenomic analysis, aiming to cluster contigs from the same genome into coherent groups. In contemporary workflows, most binning tools begin with the assembly of shotgun metagenomic sequencing data. The assembled contigs are then grouped into bins representing individual microbial genomes or species, typically using taxonomy-independent methods. Although several methods exist, metagenomic binning remains a challenging yet mandatory task, particularly in the context of complex and highly diverse microbial communities.\n\nResultsWe propose CoCoBin, a novel metagenomic binning tool explicitly designed for the effective binning of metagenomic contigs. In this study, we introduced an innovative approach for calculating contig similarity by separating composition and coverage information. The method begins by (1) assigning contigs into a cluster based on length ranges, (2) calculating contig similarity based on composition features (e.g., k-mer frequencies), and (3) calculating contig difference based on coverage features. These similarity measures are then integrated to construct a graph, where nodes represent contigs and edges represent the similarities between them. Finally, the Louvain algorithm is applied to the graph to cluster closely related contigs. CoCoBin was compared against several state-of-the-art binning tools: BusyBee Web, CONCOCT, MaxBin 2.0, MetaBAT 2, and MetaDecoder on nine simulated datasets, five mock community datasets, and one real dataset. The AMBER tool used to evaluate the binning results across all datasets shows that CoCoBin achieved the best performance regarding the number of bins identified, followed by its performance on the F1 score.\n\nAvailabilityThe source code of CoCoBin is available at https://github.com/cucpbioinfo/CoCoBin\n\nContactduangdao.w@chula.ac.th\n\nSupplementary informationSupplementary data are available at Bioinformatics online.",
+      "doi": "10.1101/2025.08.27.672549",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672549"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672714",
+      "title": "Longitudinal Multi-Organ Transcriptomic Atlas of Salt-Induced Hypertension",
+      "abstract": "BACKGROUNDSalt-sensitive hypertension is a prevalent and clinically significant subtype of hypertension, where increased dietary salt intake elevates blood pressure and causes injury to multiple organ systems. Despite extensive research, dynamic molecular changes and conserved versus organ-specific transcriptional programs in hypertensive multi-organ damage remain poorly understood. Defining complex molecular pathways both in a temporal sequence and in an organ-specific manner is essential for developing targeted, precision therapies to mitigate hypertensive disease burden.\n\nMETHODSWe generated a longitudinal multi-organ transcriptomic atlas of salt-sensitive hypertension using RNA sequencing of kidney cortex, kidney medulla, heart, and liver from Dahl salt-sensitive rats across four disease stages. A comprehensive bioinformatic analysis mapped dynamic transcriptional programs, evaluated 50 biological pathways, and defined upstream regulators. Histological and biochemical assays complemented transcriptomic analysis, while integration with human genome-wide association studies (GWAS) and compound-transcriptome analysis provided translational insights and identified candidate therapeutics.\n\nRESULTSSalt-induced hypertension elicited both shared and tissue-specific transcriptional programs that evolved with disease progression. The kidney medulla showed robust early immune activation with metabolic suppression, while the cortex exhibited transient metabolic activation before declining and initiating immune activation. The liver and heart showed time-dependent metabolic and inflammatory remodeling. Cross-organ comparisons revealed a shared early proliferative response that converged on proinflammatory and fibrotic signatures. Upstream regulator analysis identified 79 time- and tissue-specific transcription factors associated with gene expression dynamics. GWAS integration analysis revealed endocrine signaling, ion transport, lipid metabolism, and detoxification as conserved pathways across species, underscoring the translational relevance of the model and study. Predictive compound- transcriptome analyses identified kinase inhibitors targeting phosphoinositide 3-kinase, mechanistic target of rapamycin and cyclin-dependent kinases as top candidates to counteract maladaptive transcriptional programs.\n\nCONCLUSIONSThis study defines temporal and tissue-specific transcriptomic remodeling in salt-sensitive hypertension and highlights the need for precision interventions to prevent progressive organ damage.",
+      "doi": "10.1101/2025.08.27.672714",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1172/jci.insight.200841",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "physiology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672714"
+    },
+    {
+      "paper_id": "10.1101/2025.09.01.669131",
+      "title": "Olfactory performance explains duality of antennal architectural designs in Lepidoptera",
+      "abstract": "Male attraction by females through sex pheromones is widespread among Lepidoptera, and antennae are key olfactory organs during male orientation. Broadly speaking, two designs of antennae coexist in Lepidoptera: complex (pectinate) or stick-like (filiform) ones. Pectinate antennae have attracted attention because of their multiscale geometry, assumed to outperform filiform. Yet, the filiform design is by far more common. We compare the olfactory performance of the two designs using modeling, particle image velocimetry on 3D-printed scaled-up models, and computational simulations. In terms of absolute odor capture, pectinate antennae perform better at nearly all flying speeds. However, when considering drag, filiform designs are more energy-efficient than pectinate ones at low flight speeds, while the reverse holds at high speeds. This is due to the differential scaling of drag and molecule capture with flight speed. According to our results, small and slow moths would bear filiform antennae whereas big and fast moths would have pectinate ones, which is the general trend observed in Nature. We discuss exceptions to this general pattern and how species could evolve from one design to the other by investigating the influence of the antennal structural elements.",
+      "doi": "10.1101/2025.09.01.669131",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1098/rspb.2024.2946",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "physiology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.09.01.669131"
+    },
+    {
+      "paper_id": "10.1101/2022.11.02.514917",
+      "title": "Tensor-cell2cell v2 unravels coordinated dynamics of protein- and metabolite-mediated cell-cell communication",
+      "abstract": "SummaryCell-cell communication dynamically changes across time while involving diverse cell populations and ligand types such as proteins and metabolites. While single-cell transcriptomics enables its inference, existing tools typically analyze ligand types separately and overlook their coordinated activity. Here, we present Tensor-cell2cell v2, a computational tool that can jointly analyze protein- and metabolite-mediated communication over time using coupled tensor component analysis, while preserving each modality of inferred communication scores independently, as well as their data structures and distributions. Applied to brain organoid development, Tensor-cell2cell v2 uncovers dynamic, coordinated communication programs involving key proteins and metabolites across relevant cell types across specific time points.\n\nAvailability and implementationTensor-cell2cell v2 and its new coupled tensor component analysis are implemented in Python and available as part of the cell2cell framework at https://github.com/earmingol/cell2cell. This python library is available on PyPI. Analyses of this manuscript can be reproduced in a Code Ocean capsule at https://doi.org/10.24433/CO.0061424.v1 and online tutorials can be found at https://cell2cell.readthedocs.io.\n\nSupplementary informationSupplementary data are available at bioRxiv online.",
+      "doi": "10.1101/2022.11.02.514917",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1093/bioinformatics/btaf667",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "systems biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2022.11.02.514917"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672661",
+      "title": "EXPRESSION INSIGHTS INTO GASTRIC ADENOCARCINOMA: NETWORK ANALYSIS REVEALS KEY HUB GENES AND FUNCTIONAL MODULES",
+      "abstract": "Gastric cancer remains a leading cause of cancer-related mortality worldwide, with poor survival rates. To uncover its molecular basis, we performed weighted gene coexpression network analysis on RNA-seq data from 119 gastric adenocarcinoma (GAC) and peritumoral tissue (PTT) samples. We identified six key coexpression modules: MEmagenta, MEbrown, MEgreen, and MEturquoise showed strong positive correlations with GAC, whereas MEblack and MEblue were negatively correlated. Hub genes such as COL3A1, PGAM1, and CFL1 were among the most highly expressed in GAC samples compared to PTT. ROC analyses of selected hub genes yielded AUC values exceeding 0.80 for distinguishing GAC from PTT, underscoring their diagnostic potential. Integrating cellular deconvolution with module expression revealed that MEblack hub genes (TFF1, TFF2, GKN1, GKN2 and MUCL3) correlated positively with B-cell abundance and negatively with resting mast cells and neutrophils. Conversely, MEturquoise hub genes (COL1A2, COL3A1, TAGLN and SPARC) correlated strongly with Cance Associated Fibroblasts and inversely with B-cells, reflecting a collagen-rich stroma. We also observed overlapping expression profiles between GAC and PTT, indicating tumor heterogeneity and a molecular continuum between normal and neoplastic tissues. These integrated insights highlight candidate biomarkers and in GAC.",
+      "doi": "10.1101/2025.08.27.672661",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672661"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672583",
+      "title": "Leveraging learned representations and multitask learning for lysine methylation site discovery",
+      "abstract": "Lysine methylation is a dynamic and reversible post-translational modification of proteins carried out by lysine methyltransferase enzymes. The role of this modification in epigenetics and gene regulation is relatively well understood, but our understanding of the extent and the role of lysine methylation of non-histone substrates remains fairly limited. Several lysine methyltransferases which methylate non-histone substrates are overexpressed in a number of cancers and are believed to be key drivers of cancer progression. There is great incentive to identify the lysine methylome, as this is a key step in identifying drug targets. While numerous computational models have been developed in the last decade to identify novel lysine methylation sites, the accuracy of these model has been modest, leaving much room for improvement. In this work, we leverage the most recent advancements in deep learning and present a transformer-based model for lysine methylation site prediction which achieves state-of-the-art accuracy. In addition, we show that other post-translational modifications of lysine are informative and that multitask learning is an effective way to integrate this prior knowledge into our lysine methylation site predictor, MethylSight 2.0. Finally, we validate our model by means of mass spectrometry experiments and identify 68 novel lysine methylation sites. This work constitutes another contribution towards the completion of a comprehensive map of the lysine methylome.",
+      "doi": "10.1101/2025.08.27.672583",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1038/s41598-026-39136-9",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672583"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672581",
+      "title": "Predicting Organ-Specific Toxicity of Selective Androgen Receptor Modulators, using Transfer Learning on Graph Convolutional Networks",
+      "abstract": "Novel Quantitative Structure-Activity Relationship (QSAR) models were constructed using Graph Convolutional Networks (GCNs), to predict Drug-Induced Liver Injury (DILI), Drug-Induced Renal Injury (DIRI) and Drug-Induced Cardiotoxicity (DICT) of Selective Androgen Receptor Modulators (SARMs) - an emerging class of performance-enhancing drugs. Prior to training on DILI, DIRI and DICT datasets, the GCN QSAR models were first pre-trained on a variety of unrelated biomedical assay datasets, as an attempt to improve model performance via transfer learning. The success of the transfer learning was mixed; model performances were measurably improved via pre-training on certain datasets, by statistically weak increases. The optimal final QSAR models achieved overall accuracy scores of 68% for DILI (no significant improvement via ensemble modelling), 76% for DIRI (improved to 77% via ensemble modelling) and 65% for DICT (improved to 67% via ensemble modelling). Application of the most optimal singular models to a dataset of 25 SARMs predicted that 21 of the 25 SARMs are either DILI-positive, DIRI-positive, or both - which raises concern, given the rising use of SARMs. All SARMs except for one were predicted as DICT-negative. A novel definition of the Applicability Domain (AD) was used, intended for close relevance to the models, via generating three-dimensional graph embeddings, for each model. Convex hulls were fitted around training data embeddings, with a {+/-}10% buffer, defining the AD as the region of embedded chemical space covered by the convex hull, for a given model. Subsequent analysis found that a majority of DILI, DIRI and DICT testing data lay within the AD, alongside a majority of the SARMs - adding consensus to the reliability of the predictions.",
+      "doi": "10.1101/2025.08.27.672581",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "pharmacology and toxicology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672581"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672688",
+      "title": "Non-canonical Sodium Channel Isoforms Underlie Chamber Specific Cardiac Excitability",
+      "abstract": "Voltage-gated sodium (NaV) channels drive cardiac excitability. While NaV1.5 is the primary cardiac isoform, the composition and functional contributions of non-NaV1.5 isoforms in the heart remain unclear. Here, we developed a chemical-genetic mouse model (NaV1.5-GX) in which NaV1.5 can be selectively and reversibly inhibited by acyl- and aryl-sulfonamide compounds (GX drugs). NaV1.5-GX mice exhibited normal cardiac function at baseline, but acute GX drug administration caused profound conduction defects and arrhythmias. Whole-heart optical mapping revealed dose-dependent chamber-specific sensitivity to NaV1.5 inhibition, with the right ventricle (RV) being the most sensitive, followed by the left ventricle (LV), left atrium (LA), and right atrium (RA). Patch-clamp recordings of isolated cardiomyocytes with application of NaV isoform-selective inhibitors showed that NaV1.5 contributed 93% of sodium current in the LV, 81% in the RV and 78% in the LA. Non-NaV1.5 isoforms were differentially enriched across chambers: NaV1.8 in the LV, NaV1.1/1.3 in the RV, and NaV1.2/1.6/1.7 in the atria. These results reveal a surprising chamber-specific isoform landscape of cardiac sodium currents which may underlie the right ventricular predominant phenotype of Brugada syndrome and highlight non-NaV1.5 isoforms as potential mediators of chamber-specific cardiac pathologies and as pharmacological targets.",
+      "doi": "10.1101/2025.08.27.672688",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "physiology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672688"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672683",
+      "title": "Evaluation of Deep Learning Algorithms to Predict Multiple Dementia-Related Neuropathologies from Brain MRI, Clinical and Genetic Data",
+      "abstract": "Alzheimers disease and related dementias (ADRD) involve overlapping neurodegenerative and vascular pathologies--such as amyloid-{beta} (A{beta}), tau, cerebral amyloid angiopathy (CAA), TDP-43, and alpha-synuclein--that complicate diagnosis and treatment. While PET and CSF biomarkers are useful for detecting A{beta} and tau, they are invasive, expensive, and not widely available. In contrast, magnetic resonance imaging (MRI) is non-invasive and widely accessible, offering an opportunity for pathology prediction when combined with deep learning. Most prior studies have focused on single-pathology detection, but there remains a need for models that can jointly predict multiple co-occurring pathologies. In this work, we evaluate deep learning models that integrate structural MRI with demographic, clinical, and genetic data to classify six autopsy-confirmed neuropathologies: A{beta}, tau, CAA, TDP-43, hippocampal sclerosis, and dementia with Lewy bodies. We compare our hybrid deep learning model to AutoGluon, an automated machine learning framework. Our findings support the potential of multimodal AI to enable non-invasive, comprehensive neuropathological profiling in ADRD.",
+      "doi": "10.1101/2025.08.27.672683",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672683"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672680",
+      "title": "Using Diffusion Transformers to Generate Synthetic Diffusion Scalar Maps for Data Augmentation",
+      "abstract": "Generation of high-quality synthetic brain MRI data could be beneficial for advancing neuroimaging research, particularly when access to large-scale, labeled datasets is limited. In this work, we leverage a pretrained Diffusion Transformer (DiT) architecture to synthesize 3D mean diffusivity (MD) scalar maps from the Cam-CAN dataset. To adapt the DiT model--originally trained on 2D natural images--for 3D neuroimaging data, we implemented a preprocessing strategy that tiles 2D slices from 3D volumes into composite 2D images, enabling effective finetuning. The quality of the generated synthetic images was evaluated using Multi-Scale Structural Similarity (MS-SSIM) and Maximum Mean Discrepancy (MMD) metrics, demonstrating high fidelity and anatomical coherence. To assess the utility of synthetic data in downstream tasks, we conducted transfer learning experiments for dementia classification on the ADNI dataset. A sex classification model, trained on both real and synthetic Cam-CAN data, was repurposed for this task, showing that synthetic samples can enhance model performance. These results highlight the potential of diffusion-based generative models for augmenting neuroimaging datasets and supporting clinical applications.",
+      "doi": "10.1101/2025.08.27.672680",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672680"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672670",
+      "title": "Identification and characterization of host-directed therapeutics for tuberculosis using a versatile human 3D tuberculoma bioplatform",
+      "abstract": "Host-directed therapies (HDT) represent a pivotal strategy in combating both drug-susceptible and drug-resistant tuberculosis (TB). Current evaluations, however, show limited success in animal models and clinical settings, emphasizing the need for more effective HDT candidates. With few druggable targets validated within granulomas, it is essential to verify the effectiveness of HDT candidates identified through traditional macrophage cultures in the context of the tuberculous granuloma milieus. Bioengineering a scalable, high-throughput screening (HTS) platform that replicates the physiological microenvironments in the hallmark tubercular lesions could significantly improve the identification of relevant HDT candidates and new treatment strategies. Here, we developed a facile, HTS-compatible bioplatform that generates tuberculoma-emulating structures, following three-dimensional (3D) co-cultures of human cells and pathogenic mycobacteria. Employing high-content imaging alongside immunological and transcriptomic approaches, we demonstrated that these 3D structures exhibit classic tuberculoma attributes and develop crucial transformations. Utilizing this system, we screened antibody biosimilars and potential HDT compounds. Our findings demonstrate the systems versatility in discovering antimicrobials and HDT candidates that effectively reduce mycobacterial burdens and granuloma lesions, while elucidating their immune mechanisms within 3D milieus. Many compounds effective in two-dimensional (2D) cultures were ineffective once granulomas formed in our 3D model. Notably, several promising compounds were found to induce rapid autophagy flux, and we validated the effectiveness of one such compound, the multi-kinase inhibitor AT9283, in a mouse model. Our findings highlight several HDT candidates for potential repurposing in TB treatment, offering a robust tool for accelerating therapeutic discoveries and advancing translational research for TB and other granulomatous diseases.\n\nSummarySafer and shorter treatment regimens for tuberculosis (TB) are urgently needed. Host-directed therapies (HDT) are being explored to enhance antibiotic regimens and address antimicrobial resistance. To expedite the discovery of HDT candidates and the development of new treatment strategies, scalable in vitro systems are needed that can replicate the critical features and microenvironments of TB lesions in a format compatible with high-throughput screening (HTS). We developed an HTS-compatible bioplatform using 3D co-cultures of human cells and fluorescent mycobacteria, creating tuberculoma-like structures with classic solid, necrotic, and cavitary transformations that exhibit crucial microenvironments. This facile system enabled us to screen antibody biosimilars and HDT compounds in 3D human in vitro tuberculomas, identifying candidates that inhibited mycobacterial growth and granuloma lesions while revealing potential innate immune mechanisms. The study revealed several promising HDT candidates that could be repurposed for TB treatment, introducing a versatile tool for screening therapeutic libraries. Additionally, it presents a framework for enhancing human in-vitro granuloma models, as advances in tissue-like systems emerge to recapitulate the architecture and multilineage differentiation in the lungs.",
+      "doi": "10.1101/2025.08.27.672670",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC0",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "immunology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672670"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672700",
+      "title": "Development of a Virus Particle-Based Antibody-Dependent Cellular Phagocytosis (ADCP) Assay for HIV",
+      "abstract": "Antibody-dependent cellular phagocytosis (ADCP) is an Fc-mediated effector function that contributes to the clearance of pathogens, including HIV. Conventional bead-based ADCP assays using recombinant Env proteins offer scalability and reproducibility but do not recapitulate the structural, conformational and glycan features of Env on intact virions, potentially limiting their physiological relevance. Here, we describe a virus particle-based ADCP assay that preserves the native membrane embedded conformation and glycosylation of the HIV envelope glycoprotein (Env), features critical for antibody recognition and Fc{gamma} receptor engagement. The assay utilizes THP-1 human monocytic cell line, as effector cells and sucrose purified inactivated HIV-1 virions coupled with fluorescent beads, as phagocytic targets. This platform enables sensitive and reproducible measurement of antibody-mediated phagocytosis in a biologically relevant antigen presentation context. The assay supports functional profiling of monoclonal and polyclonal antibodies across multiple species and provides a practical framework for evaluating Fc effector responses in HIV infection and vaccine studies.",
+      "doi": "10.1101/2025.08.27.672700",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "immunology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672700"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672687",
+      "title": "Immune Remodeling and Dysbiosis May Distinguish the Microenvironments of Gastric Adenocarcinoma and Peritumoral Tissue",
+      "abstract": "The gastric tumor microenvironment is dynamically shaped by the interactions between the local microbiota and the host immune system, although the functional integration of these elements remains incompletely understood. In this study, we characterized microbial diversity, immune cell composition, and immune-related gene expression profiles in samples of gastric adenocarcinoma (GAC) and adjacent peritumoral tissue (PTT), aiming to elucidate their functional organization. A total of 106 samples of 75 patients were analyzed using bulk RNA-Seq expression profiling, immune deconvolution, and bacterial taxonomic reconstruction. While alpha diversity remained preserved between GAC and PTT, distinct compositional differences emerged: GAC was enriched with Pseudomonadota, Enterobacteriaceae, and Escherichia, whereas PTT exhibited a predominance of Helicobacteraceae and Helicobacter. Immune deconvolution revealed an expansion of cancer-associated fibroblasts (CAFs) and mast cells in GAC, correlated with higher expression levels of TGFB1 and FOXP3, while neutrophils and B cells predominated in PTT. Integrated analysis demonstrated that GAC formed dense and cohesive networks connecting pro-inflammatory bacteria, activated immune cells, and inflammatory genes such as IL1B, CXCL8, and IFNG. In contrast, PTT exhibited dispersed networks and negative correlations, suggesting a less structured, tolerogenic environment. Our findings indicate that gastric cancer progression involves not only compositional shifts in microbiota and immune cells but also the active construction of functionally integrated inflammatory networks, providing new insights into potential therapeutic targets at the microbiome-immune interface.",
+      "doi": "10.1101/2025.08.27.672687",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genetics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672687"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672677",
+      "title": "Generating diffusion MRI scalar maps from T1-weighted images using Reversible GANs",
+      "abstract": "Diffusion tensor imaging (DTI) provides valuable insights into brain tissue microstructure, but acquiring high-quality DTI data is time-intensive and not always feasible. To mitigate data scarcity and enhance accessibility, we investigate the generation of synthetic DTI scalar maps--specifically mean diffusivity (MD)--from structural 3D volumetric T1-weighted brain MRI using a reversible generative adversarial network (RevGAN). Unlike conventional pipelines requiring multiple steps, our approach enables a single-step translation from T1 to diffusion-derived measures. We assess the quality and utility of the synthetic maps in two downstream tasks: sex classification and Alzheimers disease classification. Performance comparisons between models trained on real and synthetic DTI maps demonstrate that RevGAN-generated images retain meaningful microstructural features and offer competitive accuracy, underscoring their potential for data augmentation and analysis in neuroimaging workflows. We also examine how well models trained on these data generalize to a new population dataset from India (NIMHANS cohort).",
+      "doi": "10.1101/2025.08.27.672677",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672677"
+    },
+    {
+      "paper_id": "10.1101/2025.08.31.673378",
+      "title": "Complex Patterns of Altered White Matter Structural Connectivity within a 'subjective valuation network' in Treatment-Resistant Depression",
+      "abstract": "BackgroundTreatment-resistant depression (TRD) poses a significant clinical challenge, demanding a deeper understanding of its neurobiological underpinnings to improve therapeutics. We examined white matter microstructure and structural connectivity in TRD, focusing on the  subjective valuation network (SVN), which captures motivated behavior, reward processing, and emotional regulation circuits commonly altered in depression. This allowed us to identify potential neuroimaging biomarkers associated with treatment resistance.\n\nMethodsDiffusion tensor imaging (DTI) data were acquired from a sample of age-and-gender balanced individuals with TRD (n=44; female = 24, male=11, non-binary/unchecked =7) and non-depressed controls (n=42; female=27, male =12, non-binary/unchecked=5). Tract-Based Spatial Statistics were used to compare whole-brain white matter integrity differences between groups. Probabilistic tractography was then used to assess fractional anisotropy (FA) and white matter structural connectivity within the SVN across groups. SVN was defined a priori based on converging functional connectivity studies and included key regions such as the ventromedial prefrontal cortex (vmPFC), anterior cingulate cortex (ACC), ventral striatum, and insula and their connecting white matter tracts. Additionally, correlations between clinical measures of depression severity and cognition and structural features of the networks white matter fibers (i.e. FA and structural connectivity) were explored.\n\nResultsCompared to non-depressed controls, individuals with TRD exhibited reduced FA within the left uncinate fasciculus, left inferior fronto-occipital fasciculus, and anterior cingulum, supporting widespread white matter integrity degradations in TRD. No correlations were found between FA and depression severity, suggesting a more specific association with anhedonic features. Whole-network measures of FA and structural connectivity of the SVN did not differ between groups. However, specific subcircuits structural connectivity within the SVN differed between groups; namely, the white matter tracts connecting the insula-vmPFC, striatum-insula, and striatum-vmPFC. Hyperconnectivity emerged for patients with TRD for tracts connecting the insula-vmPFC and striatum-vmPFC region-pairs, with exhibited hypoconnectivity between the striatum-insula. Exploratory analyses for the TRD group indicated the subcircuits with altered structural connectivity within the SVN correlated with depressive severity. This indicates subcircuit network alterations may associate with greater difficulty experiencing pleasure - a core symptom of depression and a potential marker of treatment resistance.\n\nConclusionsThis study provides evidence for wide-spread disruption of white matter microstructure and altered structural connectivity within specific subcircuits of the SVN in TRD. These findings point to an intricate pattern of structural hyper-and-hypo-connectivity within the subcircuits of the SVN which may underlie the core symptoms of TRD. The altered structural connectivity within the SVN may contribute to the pathophysiology of TRD, especially concerning the motivational and emotional deficits associated with anhedonia. Future research employing multimodal neuroimaging techniques and longitudinal designs is warranted to further elucidate the functional consequences of these structural abnormalities and their potential as predictive biomarkers for personalized treatment interventions in TRD. Specifically, investigating how these white matter alterations change with successful treatment or targeted interventions aimed at improving anhedonia could inform more effective therapies for this challenging condition.",
+      "doi": "10.1101/2025.08.31.673378",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.31.673378"
+    },
+    {
+      "paper_id": "10.1101/2024.07.22.604239",
+      "title": "Multiscale characterization of Caenorhabditis elegans mutants to probe functional mechanisms of human actin pathological variants",
+      "abstract": "Actin plays a crucial role in diverse physiological processes by forming dynamic networks that determine cellular shape and mechanical properties. Non-Muscle Actinopathies (NMA) are rare diseases caused by de novo variants in human cytoskeletal {beta}-actin (ACTB) and {gamma}-actin (ACTG1) genes, ranging from missense mutations to whole gene deletions. Currently, the high clinical variability and genotype-phenotype correlations in NMA remain largely unresolved. To address this concern, we inserted nine mutations identified in patients in the C. elegans cytoplasmic actin orthologue act-2 and performed a quantitative multiscale characterization of these animal models. We uncovered various perturbations including micro-scale actin network defects, cell-scale abnormalities, morphogenesis failure, and weaker behavioural phenotypes. Notably, the severity of the observed defects correlates with the severity of patients symptoms. Thus, we provide evidence that such C. elegans models are relevant to investigate the mechanisms underlying NMA physiopathology and could ultimately be used to screen for therapeutic strategies.",
+      "doi": "10.1101/2024.07.22.604239",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1016/j.isci.2025.113652",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "cell biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.07.22.604239"
+    },
+    {
+      "paper_id": "10.1101/2025.04.13.648654",
+      "title": "Assessing plant phenological changes based on drivers of spring phenology",
+      "abstract": "Understanding plant phenological responses to climate warming is crucial for predicting changes in plant communities and ecosystems but challenging when relying on sensitivity analysis that is not based on drivers of spring phenology. In this article, we present a new measure phenological lag to quantify the overall effect of phenological constraints including insufficient winter chilling, photoperiod, and environmental stresses, based on observed response and that expected from species-specific changes in spring temperatures, i.e., changes in spring forcing (degree days) from warming and average temperature at budburst with the warmer climate. We applied this new analytical framework to a global dataset with 980 species and 1527 responses to synthesize observed changes in spring budburst (leafing or flowering) and investigate the mechanisms of differential phenological responses reported previously. We found longer phenological lags with experimental studies and native plants in flowering, likely due to more stressful environments associated with warmer and drier climate. Less forcing changes were mainly responsible for the smaller responses in leafing and flowering in boreal region (compared to temperate region) and in grass leafing (compared to trees and shrubs). Higher budburst temperatures also contributed to the smaller responses in flowering for experimental studies and with herbs and grasses. The effects of altitude, latitude, MAT, and average spring temperature change were minor (all combined <2.5% variations), while those of photoperiod and long-term precipitation were not significant in influencing spring phenology. Our method helps to determine mechanisms responsible for changes in spring phenology and differences in plant phenological responses.",
+      "doi": "10.1101/2025.04.13.648654",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "ecology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.04.13.648654"
+    },
+    {
+      "paper_id": "10.1101/2024.11.26.624747",
+      "title": "Synthetic ratio computation for programming population composition and multicellular morphology",
+      "abstract": "Recent advancements in genetic engineering have provided diverse tools for artificially synthesizing population diversity in both prokaryotic and eukaryotic systems. However, achieving precise control over the ratios of multiple cell types within a population derived from a single founder remains a significant challenge. In this study, we introduce a suite of recombinase-mediated genetic devices designed to achieve accurate population ratio control, enabling the distribution of distinct functionalities across multiple cell types. We systematically evaluated key parameters influencing recombination efficiency and developed data-driven models to reliably predict binary differentiation outcomes. Using these devices, we implemented parallel and series circuit topologies to create user-defined, complex cell fate branching programs. These branching devices facilitated the autonomous differentiation of precision fermentation consortia from a single founder strain, optimizing cell-type ratios for applications such as pigmentation and cellulose degradation. Beyond biomanufacturing, we engineered multicellular aggregates with genetically encoded morphologies by coordinating self-organization through cell adhesion molecules (CAMs). Our work provides a comprehensive characterization of recombinase-based cell fate branching mechanisms and introduces a novel approach for the bottom-up, high-resolution construction of synthetic consortia and multicellular assemblies.",
+      "doi": "10.1101/2024.11.26.624747",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1038/s41586-026-10259-3",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "synthetic biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.11.26.624747"
+    },
+    {
+      "paper_id": "10.1101/2025.08.31.672288",
+      "title": "Reliable Detection of SGLT2 Protein through Knockout-based Antibody Characterization and Optimized Procedures",
+      "abstract": "IntroductionSodium-glucose cotransporter 2 (SGLT2) is a key mediator of renal glucose reabsorption. Its pharmacological inhibition exerts cardio- and reno-protective benefits. Despite widespread clinical interest, reliable detection of SGLT2 protein remains challenging due to concerns regarding the specificity of available antibodies.\n\nMethodsThis study assessed the specificity of eight commercially available anti-SGLT2 antibodies by immunohistochemistry and Western blotting. Genetically engineered Sglt2-deficient mice and rats, generated via clustered regularly interspaced short palindromic repeats/CRISPR-associated protein 9 (CRISPR/Cas9) technology, were employed as definitive negative controls. Additionally, human kidney tissues, including renal cell carcinoma samples, were analyzed.\n\nResultsAmong the antibodies tested, few exhibited robust specificity, characterized by substantial immunostaining with minimal background in wild-type kidney tissues and complete absence of staining in Sglt2-deficient samples. In renal cell carcinoma samples, a validated antibody detected SGLT2 immunostaining in proximal tubules of non-tumor regions but not in tumor areas. Subcellular localization studies revealed that SGLT2 was enriched within proximal tubular microvilli, partially overlapping with its co-factor PDZK1IP1 (MAP17). LRP2 (megalin) and NHE3 were placed at the microvillar base and did not colocalize with SGLT2. Western blotting identified a specific SGLT2 band at approximately 55 kDa in kidney lysates using several antibodies under optimized procedures. This band was shifted to approximately 45 kDa after enzymatic removal of N-linked glycans. One antibody detected a weak band at the same molecular mass even in kidney lysates from Sglt2-deficient rodents.\n\nConclusionsConsiderable variability exists in the specificity of commercially available anti-SGLT2 antibodies. Only a limited number of antibodies are suitable for reliable detection of SGLT2 in rodent and human samples. Rigorous antibody characterization, including the use of knockout controls and optimized experimental conditions, is essential to ensure reproducibility and prevent misinterpretation in studies investigating the biological and pathophysiological roles of SGLT2.",
+      "doi": "10.1101/2025.08.31.672288",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1161/HYPERTENSIONAHA.125.26135",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "molecular biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.31.672288"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672513",
+      "title": "Copy number variation in the genome of four South American camelid species",
+      "abstract": "Copy number variation (CNV), a type of structural genomic variant, has been widely studied in humans, plants, and livestock. CNVs may contribute to phenotypic variation and traits of economic importance. Evaluating CNVs in domestic populations and their wild ancestors can reveal genetic changes associated with phenotypic differences that have emerged during domestication. In this study, whole-genome data from sixteen alpacas, six llamas, one guanaco, and one vicuna were used to investigate CNVs. A total of 4,247 CNVs were identified through genome-wide analysis. Functional analysis of Gene Ontology (GO) groups indicated that CNVs in alpacas are mainly related to immune-related genes, olfactory receptor genes, and keratinization. Species-level differences were observed, with the vicuna showing the least variation and the alpaca the most. This study provides the first CNV map for camelids and contributes to expanding knowledge of CNV diversity across the four South American camelid species.",
+      "doi": "10.1101/2025.08.28.672513",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672513"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672558",
+      "title": "DARKIN: A zero-shot benchmark for phosphosite-dark kinase association using protein language models",
+      "abstract": "MotivationProtein Language Models (pLMs) have emerged as powerful tools for capturing the intricate information encoded in protein sequences, facilitating various downstream protein prediction tasks. With numerous pLMs available, there is a critical need for diverse benchmarks to systematically evaluate their performance across biologically relevant tasks. Here, we introduce DARKIN, a zero-shot classification benchmark designed to assign phosphosites to understudied kinases, termed dark kinases. Kinases, which catalyze phosphorylation, are central to cellular signaling pathways. While phosphoproteomics enables the large-scale identification of phosphosites, determining the cognate kinase responsible for the phosphorylation event remains an experimental challenge.\n\nResultsIn DARKIN, we prepared training, validation, and test folds that respect the zero-shot nature of this classification problem, incorporating stratification based on kinase groups and sequence similarity. We evaluated multiple pLMs using two zero-shot classifiers: a novel, training-free k-NN-based method, and a bilinear classifier. Our findings indicate that ESM, ProtT5-XL, and SaProt exhibit superior performance on this task. DARKIN provides a challenging benchmark for assessing pLM efficacy and fosters deeper exploration of under-characterized (dark) kinases by offering a biologically relevant test bed.\n\nImplementationThe DARKIN benchmark data and the scripts for generating additional splits are publicly available at: https://github.com/tastanlab/darkin\n\nContactotastan@sabanciuniv.edu\n\nSupplementary informationSupplementary data are available at Bioinformatics online.",
+      "doi": "10.1101/2025.08.27.672558",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672558"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672595",
+      "title": "Studying a human genetic model of lung squamous cell carcinoma with organotypic cultures and xenografts uncovers distinct advantages of each system and implicates NOTCH1 loss in tumour development",
+      "abstract": "Selecting appropriate experimental systems is crucial in cancer research, where factors such as model relevance, cost, and resource availability guide decisions. A detailed understanding of the strengths and limitations of each model helps ensure their optimal use.\n\nWe recently developed a human lung squamous cell carcinoma (LUSC) model using genetically engineered human bronchial epithelial cells (hBECs). These were studied through organotypic air-liquid interface (ALI) cultures and standard in vitro assays, including proliferation, invasion, and anchorage-independent growth. However, we did not evaluate whether the same mutant hBECs behaved similarly in vivo, or if in vivo models offered distinct advantages.\n\nTo address this, we conducted a comparative phenotypic analysis of mutant hBECs derived from the same donor in both ALI cultures and xenografts in immunocompromised mice. Both models followed a similar oncogenic trajectory, involving squamous differentiation and activation of Nrf2 and PI3K/Akt pathways, characteristic of the classical LUSC subtype.\n\nHowever, some transcriptomic differences related to an increase in microtubule formation and cell motility in xenografts emerged. Additionally, xenograft gene expression profiles more closely matched classical LUSC tumours than ALI cultures.\n\nImportantly, we observed spontaneous squamous differentiation in the absence of SOX2 overexpression and detected selection for NOTCH1 mutations in specific in vivo mutants. Truncation of NOTCH1 promoted squamous differentiation and suppressed mucociliary features in ALI cultures, underscoring its role as a potential LUSC driver.\n\nIn summary, mutant hBECs in vitro and in vivo showed largely consistent phenotypes, validating both systems. However, in vivo models can enable the unbiased discovery of new genetic LUSC driver genes. This highlights the complementary value of integrating both model types in LUSC research.",
+      "doi": "10.1101/2025.08.28.672595",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "cancer biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672595"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672614",
+      "title": "Evaluation of Data-based Motion Correction Techniques for High Temporal Resolution Functional PET",
+      "abstract": "Functional Positron Emission Tomography (fPET) data offers novel insights into brain energy demands and molecular connectivity. Recent advances in improving temporal resolutions for this imaging technique have opened up new research possibilities. However, lower signal-to-noise ratios (SNR) inherent to short PET frames bring into question whether current realignment approaches still provide appropriate motion correction. Thus, we aimed to evaluate the effectiveness of standard motion correction methods and explore potential improvements for high temporal resolution fPET with 3s frames. We investigated two techniques aimed at improving the SNR to facilitate more accurate realignment of fPET images, in comparison to conventional motion correction: a deep-learning technique based on the application of a conditional generative adversarial network and an exponentially weighted sliding window average. Performance was evaluated by correlating rigid motion parameters between approaches and with simultaneously acquired fMRI data, and by assessing magnitudes of task-induced activation. Our results indicate that neither of the two methods substantially improve mitigation of motion artefacts. Given the increased computational effort of both techniques, we propose that the standard motion correction procedure is adequate for processing high temporal resolution fPET data. Nevertheless, future development of targeted strategies to enhance motion correction may further advance this imaging technique.",
+      "doi": "10.1101/2025.08.27.672614",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672614"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672590",
+      "title": "Evidence of spinal cord comparator modules for rapid corrections of movements",
+      "abstract": "Successful movement requires continuous adjustments in response to changes in internal and external environments. To do so, neural circuits continuously compare efference copies of motor commands with sensory feedback to respond to sensory prediction errors. Some responses need to be very fast, indicating that they likely occur within spinal cord circuits. Here, we describe spinal cord circuits involving dI3 neurons, showing that they receive multimodal sensory inputs and direct efferent copies from both Renshaw cells and motor neurons. We further show that they form connections to motor pools. Reducing dI3 neuronal activity diminished stumbling responses, as did disrupting Renshaw cell circuits, providing evidence for a comparator role of dI3 neurons for online corrections. Together, our findings reveal a pivotal role for dI3 neurons functioning as comparators of efference copies and external sensory feedback to mediate rapid corrections of ongoing movements.",
+      "doi": "10.1101/2025.08.27.672590",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672590"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672620",
+      "title": "A Reinforcement Learning and Sequential Sampling Model Constrained by Gaze Data",
+      "abstract": "Reinforcement learning models can be combined with sequential sampling models to fit choice-RT data. The combined models, known as RL-SSMs, explain a wide range of choice-RT patterns in repeated decision tasks. The present study shows how constraining an RL-SSM with eye gaze data can further enhance its predictive ability. Our model assumes that learned option values and relative gaze independently influence the accumulation of evidence prior to choice. We evaluated the model on data from two eye-tracking experiments (total N = 133) and find that it makes better out-of-sample predictions than other models with different ways of integrating values and gaze at the decision stage. Further, we show that it captures a variety of empirical effects, including the finding that choices become more accurate as the higher-value option receives a greater proportion of the total fixation time. The model can be used to understand how learned option values interact with visual attention to influence choice, joining together two major--but mostly separate--research traditions in the cognitive science of decision making.",
+      "doi": "10.1101/2025.08.27.672620",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pcbi.1014052",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "animal behavior and cognition"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672620"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672546",
+      "title": "Anyone can be the best: Impact of diverse methodologies on the evaluation of structural variant callers",
+      "abstract": "Structural variants (SVs) are medium and large-scale genomic alterations that shape phenotypic diversity and disease risk. Numerous methods have been proposed for discovering SVs, however their benchmarking has been inconsistent across studies, often resulting in contradictory findings. One of the main sources of conflicting evaluation re-sults is the lack of consistency in the SV callsets used as ground truth, ranging from curated callsets released by consortia to more recent approaches that construct callsets from high-quality telomere-to-telomere de novo haplotype assemblies. The discrepancies between benchmarks are further compounded by the choice of the reference genome (GRCh37, GRCh38, and T2T-CHM13), where using T2T-CHM13reveals a different deletion/insertion profile, indicating reduced reference bias. We evaluated the performance of several state-of-the-art SV discovery methods from long-read whole-genome sequencing data and observed substantial variation in their performance and rankings, depending on the choice of ground truth, reference genome, and genomic regions used for evaluation. Counter-intuitively, the more complete reference genome T2T-CHM13does not inherently solve the problem of SV benchmarking; instead it reveals the limitations of each detection method in complex genomic regions. The substantial variation in detection accuracy across different genomic regions calls for additional caution in downstream analyses and in drawing conclusions based on predicted SVs. These findings underscore the complexity of evaluating SV detection methods and highlight the need for careful consideration and, ideally, field-standard best practices when reporting performance metrics.",
+      "doi": "10.1101/2025.08.28.672546",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672546"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672604",
+      "title": "Improved peptide search for identification of SUMO and sequence-based modifications, in MaxSBM",
+      "abstract": "Post-translational modifications (PTMs), such as SUMOylation and ubiquitination, regulate key cellular processes by covalently attaching to lysine residues. While mass spectrometry allows site-specific identification of PTMs, most existing search engines are optimized for small, non-fragmenting modifications and struggle to detect large, fragmenting protein-based modifiers. We refer to these as Sequence-Based Modifiers (SBMs). To overcome this limitation, we developed an SBM-specific search strategy within MaxQuant that accounts for the fragmentation behavior of SBMs during peptide identification. Using publicly available datasets, we validated our approach for SUMO2/3. Our analysis identified distinct diagnostic features and characteristic mass shifts associated with SBM fragmentation, referred to in this study as d-ions (diagnostic ions) and p-ions. By leveraging these features, our method improved the identification of SUMOylated peptides from human cell lines by 13%, SUMOylation sites in mouse embryonic cells by 18%, and in mouse adipocytes by 25%. Our search method improved spectral annotation of SBMs by up to 9% increase in the median Andromeda score. Taken together, we highlight the potential of our SBM search to enhance the discovery of protein-based modifications.\n\nHighlightsO_LIDevelopment of a MaxQuant module tailored for identifying Sequence-Based Modifiers (SBMs), including SUMO2/3\nC_LIO_LIIncorporation of SBM-specific fragmentation patterns into search algorithms\nC_LIO_LIEnhanced biological discovery through improved PTM identification from mass spectrometry datasets\nC_LI\n\nIn BriefHere, we introduce MaxSBM, an optimized framework for interpreting complex sequence-based modifiers (SBMs), particularly SUMO, within MaxQuant. Our approach incorporates SBM-specific d- and p-ion series into peptide scoring and annotation. By extending the theoretical spectral space to include fragments bearing partial SUMO (or other SBM) peptide remnants, MaxSBM provides a more comprehensive spectral annotation which enhances peptide scoring, resulting in increased identification rates at a higher confidence. Beyond methodological refinement, we validated MaxSBM via reanalysis of several physiological SUMO datasets, ultimately unlocking new insights via mapping of previously obscured modification sites.",
+      "doi": "10.1101/2025.08.27.672604",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1016/j.mcpro.2026.101589",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672604"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672571",
+      "title": "Measuring Temporal Variations of Nucleotide Pools in Microbial Granular Biofilm Performing Enhanced Biological Phosphorous Removal",
+      "abstract": "Microbial communities often face environmental fluctuations that occur on timescales much shorter than their growth rate or proteome turnover. In such cases, cellular responses are likely driven by rapid changes in metabolite pools, particularly energy nucleotides including ATP, ADP, and AMP. However, robust methods to quantify these metabolites in biofilm-forming microbial communities are lacking. Here, we developed and systematically evaluated a metabolomics workflow for a granular biofilm enrichment, which performs Enhanced Biological Phosphorous Removal (EBPR). We combined fast quenching in liquid nitrogen and a boiling water extraction, followed by high resolution mass spectrometry, using porous graphitic carbon chromatography and 13C-labeled internal reference standards. Among tested procedures, a boiling water extraction was most suitable for extraction of nucleotides, as indicated by stable adenylate energy charge (AEC) and isotopic ratios. Applied to an anaerobic-aerobic cycle of a lab scale EBPR system, the method revealed dynamic changes in AEC and uridylate energy charge (UEC) during acetate uptake and polyphosphate degradation. These results demonstrate that energy pool imbalances underlie rapid metabolic switching observed in EBPR systems. Moreover, the established method provides a foundation for performing metabolomic studies of microbial biofilms in general.",
+      "doi": "10.1101/2025.08.27.672571",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "systems biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672571"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672792",
+      "title": "The effects of action-based predictions in early visual cortex",
+      "abstract": "During voluntary movement, predictions about the sensory consequences of an action typically result in reduced sensory sensitivity. The forward model theory proposes that this reduced sensitivity is due to neural suppression or cancellation of sensory action outcomes. However, recently this theory has been challenged by three alternative theories: the pre-activation account, sharpening, and the opposing processes theory. In this fMRI study, we directly tested and compared these four theories using univariate and multivariate analyses both prior to and during stimulus presentation. Participants performed a visual orientation discrimination task on two sequentially presented gratings, which were either presented automatically (passive condition) or triggered by their own button press (active condition). Auditory cues at trial onset indicated the overall grating orientation, followed by a preparatory phase in which participants anticipated the upcoming stimuli. During this phase, the predicted stimulus orientation was decodable from early visual cortex activity in both active and passive conditions at levels significantly above chance, indicating pre-activation of the predicted orientation, but with no difference between active and passive conditions. BOLD responses did not emerge earlier in active conditions, arguing against the pre-activation theory. During stimulus presentation, actively generated stimuli elicited larger BOLD responses than passively presented ones, contradicting the forward model theory, which predicts overall response suppression. Decoding accuracy did not differ between conditions, inconsistent with the sharpening hypothesis, which predicts enhanced neural precision for actively generated stimuli. Instead, our findings align most closely with the opposing processes theory, which posits pre-activation in both conditions. However, the stronger BOLD response for actively generated stimuli is not predicted by any existing theory, suggesting that additional mechanisms--such as heightened attention or motor-related enhancement--may contribute to sensory processing during self-initiated actions.",
+      "doi": "10.1101/2025.08.28.672792",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1016/j.isci.2026.117074",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672792"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672636",
+      "title": "SPAGHETTI leverages massive H\\&E morphological models for phase contrast microscopy images with a generative deep learning approach",
+      "abstract": "Phase contrast microscopy (PCM) is a powerful cell imaging method, one of the few technologies to delineate and track cell structure in live cells without staining. Despite PCMs great potential and popularity in monitoring live-cell populations, there is a lack of algorithms to extract morphological information from these images due to the lack of large training datasets. To overcome this challenge and enable advanced, high throughput quantitative analysis of PCM images, we introduce SPAGHETTI: a lightweight image translator built on a modified cycle-consistent generative adversarial network. SPAGHETTI translates PCM images into those resembling hematoxylin and eosin (H&E) pathological images which, due to the pervasive and widespread use in clinical settings, are the basis for most large-scale deep learning models for quantitative analyses. We demonstrate that by first using SPAGHETTI to translate PCM images into H&E-like images, we could achieve significantly improved performance on cell segmentation through the use of tissue and H&E-specific cell segmentation models. We also show that by passing translated PCM images across several independent datasets into H&E feature extractor models, we improve the performance of cell-type annotation, experimental media classification, and cell viability prediction. Overall, SPAGHETTI enables many quantitative analyses of PCM that were previously impossible and acts as a valuable preprocessing step to help researchers gather novel information about cell states through the downstream quantitative analysis of morphological features.",
+      "doi": "10.1101/2025.08.27.672636",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672636"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672360",
+      "title": "Hierarchical Bayesian Modelling of Interoceptive Psychophysics",
+      "abstract": "Interoception, the capacity to sense, perceive, and metacognitively appraise viscerosensory and homeostatic signals, is a growing focus in psychology and psychiatry. Adaptive psychophysical tasks now allow quantification of perceptual sensitivity, bias, and precision in cardiac and respiratory domains. However, accurately estimating these parameters often requires large numbers of trials or participants, posing practical challenges, especially in clinical research where participant availability and tolerance are limited. One approach to reduce participant burden while maintaining statistical rigour is to optimise data analysis. Here, we present hierarchical Bayesian models tailored for cardiac and respiratory interoceptive psychophysics that efficiently estimate sensitivity, bias, and precision at both individual and group levels. Using simulations and empirical data, we validate these models and demonstrate that they allow enhanced inference relative to conventional approaches. To support adoption, we provide openly-accessible resources, including a tutorial on how to implement and fit these models in R (written with researchers without modelling expertise in mind) and an app for sample-size justification. These tools facilitate robust, efficient, and generalisable modelling of interoceptive performance, enabling rigorous studies even with limited trials or participant availability.",
+      "doi": "10.1101/2025.08.27.672360",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672360"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672650",
+      "title": "An RNA polymerase III tissue and tumor atlas uncovers context-specific activities linked to 3D epigenome regulatory mechanisms",
+      "abstract": "RNA polymerase III (Pol III) produces a plethora of small noncoding RNA species involved in diverse cellular processes, from transcription regulation and splicing to RNA stability, translation, and proteostasis. Though Pol III activity is broadly coupled with cellular demands for protein synthesis and growth, a more precise understanding of gene-level dynamics and context-specific expression patterns remains missing, in part due to challenges related to sequencing and mapping Pol III-derived small ncRNAs. Here, we establish a predictive multi-tissue map of human Pol III activity across 19 tissues and 23 primary cancer subtypes by comprehensively profiling the chromatin accessibility of canonical Pol III-transcribed gene classes. Our framework relies on the unique relationship between gene accessibility and Pol III transcription, inferring activity through uniform binary classification of ATAC-seq enrichment at Pol III-transcribed genes. By characterizing multi-context gene uniformity, we provide a definition of the core Pol III transcriptome, broadly active across specialized tissues, and catalog genes with varied levels of context specificity. Our genomic Pol III atlas uncovers variable levels of activity across tissues, including sharp contraction of the Pol III transcriptome in heart and brain tissues and frequent expansion across diverse cancers. We show that both tissue- and tumor-specific genes are significantly enriched within lamina-associated domains (LADs), and that aberrant expression of nuclear lamin proteins is sufficient to induce Pol III-emergent patterns at tumor-specific genes. Together, these findings link Pol III dynamics to subnuclear compartmentalization and provide a resource for better understanding Pol III expansion and small RNA biogenesis in cancer.",
+      "doi": "10.1101/2025.08.28.672650",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1101/gr.281419.125",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672650"
+    },
+    {
+      "paper_id": "10.1101/2025.08.27.672637",
+      "title": "Lifestyle and transcriptional signatures associated with ethnicity/race-related variations in the functional connectome",
+      "abstract": "Understanding the variation of functional architecture across individuals and populations is fundamental to advancing our knowledge of human health and behaviour. Yet, while functional organization differences related to ethnicity/race are consistently reported, their underlying mechanisms remain poorly understood. Here, we apply precision individualized functional mapping to systematically investigate ethnicity/race-related differences in the brains intrinsic organization and their associations with lifestyle and transcriptional signatures. We show that variations in network topography and functional connectivity across ethnic/racial groups follow a hierarchical sensorimotor- association axis and are constrained by brain morphology. Importantly, we identify lifestyle factors-- particularly education and substance use--that significantly mediate these associations between ethnicity/race and functional connectivity. Leveraging human brain gene expression data, we further demonstrate that cortical transcriptional patterns are spatially aligned with ethnicity/race-related variability in functional connectivity. Gene ontology analyses of associated genes reveal significant enrichment in biological processes such as synaptic signalling and neuronal system development. Together, these findings uncover a multi-layered framework linking ethnicity/race-related differences in brain function to structural constraints, lifestyle influences, and molecular signatures, and advance a more comprehensive and equitable understanding of human brain diversity.",
+      "doi": "10.1101/2025.08.27.672637",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.34133/research.1143",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.27.672637"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672844",
+      "title": "Collateral mutagenesis funnels multiple sources of DNA damage into a ubiquitous mutational signature",
+      "abstract": "Mutations reflect the net effects of myriad types of damage, replication errors, and repair mechanisms, and are therefore expected to differ across cell types with distinct exposures to mutagens, division rates, and cellular programs. Yet when mutations in humans are decomposed into a set of \"signatures\", one single base substitution signature, SBS5, is present across cell types and tissues, and predominates in post-mitotic neurons as well as male and female germlines [1-3]. The etiology of SBS5 is unknown. By modeling the processes by which mutations arise, we infer that SBS5 is the footprint of errors in DNA synthesis triggered by distinct types of DNA damage. Supporting this hypothesis, we find that SBS5 rates increase with signatures of endogenous and exogenous DNA damage in cancerous and non-cancerous cells and co-vary with repair rates along the genome, as expected from model predictions. These analyses indicate that SBS5 captures the output of a \"funnel\", through which multiple sources of damage result in a similar mutation spectrum. As we further show, SBS5 mutations arise not only from translesion synthesis but also from DNA repair, suggesting that both mechanisms occasionally trigger the same mutagenic process.",
+      "doi": "10.1101/2025.08.28.672844",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672844"
+    },
+    {
+      "paper_id": "10.1101/2025.08.21.671415",
+      "title": "The Darwin-Godel Drug Discovery Machine (DGDM): A Self-Improving AI Framework",
+      "abstract": "Despite advances such as AlphaFold and modern generative AI models, current drug discovery pipelines lack mechanisms to refine both molecules and the pipelines themselves, limiting their ability to achieve autonomous and reliable self-improvement. To address this, we present the Darwin-Godel Drug Discovery Machine (DGDM), a self-improving artificial intelligence framework that integrates generative molecular design and evolution with adaptive meta-learning. DGDM employs a dual-loop architecture: an inner loop frames molecular optimization as a Darwinian evolutionary process guided by reinforcement learning signals, where candidate molecules generated by generative AI are evolved through search and feedback; an outer loop adaptively modifies the discovery pipeline itself. Unlike the original Godel machine, which demands formal proofs of improvement--rarely attainable in practice--DGDM uses statistical validation to bound risk and ensure reliable progress. The framework is fully compatible with modern structural biology tools, including AlphaFold, and supports evaluation through docking, binding affinity prediction, and ADMET profiling. In a proof-of-concept study, DGDM improved the median binding affinity of candidate ligands from -4.457 to -5.422 kcal/mol while maintaining 100% drug-likeness and novelty. These results suggest that bounded-risk, self-improving AI can accelerate drug discovery by continuously refining both molecular design and discovery processes, extending the Godel machine principle of self-improvement into biomedical research. All code is open-sourced at https://github.com/deep-geo/DGDM.",
+      "doi": "10.1101/2025.08.21.671415",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.21.671415"
+    },
+    {
+      "paper_id": "10.1101/2024.09.30.615863",
+      "title": "Divergence of the Individual repeats in the leucine-rich repeat domains of human Toll-like receptors explain their diversity and functional adaptations.",
+      "abstract": "Toll-like receptors (TLRs) are best known pattern recognition receptors of innate immunity, detecting a broad range of pathogen-associated molecular patterns (PAMPs), and endogenous danger associated molecular patterns (DAMPs), initiating inflammatory and antimicrobial responses. TLRs contain two specialized domains, a signaling domain (TIR), and a receptor domain composed of tandem repeats of short 20-30 amino acid segments called Leucine-rich Repeats (LRRs). LRR domains, often paired with other domains, are widespread in all kingdoms of life, invariably forming highly similar, solenoid-like three dimensional structures. Despite this structural conservation, LRR domains overall, and receptor domains of TLRs in particular, exhibit remarkable diversity in binding specificity, recognizing diverse ligands such as lipoproteins, nucleic acids, polysaccharides, other proteins and protein complexes. To understand how this conserved scaffold can accommodate such binding diversity, we performed an in-depth analysis of sequential and structural conservation of individual repeats within the LRR domain of each of the ten human TLRs. We demonstrate that the small variations in repeat lengths and local sequence patterns lead to subtle, but critical structural adaptations, such as changes in local curvature, emergence of loops, cavities and interaction interfaces, each contributing to recognition of specific ligands and formation of the receptor complexes. TLR polymorphisms in human populations can further fine-tune the specificity and strength of ligand recognition, influencing how individuals respond to different pathogens and cell damage causing diseases. We show that in most cases the interfaces with the ligands show high level of polymorphism, suggesting a potential for diverse immune responses to infections among human populations while interfaces with other proteins in the receptor complex are more conserved, pointing to the importance of conserving the overall structure of the signaling pathways. By studying how divergence in LRR repeats affects TLRs structure and function, we provide deeper insights into TLR recognition mechanisms, and a better understanding of the mechanism of evolutionary adaptability of immune recognition systems, both along the evolution of vertebrates, and across the human population.\n\nSignificance statementHuman Toll-like receptors (hTLRs) play a key role in the innate immune response, recognizing diverse danger molecular patterns through their receptor domains, that consist of tandem repeats of a structural unit called a leucine rich repat (LRR). They are also an example of functionally diverse paralogous family where, despite the overall sequence and structure similarity, each member develops its specific function. Our study reveals that subtle modifications of dividual repeats, without disrupting the overall structure of the receptor domain, form secondary patterns defining the functional specificity of each TLR, enabling them to recognize and respond to a broad array of pathogen and disease associated molecular patterns. These findings offer a new perspective on how sequence variability within conserved protein domains can drive functional evolution and adaptation, with implications both for understanding immune receptor functional adaptation and their fast evolution as well as more general problem of functional diversification in paralogous families.",
+      "doi": "10.1101/2024.09.30.615863",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.09.30.615863"
+    },
+    {
+      "paper_id": "10.1101/2025.08.31.673316",
+      "title": "Bayesian inference of introgression between sister lineages using genomic data",
+      "abstract": "Inference of interspecific gene flow using genomic data is important to reliable reconstruction of species phylogenies and to our understanding of the speciation process. Gene flow is harder to detect if it involves sister lineages than nonsisters; for example, most heuristic methods based on data summaries are unable to infer gene flow between sisters. Likelihood-based methods can identify introgression between sisters but the test exhibits several nonstandard features, including boundary problems, indeterminate parameters, and multiple routes from the alternative to the null hypotheses. In the Bayesian test, those irregularities pose challenges to the use of the Savage-Dickey (S-D) density ratio to calculate the Bayes factor. Here we develop a theory for applying the S-D approach under nonstandard conditions. We show that the Bayesian test of introgression between sister lineages has low false-positive rates and high power. We discuss issues surrounding the estimation of the rate of gene flow between sister lineages, especially at very low or very high rates, and suggest that evidence for gene flow between sisters be assessed via a Bayesian test. We find that the species split time has a major impact on the information content in the data, with more information at deeper divergence. We use a genomic dataset from Sceloporus lizards to illustrate the test of gene flow between sister lineages.",
+      "doi": "10.1101/2025.08.31.673316",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1093/sysbio/syag028",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "evolutionary biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.31.673316"
+    },
+    {
+      "paper_id": "10.1101/2022.10.31.514544",
+      "title": "Slice-PASEF: Maximising Ion Utilisation in LC-MS Proteomics",
+      "abstract": "Quantitative mass spectrometry (MS)-based proteomics has become a streamlined technology with a wide range of usage. Many emerging applications, such as single-cell proteomics, spatial proteomics of tissue sections and the profiling of low-abundant posttranslational modifications, require the analysis of minimal sample amounts and are thus constrained by the sensitivity of the workflow. Here, we present Slice-PASEF, a mass spectrometry technology that leverages trapped ion mobility separation of ions to attain the theoretical maximum of tandem MS sensitivity. We implement Slice-PASEF using a new module in our DIA-NN software and show that Slice-PASEF uniquely enables precise quantitative proteomics of low sample amounts. We further demonstrate its utility towards a range of applications, including single cell proteomics and degrader drug screens via ubiquitinomics.",
+      "doi": "10.1101/2022.10.31.514544",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2022.10.31.514544"
+    },
+    {
+      "paper_id": "10.1101/2025.08.31.673107",
+      "title": "Urinary exfoliated cells exhibit mesodermal lineage differentiation potential in the absence of dedicated culture conditions",
+      "abstract": "IntroductionUrine contains various cells derived from the kidney, including renal tubular epithelial cells, glomerular epithelial cells, and mesenchymal stem cells. Urinary exfoliated mesenchymal stem cells can be differentiated into adipocytes, osteoblasts, chondrocytes, muscle cells, or neuronal cells, if grown in specialized culture conditions. In this study, however, we identified the development of multiple mesodermal cell lineages from urinary exfoliated cells despite using a single culture system not designed for these cell differentiations.\n\nMethodsUrinary exfoliated cells used for culturing were obtained from pediatric patients with kidney disease. All cultures were maintained using an identical, non-specifically supplemented, rich, DMEM/F12-based growth medium, refreshed regularly throughout the experiments. Cells of different mesodermal lineages--adipocytes, osteoblasts, and chondrocytes--were identified by staining with Oil Red O, Alizarin Red, and Alcian Blue solutions. Moreover, the expression of mRNA markers specific for adipocytes, osteoblasts, and chondrocytes, as well as for stem cells and--more specifically--mesenchymal stem cells, was analyzed by RT-PCR.\n\nResultsAlthough the abundances varied, in all 11 cultures of urinary exfoliated cells from six patients, dye staining revealed multiple cell clusters of mesodermal lineages. All cultures contained clusters of the adipocyte and chondrocyte lineages, and seven also contained clusters of the osteoblast lineage. Morphology differences were found even between clusters stained with the same dye. RT-PCR confirmed the presence of the three lineages, while also revealing expression of genes specific to pluripotent stem cells (Nanog, Oct3/4, SOX2, and LIF) and genes more specific for mesenchymal stem cells (CD73, CD90, and CD105).\n\nConclusionsAmong urinary exfoliated cells cultured using our method, clusters of cells of mesodermal lineages were observed without needing to selectively adjust the culture medium. The cells seemed to differentiate and proliferate from mesenchymal stem cells in the urine. We envision that these initial findings may eventually contribute to a deeper understanding of urinary stem cell differentiation and to optimizing lineage-specific differentiation for research and therapeutic applications.",
+      "doi": "10.1101/2025.08.31.673107",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "cell biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.31.673107"
+    },
+    {
+      "paper_id": "10.1101/2025.08.31.673357",
+      "title": "A hybrid model of the within-host dynamics post-infection with Legionnaires disease;",
+      "abstract": "Understanding the incubation period of Legionnaires disease is vital for accurate source-term identification. Traditionally, researchers estimate the dose-dependent incubation period from human outbreak data, but this method suffers from the inability to estimate the exposure dose retrospectively for each case. This challenge limit the precision of incubation-period analysis using human case data. Existing within-host models, such as ordinary differential equation (ODE)-based and discrete-event stochastic approaches, estimate the dose-dependent incubation period of Legionnaires disease. However, discrete-event models, while useful, are so computationally costly that the within-host dynamics must be simplified to solely the Legionella and macrophage interactions. This simplification makes the computation feasible, but precludes cytokine interactions and adaptive immune response modelling. In this paper, we develop a new approach to model the within-host dynamics of Legion-naires disease that focuses on reducing computational cost while maintaining accuracy. Specifically, we propose a hybrid framework that integrates and improves upon existing ODE and discrete event within-host models of Legionnaires disease. By integrating the previously developed ODE and discrete-event stochastic models with stochastic differential equation (SDE) models, we create a unified system that adapts dynamically throughout the infection process. We quantify the points at which each model becomes the optimal tool for describing the infection, resulting in a flexible simulation of disease dynamics. Our hybrid model aligns with observed human incubation-period data and is the first framework of its kind in this context. This advancement offers a more robust platform for testing additional biological assumptions and improving our understanding of Legionnaires disease.",
+      "doi": "10.1101/2025.08.31.673357",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "cell biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.31.673357"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672876",
+      "title": "Temporal and spatial variability of mudflat and mangrove foraminiferal eDNA assemblages and its implication for sea-level reconstruction",
+      "abstract": "Reconstructing relative sea level (RSL) is essential for understanding coastal evolution and mitigating impacts of climate change. Foraminiferal assemblages are established proxies for past sea levels, but their composition can vary seasonally and spatially, affecting the reliability of morphological reconstructions. Environmental DNA (eDNA) enables high-resolution, non-invasive monitoring of foraminiferal communities and supports high-precision RSL reconstruction. However, the spatiotemporal stability of eDNA assemblages in (sub)tropical intertidal zones--and their influence on RSL reconstruction--remains uncertain. We conducted a two-year eDNA monitoring study at three intertidal stations of varying tidal elevation in Hong Kong, sampling during both dry and wet seasons to assess variability in mangrove and mudflat environments. Mid-mangrove eDNA communities exhibited temporal and spatial stability. In contrast, eDNA assemblages in mudflat and upper-mangrove environments, particularly among monothalamous foraminifera taxa, showed pronounced seasonal shifts primarily driven by environmental changes. Despite this variability in the upper-mangrove, eDNA-based elevation estimates in mangrove consistently aligned with observed elevations (within 95% credible intervals), demonstrating reliability of RSL reconstructions in these environments. However, samples from mudflats, especially during the wet season, exhibited an overprediction bias, reflecting their heightened sensitivity to seasonal and exogenous eDNA inputs. These findings highlight the need to account for seasonal and environmental variability in eDNA-based RSL reconstruction. Stable mangroves are optimal for transfer functions, while transitional/mudflat zones require caution due to higher variability. Our study provides guidance for foraminiferal eDNA application in complex, dynamic coastal settings.",
+      "doi": "10.1101/2025.08.28.672876",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "ecology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672876"
+    },
+    {
+      "paper_id": "10.1101/2025.08.29.672704",
+      "title": "Optimal TELSAM-Target Protein Linker Character is TargetProtein-Dependent",
+      "abstract": "Fusing a variant of the sterile alpha motif domain of the human translocation ETS leukaemia protein (TELSAM) to a protein of interest has been shown to significantly enhance crystallization propensity. TELSAM is a pH-dependent, polymer-forming protein crystallization chaperone which, when covalently fused to a protein of interest, forms a stable, well-ordered crystal lattice. However, despite its success, a challenge persists in that crystal quality and diffraction limits appear to be heavily dependent on the choice of linker between TELSAM and the protein of interest, with identification of a functional linker relying on trial-and-error methods. Likewise, previous studies revealed that the 10xHis tag at the TELSAM N-terminus can either facilitate or hinder the ordered crystallization of target proteins attached via flexible or semi-flexible linkers. To address these challenges, we designed multiple constructs with several types of linkers--rigid (helical fusion), semi-flexible (Pro-Alan), and flexible (poly-Gly)--of varying lengths to fuse a designed ankyrin repeat protein (DARPin) to the TELSAM C-terminus. Semi-flexible and flexible linker constructs were made with and without the 10xHis tag. Our findings indicate that short semi-flexible and rigid linkers consistently yield large crystals within 24 hours with a DARPin target protein, but that flexible linkers perform best with a TNK1 UBA domain target protein. Removing the 10xHis tag enhanced crystallization rates, improved crystal morphology, and increased the crystallization propensity of semi-flexible and flexible linker constructs. While removing the His tag did not have a significant effect on crystal size, it improved the diffraction limits and crystal quality of the 1TEL-PA-DARPin construct. These results suggest that the ideal linker selection primarily depends on the properties of the target protein. Our data support the recommendation to use a short yet flexible or semi-flexible linker between TELSAM and the target protein to facilitate protein crystallization and high-resolution structure determination.\n\nSynopsisIn this study, we examine the effect of short to medium-length flexible, semi-flexible, and rigid linkers on the crystallization of a DARPin fused to the 1TEL protein crystallization chaperone, demonstrating that while rigid linkers impair crystallization and reduce diffraction quality, the ideal linker character remain target-protein dependent.\n\n\n\nO_FIG O_LINKSMALLFIG WIDTH=200 HEIGHT=91 SRC=\"FIGDIR/small/672704v1_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (22K):\norg.highwire.dtl.DTLVardef@b90d1org.highwire.dtl.DTLVardef@1508e7dorg.highwire.dtl.DTLVardef@1baf0d1org.highwire.dtl.DTLVardef@1843df_HPS_FORMAT_FIGEXP  M_FIG C_FIG",
+      "doi": "10.1101/2025.08.29.672704",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.29.672704"
+    },
+    {
+      "paper_id": "10.1101/2025.08.15.670450",
+      "title": "PXDesign: Fast, Modular, and Accurate De Novo Design of Protein Binders",
+      "abstract": "PXDesign achieves nanomolar binder hit rates of 17-82% across six of seven diverse protein targets, surpassing prior methods such as AlphaProteo. This experimental success rate is enabled by advances in both binder generation and filtering. We develop both a diffusion-based generative model (PXDesign-d) and a hallucination-based approach (PXDesign-h), each showing strong in silico performance that outperforms existing models. Beyond generation, we systematically analyze confidence-based filtering and ranking strategies from multiple structure predictors, comparing their accuracy, efficiency, and complementarity on datasets spanning de novo binders and mutagenesis. Finally, we validate the full design process experimentally, achieving high hit rates and multiple nanomolar binders.\n\nTo support future research and broaden community adoption, we release the full PXDesign pipeline (https://github.com/bytedance/PXDesign), provide public access to PXDesign through a dedicated web server (https://protenix-server.com), and make all designed binder sequences available at the project page (https://protenix.github.io/pxdesign).\n\nO_FIG O_LINKSMALLFIG WIDTH=200 HEIGHT=75 SRC=\"FIGDIR/small/670450v3_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (25K):\norg.highwire.dtl.DTLVardef@2a414aorg.highwire.dtl.DTLVardef@248f85org.highwire.dtl.DTLVardef@4a6afdorg.highwire.dtl.DTLVardef@1b622dd_HPS_FORMAT_FIGEXP  M_FIG C_FIG",
+      "doi": "10.1101/2025.08.15.670450",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "molecular biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.15.670450"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672842",
+      "title": "Sticky salts: overbinding of monovalent cations to phosphorylations in all-atom forcefields",
+      "abstract": "Phosphorylation is a major post-translational modification, which is involved in the regulation of the dynamics and function of Intrinsically Disordered Proteins (IDPs). We recently characterized a phenomenon, which we termed n-Phosphate collaborations (nP-collabs), where bulk cations form stable bridges between several phosphoresidues in all-atom molecular dynamic simulations. nP-collabs were found to be sensitive to the combination of forcefields and cation types. Here, we attempt to assess the physical relevance of these nP-collabs by evaluating the strength of the cation/phosphate interaction through osmotic coefficient ({phi}) calculations on the model [Formula] and [Formula] salts, using different classical forcefields for phosphorylations. All force-fields were found to overestimate the strength of the interaction to various degrees. We thus designed new parameters for CHARMM36m and AmberFF99SB-ILDN using the Electronic Continuum Correction (ECC) approach, which provide remarkable agreement for{phi} values for both cation types and over a range of concentrations. We provide a preliminary test of these ECC parameters for phosphorylations by simulating the sevenfold-phosphorylated rhodopsin peptide 7PP and comparing secondary chemical shifts to experimental data. Conformational ensembles resulting from the ECC-derived phosphorylated forcefields display both qualitative and quantitative improvements with regard to full-charge forcefields. We thus conclude that long-lasting nP-collabs are artifacts for classical forcefields born from the lack of explicit polarization, and propose a possible computational strategy for the extensive parameterization of phosphorylations. The presence of long-lived nP-collabs in simulations produced using classical forcefields is therefore a serious concern for the accurate modelling of multiphosphorylated peptides and IDPs, which are at the center of research questions regarding neurodegenerative diseases such as Alzheimers or Parkinsons.",
+      "doi": "10.1101/2025.08.28.672842",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672842"
+    },
+    {
+      "paper_id": "10.1101/2025.08.30.673229",
+      "title": "Aperiodic EEG Activity Provides a Linear, Bidirectional, and Spatially Uniform Marker of Subjective and Objective Vigilance in Humans, Both Within and Across States",
+      "abstract": "1Vigilance is increasingly conceived as a continuum, ranging from full alertness to deep sleep. Despite its fundamental role in cognition, behaviour, and health, reliable physiological markers of vigilance remain limited, and clinical assessments often rely on subjective or time-consuming evaluations. Traditionally, vigilance has been estimated through visual inspection of the electroencephalogram (EEG), identifying recognizable oscillatory patterns like rapid, wakefulness-defining alpha waves ([~]10 Hz) and large slow waves ([~]1 Hz) which typify sleep. However, these oscillatory features often appear only intermittently and follow complex, non-linear trajectories across time, space, and frequency, limiting their utility for automated, continuous tracking of vigilance.\n\nRecent research has shifted attention to the non-oscillatory, or aperiodic, component of the EEG, which may follow simpler dynamics and offer a more robust index of brain state. Yet most studies often continue to use narrowly defined, discrete vigilance states and transitions in only one direction (e.g., from wakefulness to sleep), without jointly examining oscillatory and aperiodic activity.\n\nHere, we address these key gaps by evaluating the capacity of both oscillatory and aperiodic features of EEG power spectra, derived from high-density recordings, to predict vigilance as a continuous variable. Across three independent datasets, we consistently show that although oscillatory features reliably track changes in vigilance, they are unequivocally outperformed by aperiodic activity. Aperiodic features demonstrate a stronger, more linear, and spatially consistent relationship with both objective and subjective indices of vigilance, offering a more robust and scalable physiological marker of this fundamental feature of the brain.\n\nO_FIG O_LINKSMALLFIG WIDTH=200 HEIGHT=173 SRC=\"FIGDIR/small/673229v1_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (28K):\norg.highwire.dtl.DTLVardef@1c66d88org.highwire.dtl.DTLVardef@4126b0org.highwire.dtl.DTLVardef@152f10borg.highwire.dtl.DTLVardef@4f413f_HPS_FORMAT_FIGEXP  M_FIG C_FIG",
+      "doi": "10.1101/2025.08.30.673229",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.30.673229"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672547",
+      "title": "Physical exercise and brain network dynamics: reduction of frontoparietal-striatal connectivity following 1 hour of aerobic cycling",
+      "abstract": "Physical exercise is beneficial for metabolic health and cognitive performance. In addition, exercise can be highly pleasurable and and serves as an effective stress reliever. Extant studies have highlighted frontal, parietal, and subcortical brain changes following acute bouts of exercise. However, slower, slightly delayed brain correlates after exercise at the network level have not been studied. Therefore, this studys objective was to investigate the changes in dynamic functional connectivity after 60 minutes of exercise in healthy males.\n\nHere we measured a 6-minute resting state fMRI in 24 young males at baseline and after a 60-minute cycling exercise challenge. Apart from routine preprocessing, the data were denoised with FSL-FIX and modeled with i) leading eigenvector dynamics analysis (LEiDA) to probe whole brain network dynamics and ii) with group independent component analysis (ICA) and dual regression to quantify static brain connectivity. The within subject statistical tests compared baseline to post-exercise conditions.\n\nWe found that a striato-fronto-parietal network is destabilized after exercise, as indicated by a lower probability of occurrence in dynamic analysis through LEiDA. The brain areas in the network include the bilateral caudate, putamen and pallidum as well as middle orbitofrontal, frontal operculum, frontal trigonum and inferior parietal cortices. No differences between baseline and post exercise conditions were found in the dual regression of the group ICA components.\n\nWe conclude that 60 minutes of cycling causes a prolonged effect in brain network dynamics, reducing synchronization between the striatum and frontoparietal networks with respect to baseline. This provides insights into the network-level neural correlates of aerobic exercise, which may be directly linked with the stress relieving effects of physical exercise.",
+      "doi": "10.1101/2025.08.28.672547",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672547"
+    },
+    {
+      "paper_id": "10.1101/2025.08.26.672376",
+      "title": "Benchmarking sketching methods on spatial transcriptomics data",
+      "abstract": "High-throughput spatial transcriptomics (ST) now profiles hundreds of thousands of cells or locations per section, creating computational bottlenecks for routine analysis. Sketching, or intelligent sub-sampling, addresses scale by selecting small, representative subsets. While effective for scRNA-seq data, existing sketching methods, which optimize coverage in expression space but ignore physical location, can introduce spatial bias when applied to ST data. To explore the impact of sketching on ST analysis, we systematically benchmarked uniform sampling, leverage-score sampling, Geosketch (minimax/Hausdorff), and scSampler (maximin) across multiple real ST datasets (mouse ovary, MERFISH brain, human breast cancer, lung) and simulations, using three input representations: PCA embeddings, spatial coordinates, and spatially smoothed embeddings. We show that expression-only designs capture global transcriptomic heterogeneity but distort tissue architecture by over-sampling high-variability regions and under-sampling homogeneous areas. Coordinate-only sampling restores tissue coverage but misses transcriptional extremes. A simple spatially aware extension, computing leverage scores from a randomized SVD basis smoothed by a spatial weights matrix, strikes a favorable balance, recovering rare cell states while maintaining uniform tissue coverage and avoiding edge effects. Across robust Hausdorff distances, clustering stability (ARI), PCA loading drift, and local cell-type MSE, spatially smoothed leverage scores match or outperform alternatives. These results motivate joint spatial-transcriptomic sketching objectives to enable fast, unbiased analyses of increasingly large ST datasets.",
+      "doi": "10.1101/2025.08.26.672376",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1093/nar/gkag434",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.26.672376"
+    },
+    {
+      "paper_id": "10.1101/2025.08.29.672857",
+      "title": "TransStop, a genomic language model for the pan-drug prediction of translational readthrough efficacy",
+      "abstract": "MotivationPremature termination codons (PTCs) are a major cause of genetic diseases, but the efficacy of therapeutic readthrough agents is highly context-dependent. While linear models have shown promise in predicting readthrough efficiency, they may not fully capture the complex, non-linear interactions between sequence context and drug activity.\n\nMethodsWe developed TransStop, a transformer-based pan-drug model, trained on a dataset of [~]5,400 PTCs and eight readthrough compounds. The model learns sequence representations and incorporates learnable embeddings to capture drug-specific effects, allowing a single model to predict efficacy for multiple drugs.\n\nResultsOur model achieved a global R2=0.94 on a held-out test set. Visualizations of the learned embeddings revealed a deep understanding of biological principles, including the distinct clustering of stop codon types and grouping of drugs by mechanism of action. In silico saturation mutagenesis and epistasis analyses uncovered complex, non-additive sequence determinants of readthrough. We generated 32.7 million predictions across the human genome, covering all possible PTCs. Analysis of these genome-wide predictions revealed strong drug specializations for specific stop codon contexts and identified key areas of disagreement with previous models, particularly for UGA codons, where our model predicts a more effective drug in thousands of cases. The TransStop model represents a significant advancement in the prediction of translational readthrough efficiency. Its superior accuracy and the biological insights derived from its applications provide a powerful tool for guiding clinical trial design, drug development, and personalized patient treatment.\n\nAvailability and ImplementationSource code: https://github.com/Dichopsis/TransStop. Model: https://huggingface.co/Dichopsis/TransStop.Genome-wide predictions: https://doi.org/10.5281/zenodo.16918476.",
+      "doi": "10.1101/2025.08.29.672857",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.29.672857"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672905",
+      "title": "MODELING CELL MIGRATORY PERSISTENCE THROUGH TEMPORAL CORRELATIONS AND ANGULAR NOISE",
+      "abstract": "The persistence of cell migration is a fundamental property of motile behavior, enabling cells to maintain directionality while adapting to fluctuations and external cues. This feature underlies essential processes such as development, immune responses, and cancer invasion. Classical mathematical models have offered key insights into directed migration, yet they often neglect temporal correlations arising from cellular mechanisms that stabilize polarity and protrusion dynamics, processes not well captured by simple white noise. Here, we introduce an agent-based model based on stochastic differential equations (SDEs) that integrates fractional Brownian motion (fBm) to explicitly incorporate translational autocorrelation in cell trajectories. We simulate migration as a function of angular reorientation (Dr) and the strength of correlated noise (H). In this framework, temporal correlation stabilizes trajectory features inherited from initial conditions, whereas angular reorientation introduces variability that enables transitions between erratic and directed motion. Our simulations show that, unlike models driven by white noise, positive correlation markedly enhances persistence even under strong angular reorientation. Moreover, the combination of Dr and H gives rise to emergent behaviors, particularly in the presence of taxis, where persistence and responsiveness are jointly tuned. These results identify correlated noise as a proxy for intrinsic cellular memory and provide a versatile computational framework to interpret the diversity and complexity of migratory behaviors.\n\nSignificance StatementCell migration drives key biological processes such as immune surveillance, development, and cancer invasion. Most models reduce motility to random walks perturbed by white noise, overlooking temporal correlations that arise from intrinsic cellular memory. By integrating fractional Brownian motion into agent-based modeling, we show how correlated translational noise interacts with angular diffusion to produce emergent behaviors, including overshooting, exploratory loops, and persistent trajectories. Our framework unifies these outcomes under a single mechanistic description and highlights how intrinsic noise modulates taxis, exploration, and persistence. This approach provides mathematicians and cell biologists with a versatile tool to test how cells balance stability and adaptability in dynamic environments.",
+      "doi": "10.1101/2025.08.28.672905",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pone.0349382",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biophysics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672905"
+    },
+    {
+      "paper_id": "10.1101/2025.08.29.673001",
+      "title": "Voltage-dependent reversal potentials in spiking recurrent neural networks enhance energy efficiency and task performance",
+      "abstract": "Spiking recurrent neural networks (SRNNs) rival gated RNNs on various tasks, yet they still lack several hallmarks of biological neural networks. We introduce a biologically grounded SRNN that implements Dales law with voltage-dependent AMPA and GABA reversal potentials. These reversal potentials modulate synaptic gain as a function of the postsynaptic membrane potential, and we derive theoretically how they make each neurons effective dynamics and subthreshold resonance input-dependent. We trained SRNNs on the Spiking Heidelberg Digits dataset, and show that SRNN with reversal potentials cuts spike energy by up to 4x, while increasing task accuracy. This leads to high-performing Dalean SRNNs, substantially improving on Dalean networks without reversal potentials. Thus, Dales law with reversal potentials, a core feature of biological neural networks, can render SRNNs more accurate and energy-efficient.",
+      "doi": "10.1101/2025.08.29.673001",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.29.673001"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672881",
+      "title": "Computational characterization of the xanthan gum glycosyltransferase GumK",
+      "abstract": "The activity of GT-B glycosyltransferases depends on their conformational flexibility and high substrate specificity, but the molecular basis of these features is still not well defined. The GT70 family contains a single well-characterized enzyme, GumK, a glucuronosyltransferase from Xanthomonas campestris required for xanthan gum biosynthesis. Here, we applied multiscale molecular simulations and sequence analysis to probe GumK dynamics and substrate specificity. We show that GumK undergoes twisting and bending motions constrained by interdomain contacts and modulated by membrane anchoring. Acceptor-substrate binding within an amphiphilic clamp promotes opening, whereas donor-substrate binding stabilizes closure, defining a substrate-dependent catalytic cycle. Specificity for UDP-glucuronate is mediated by a conserved electrostatic environment centered on Lys307 and a hydrophobic triad that orients the sugar moiety. On the acceptor side, the binding site selectively accommodates polyisoprenyl carriers up to three isoprene units in length and wraps around the substrate, constraining the trisaccharide moiety in a catalytically competent conformation. Comparative analysis highlights GumK-specific motifs that distinguish it from homologous GTs. This work provides mechanistic insight into the GT70 family and the dynamic behavior of GT-B enzymes, establishing principles for the rational engineering of GumK to modify the monosaccharide composition of xanthan gum.\n\nAuthor summaryGlycosyltransferases are enzymes that build many of the sugars and polysaccharides essential for life. One of them, called GumK, is responsible for a key step in producing xanthan gum -- a natural polymer widely used as a thickener in food and industrial materials. Despite its importance, how GumK works at the molecular level has remained unclear. In our study, we used multiscale computer simulation strategies to explore the dynamics of this enzyme and how it interacts with the cell membrane and its sugar substrates. We found that GumK acts like a flexible clamp that opens and closes as it binds two different sugar molecules through specific residues that may control the enzymes selectivity. We also discovered how the surrounding membrane helps the enzyme remain in the correct orientation to perform its function. By identifying the molecular details that determine GumKs selectivity and flexibility, our work provides a foundation for modifying this enzyme to produce xanthan gum with new properties. More broadly, our findings help explain how a large family of related enzymes controls sugar transfer in living organisms, with potential applications in biotechnology and materials science.",
+      "doi": "10.1101/2025.08.28.672881",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pcbi.1013803",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biophysics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672881"
+    },
+    {
+      "paper_id": "10.1101/2025.08.03.667510",
+      "title": "Programmed meiotic errors facilitate dichotomous sperm production in the silkworm, Bombyx mori",
+      "abstract": "The goal of meiosis is typically to produce haploid gametes (eggs or sperm). Failure to do so is catastrophic for fertility and offspring health. However, Lepidopteran (moths and butterflies) males produce two morphs of sperm: nucleated (eupyrene) sperm which fertilize the egg, and anucleated (apyrene) sperm, both of which are essential for fertilization. The meiotic differences in the two types of spermatogenesis have not been well characterized, and our knowledge of the molecular differences between eupyrene and apyrene spermatogenesis are extremely limited in all systems. The only factor identified as being required for apyrene spermatogenesis is Sex-lethal (Sxl). Here, we show through cytological analysis of early meiotic events that there are several key differences in the genesis of apyrene sperm and eupyrene sperm. Specifically, apyrene spermatocytes fail to condense and pair their chromosomes during meiotic prophase I. In addition, telomeres do not attach to the nuclear envelope. Due to these differences, full-length synaptonemal complex does not form. RNA sequencing of both eupyrene- and apyrene-producing testes revealed distinct changes in transcriptional programs, including down-regulation of a myriad of meiotic genes and cell cycle checkpoint factors during apyrene meiosis. By comparing wild-type and Sxl-knockout apyrene testes, we found that Sxl is not required for the changes in the expression of the meiotic genes but instead plays a role in checkpoint inactivation to allow this error-prone meiosis to proceed. Together, our findings reveal significant insights into two converging molecular pathways that promote the formation of dimorphic sperm in Lepidoptera.",
+      "doi": "10.1101/2025.08.03.667510",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1073/pnas.2520991123",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC0",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "genetics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.03.667510"
+    },
+    {
+      "paper_id": "10.1101/2025.08.02.668111",
+      "title": "ET-Pfam: Ensemble transfer learning for protein family prediction",
+      "abstract": "MotivationDue to the rapid growth of sequence generation, which has surpassed the expert curators ability to manually review and annotate them, the computational annotation of proteins remains a significant challenge in bioinformatics nowadays. The Pfam database contains a large collection of proteins that are nowadays annotated with domain families through multiple sequence alignments and profile Hidden Markov models (pHMMs). However, such computational annotation methods have some limitations such as problems for handling large datasets and the fact that multiple sequence alignments are computationally challenging to compute with high accuracy due to the increase in complexity as the number of sequences and lengths grow. Additionally, each HMM is independently obtained for each family missing the opportunity of learning patterns across families, that is from a complete view of all the dataset. As an alternative, some deep learning (DL) models have been recently proposed, nevertheless with simple representations of the inputs and moderate improvements in performance.\n\nResultsIn this work we present ET-Pfam, a novel approach based on transfer learning and ensembles of multiple DL classifiers to predict functional families in the Pfam database. Several base DL models are first trained using learned representations from a protein large language model, with different hyperparameters to increase diversity. Then, the base models are integrated using classical ensemble strategies and novel voting approaches by learning weights for each model and for each Pfam family. Results demonstrate that the proposed ET-Pfam method can consistently diminish classification error rates compared to individual DL models, boosting prediction performance. Among the novel ensemble strategies presented here, the learned weights by family voting achieved the best performance, with the lowest error rate (7.00%), significantly surpassing the best individual base model error (12.91%) and three competitors of the state- of-the-art on the same Pfam dataset.\n\nAvailabilityData and source code are available at https://github.com/sinc-lab/ET-Pfam.",
+      "doi": "10.1101/2025.08.02.668111",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.02.668111"
+    },
+    {
+      "paper_id": "10.1101/2024.03.22.586259",
+      "title": "The dynamic interplay between tonic and phasic arousal shapes attention to optimize performance",
+      "abstract": "Arousal and attention are fundamental brain functions that play a critical role in optimizing performance. Kahnemans attention model (1973) theorizes a key interplay between attention and arousal, yet this relationship remains poorly understood. Using a multimodal approach, we investigated this interaction in healthy young adults performing an auditory attention task designed to simultaneously assess phasic arousal, voluntary attention, and involuntary attention. Furthermore, tonic arousal was experimentally modulated with low or high arousing music, as confirmed by changes in pupil size and heart rate. Behavioral data confirmed that informative cues enhanced voluntary attention, while unexpected salient task-irrelevant sounds (so-called distractors) produced either shortened or lengthened reaction times depending on their timing relative to target onset. Physiological data indicated that the facilitation effect of distractors on reaction times was driven by increases in phasic arousal. This benefit was further modulated by a dynamic interplay between phasic arousal and voluntary attention over time. Supporting Aston-Jones and Cohens theory, a fronto-central cortical response to distractors revealed that tonic and phasic arousal interact in line with an inverted U-shaped relationship. This study provides empirical evidence, in humans, that tonic arousal can optimize performance by tuning phasic arousal and attentional control.",
+      "doi": "10.1101/2024.03.22.586259",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.03.22.586259"
+    },
+    {
+      "paper_id": "10.1101/2023.10.16.562508",
+      "title": "Dynamics of Neutrophilia at the Neurovascular Unit Arising from Repeated Pulmonary Inflammation",
+      "abstract": "BackgroundThe role of neutrophils in mediating neurovascular vulnerability has been increasingly implicated in various acute inflammatory models of neuroimmune crosstalk between the periphery and the brain. Whether neurovascular vulnerability is similarly modulated in the context of frequent, but not acute, inflammatory activation in the periphery is the aim of our study. Such a model of frequent inflammatory irritation is pertinent to understanding the neurologic risk of constant exposure to aerosolized environmental hazards leading to progressive pulmonary disease.\n\nMethodsTo model repeated pulmonary inflammation, we applied a three-dose regimen of intranasal (i.n.) lipopolysaccharide (LPS) in C57BL/6J mice and studied the impact on the inflammatory environment of the brain, with a specific focus on neutrophil dynamics at the neurovascular unit (NVU). Tissue and circulatory inflammatory profiles were screened via bronchoalveolar lavage (BAL) protein content and cellularity, transcript analysis of brain tissue, and flow cytometry of peripheral blood. Intravital two-photon microscopy (2PM) of the brain vasculature identified neutrophil dynamics at the NVU. Immunofluorescence validated neutrophil dynamics and identified neuroinflammatory hallmarks and peripheral immune factor interactions at the NVU. In vivo findings were corroborated and replicated in murine and human microphysiological systems (MPS) modeling the blood-brain barrier as a proxy demonstration of the translational relevance of our findings.\n\nResults2PM of tdTomato-Ly6G+ neutrophils demonstrated increased levels of circulating neutrophils and corresponding engagement with the brain vasculature after the three-dose repeated i.n. exposure regimen. Neutrophilia at the NVU was corroborated with increased transcript levels of Ly6G and other pro-inflammatory markers. This coordination between endothelial physiology and neutrophil phenotypes was recapitulated in murine and human MPS models. System-wide neutrophilia in the lung and circulation was found to be cotemporaneous to neutrophilia at the NVU based on the cellularity of BAL and peripheral blood samples collected at the same endpoints. Immunohistochemical analysis of brain tissue implicates temporal coordination between vascular surface adhesion molecules with changes in neutrophil dynamics from adhesion, crawling, stalling, and transmigration. Extravasation of neutrophils was complemented by sustained paravascular deposition of fibrinogen and microgliosis up to 72 hours after the final i.n. dosing. Microglia-associated effector functions for synaptic pruning and regulation of neutrophil activity demonstrated distinct temporal profiles.\n\nConclusionsOur results identify systemic levels of neutrophilia accompanied by ingress and extravascular accumulation in brain parenchyma that correlated with sustained microglial activation. This neutrophil-centric lung-brain interaction is complemented by the observation of paravascular fibrinogen deposition that alters synaptic metabolism. Thus, we propose a mechanistic role for neutrophilia and associated inflammatory dysregulation as essential mediators along the lung-brain neuroimmune axis in a generalizable model of repeated respiratory exposure to inflammatory agents.\n\nGraphical Abstract\n\nO_FIG O_LINKSMALLFIG WIDTH=200 HEIGHT=119 SRC=\"FIGDIR/small/562508v2_ufig1.gif\" ALT=\"Figure 1\">\nView larger version (31K):\norg.highwire.dtl.DTLVardef@113d747org.highwire.dtl.DTLVardef@19a8a5corg.highwire.dtl.DTLVardef@f1a1eaorg.highwire.dtl.DTLVardef@1bd23c7_HPS_FORMAT_FIGEXP  M_FIG C_FIG",
+      "doi": "10.1101/2023.10.16.562508",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1186/s12974-026-03771-w",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2023.10.16.562508"
+    },
+    {
+      "paper_id": "10.1101/2024.11.21.624247",
+      "title": "A compendium of bona fide reference markers for genuine plant-derived extracellular vesicles and their degree of phylogenetic conservation",
+      "abstract": "Although the field of plant EVs (PEVs) is experiencing exponential growth, rigorous characterisation complying with MISEV guidelines has not been yet implemented due to the lack of bona fide reference markers. In this work, we have paved the way for the standardisation of PEV markers, providing the most profound proteomic data so far from apoplastic washing fluid-EVs, a sample enriched in genuine extracellular vesicles from plant tissue of two reference plant species: Arabidopsis thaliana (Arath-EVs) and Brassica oleracea (Braol-EVs). Besides, we analysed the protein content of the soluble fraction of the apoplast and calculated the enrichment of the potential markers studied in EVs. Additionally, we have conducted an exhaustive analysis of the proteomic data available so far from genuine EVs from any plant species, evaluating current potential markers, together with those found in our proteomic analyses. Our results provide evidence supporting the potential use of the following families as PEV markers: aquaporins, vacuolar-type ATPase complex subunits, some fasciclin-like arabinogalactan proteins (FLAs), tetraspanins, syntaxins, germin-like proteins and calreticulins. Next, we analysed the presence of orthologues and their degree of conservation throughout plant taxa, as well as in 2 reference species from the animal kingdom: human and mouse. Their degree of conservation was compared with that of current animal EV: CD63, CD81 and CD9. Among the protein families with potential to be used as PEV markers, 2 were found to be plant-specific: FLAs and germin-like proteins. On the other hand, aquaporins and vacuolar-type ATPase complex subunits showed the greatest degree of conservation across plant and animal kingdoms.\n\nOur results provide key insights on several aspects of classical and novel protein identity markers for PEVs to assist in the selection of the best candidates for standardisation: 1) species-specific abundance, 2) specificity for PEVs, and 3) conservation and plant specificity.",
+      "doi": "10.1101/2024.11.21.624247",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1002/jev2.70147",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "molecular biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.11.21.624247"
+    },
+    {
+      "paper_id": "10.1101/2024.12.11.627940",
+      "title": "Indirect environmental effects on the gut-brain axis in a wild mammal",
+      "abstract": "Inconspicuous interactions between host physiological systems and resident microbial communities may underlie how animals respond to environmental change. For example, immunity and metabolism are regulated in part by the gut microbiota, which can be shaped indirectly by host neuroendocrine function via a \"gut-brain axis\". Yet the sensitivity of this axis in wild vertebrates remains ambiguous. Here, we investigate covariation among environmental quality, glucocorticoids, and gut microbiota in a vulnerable population of Siberian flying squirrels (Pteromys volans) inhabiting a region impacted by variable rates of human disturbance. We test competing hypotheses related to direct versus indirect environmental effects (via the gut-brain axis) on adult and juvenile gut microbial communities. Adults housed a richer gut microbiota and had higher hair glucocorticoids that covaried with microbial composition, while juveniles lacked any hormone-microbiome covariation. Environmental quality (patch size, habitat diversity, and suitability) predicted variation in glucocorticoids but not variation in microbial diversity, suggesting no direct effects on gut microbiota. Instead, structural equation models revealed indirect environmental effects on microbiota via elevations in glucocorticoids in adults. Among juveniles, habitat-induced hormonal responses had no downstream effects on microbial diversity. Together, this provides evidence for age-dependent indirect environmental effects on gut microbial composition in a wild mammal by way of the host neuroendocrine system.",
+      "doi": "10.1101/2024.12.11.627940",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1111/mec.70149",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "ecology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2024.12.11.627940"
+    },
+    {
+      "paper_id": "10.1101/2025.02.19.639164",
+      "title": "Comparative responses of legume vs. non-legume tropical trees to biochar additions",
+      "abstract": "Nitrogen-fixing plants in the legume family (Fabaceae) may show particularly large positive responses to biochar additions due to their capacity to potentially compensate for reduced N in biochar-amended soils. Prior studies also suggest that biochar may have specific developmental effects on legumes, including increased root nodulation and altered morphology. We examined the growth and morphometric responses of legume and non-legume tropical trees to biochar additions in a common garden pot trial experiment. Four legume species (Acacia auriculiformis, A. mangium, Delonix regia, and Pterocarpus santalinus) and four non-legumes (Eucalyptus alba, Melia azedarach, Swietenia macrophylla, and Syzygium cumini) were compared in terms of sapling responses to additions of a wood-feedstock biochar applied at 10 and 20 t/ha. Overall, strong positive effects of biochar additions on sapling performance were observed, with an average increase of 30% in total biomass and a notable increase in height relative to diameter growth. Species showed pronounced differences in responses, with strong interactive effects of species and biochar treatments on growth metrics. Legume species showed an average increase somewhat greater than non-legumes; however, responses were variable among species, with the two Acacia species showing the largest responses, resulting in a non-significant pattern. A literature-based meta-analysis of tropical and subtropical trees likewise suggests greater biochar responses in legumes, but the analysis also falls short of statistical significance. In addition, experimental results indicate large interactive effects of species and biochar on soil pH and other soil properties. Large growth responses of certain taxa of legumes (and other taxa) to biochar, and pronounced species-specific effects on soil properties, may reflect evolved responses to fire disturbance that can be leveraged in the context of forest restoration and enhanced carbon sequestration in degraded tropical landscapes.",
+      "doi": "10.1101/2025.02.19.639164",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.24072/pcjournal.668",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "plant biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.02.19.639164"
+    },
+    {
+      "paper_id": "10.1101/2025.09.02.673639",
+      "title": "Biocontrol against fungal mycoparasites driven by Bacillus velezensis strains from a mushroom crop microcosm",
+      "abstract": "1.The cultivation of button mushroom (Agaricus bisporus) requires the design of tailor-made substrates that nourish the crop and promote morphology changes from mycelium to basidiome. The agronomic stages of mushroom development are also influenced by the microbiota present in the mushroom crop microcosm, which may have a beneficial impact on mushroom growth, development and quality, or a detrimental impact through reduction of yield or quality as parasites, competitors or disease vectors in mushroom crops. In this report we describe the isolation of multiple strains of Bacillus velezensis from mushroom casing material and basidiomes that show antifungal activity towards major mushroom mycoparasites, along with further characterization of their mode of action. Full genomes of B. velezensis CM5, CM19, CM35, EM5 and EM39 were sequenced and annotated, which together with metabolic profiling of specialised metabolites produced by CM5, CM19 and CM35 suggested that the antifungal activity of these strains is linked to the production of the lipopeptide fengycin. However, in crop trials, these strains did not increase mushroom yield or provide significant control of the mushroom parasite Lecanicillium fungicola. Genomic and analytical tools were designed and used to evaluate B. velezensis persistence in casing when the selected strains were artificially applied. B. velezensis population levels decreased significantly after application, potentially contributing to the lack of biocontrol activity observed in crop trials.\n\n3. Key PointsO_LIB. velezensis strains isolated from peat-based microcosms are shown to have significant inhibitory effects against major fungal parasites of mushrooms in vitro.\nC_LIO_LIThrough full genome sequencing and metabolic profiling using LC-HRMS, the antifungal activity is correlated with the production of lipopeptides, particularly fengycin analogues.\nC_LIO_LIIn trials using button mushroom crops artificially infected with Lecanicillium fungicola, the causal agent of dry bubble, treatment of casing material with these strains did not significantly limit dry bubble disease or increase yield.\nC_LIO_LIThe persistence of strains in crop when artificially applied showed significant decreases after application on casing, potentially contributing to the lack of biocontrol activity.\nC_LI",
+      "doi": "10.1101/2025.09.02.673639",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1007/s00253-026-13938-3",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "microbiology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.09.02.673639"
+    },
+    {
+      "paper_id": "10.1101/2025.09.02.673835",
+      "title": "Modeling Alternative Conformational States in CASP16",
+      "abstract": "The CASP16 Ensemble Prediction experiment assessed advances in methods for modeling proteins, nucleic acids, and their complexes in multiple conformational states. Targets included systems with experimental structures determined in two or three states, evaluated by direct comparison to experimental coordinates, as well as domain-linker-domain (D-L-D) targets assessed against statistical models from NMR and SAXS data. This paper focuses on the former class of multi-state targets. Ten ensembles were released as community challenges, including ligand-induced conformational changes, protein-DNA complexes, a trimeric protein, a stem-loop RNA, and multiple oligomeric states of a single RNA. For five targets, some groups produced reasonably accurate models of both reference states (best TM-score >0.75). However, with the exception of one protein-ligand complex (T1214), where an apo structure was available as a template, predictors generally failed to capture key structural details distinguishing the states. Overall, accuracy was significantly lower than for single-state targets in other CASP experiments. The most successful approaches generated multiple AlphaFold2 models using enhanced multiple sequence alignments and sampling protocols, followed by model quality based selection. While the AlphaFold3 server performed well on several targets, individual groups outperformed it in specific cases. By contrast, predictions for one protein-DNA complex, three RNA targets, and multiple oligomeric RNA states consistently fell short (TM-score <0.75). These results highlight both progress and persistent challenges in multi-state prediction. Despite recent advances, accurate modeling of conformational ensembles, particularly RNA and large multimeric assemblies, remains a critical frontier for structural biology.",
+      "doi": "10.1101/2025.09.02.673835",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1002/prot.70065",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.09.02.673835"
+    },
+    {
+      "paper_id": "10.1101/2025.09.02.673832",
+      "title": "A cytokine receptor-targeting chimera (kineTAC) toolbox for expanding extracellular targeted protein degradation.",
+      "abstract": "Extracellular targeted protein degradation (eTPD) is as an important new modality for manipulating the extracellular proteome. However, most eTPD receptors are expressed broadly or are restricted to the liver. Cytokine receptor targeting chimeras (kineTACs) are genetically encoded bispecifics for eTPD that fuse a natural ligand like CXCL12 to an antibody, directing soluble or membrane proteins for lysosomal degradation using the widely expressed chemokine receptor CXCR7 (Pance K, Gramespacher JA., Byrnes, JR, Salangsang F., Serrano JAC, Cotton AD, Steri V, and Wells JA, Nat. Biotechnol. 2023, 41, 273-281). Here, we dramatically expand the kineTAC toolbox by constructing 81 new kineTACs based on an unbiased list of cytokines, chemokines and growth factors. Remarkably, 55 of these expressed at suitable levels for analysis without any optimization. Many of these kineTACs bind receptors that have unique cell-type expression profiles, allowing for eTPD in specific cells and tissues and some were more potent than the original CXCL12-based kineTAC. We further show the internalizing capability of a kineTAC can enhance the performance of antibody drug conjugates. We believe these simple, genetically encoded tools will be useful for expanding the applications for optimized or cell type-selective eTPD.",
+      "doi": "10.1101/2025.09.02.673832",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1073/pnas.2524129123",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "synthetic biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.09.02.673832"
+    },
+    {
+      "paper_id": "10.1101/2023.11.14.567066",
+      "title": "Population analyses reveal heterogenous encoding in the medial prefrontal cortex during naturalistic foraging",
+      "abstract": "Foraging in the wild requires coordinated switching of critical functions, including goal-oriented navigation and context-appropriate action selection. Nevertheless, few studies have examined how different functions are represented in the brain during naturalistic foraging. To address this question, we recorded multiple single-unit activities from the medial prefrontal cortex (mPFC) of rats seeking a sucrose reward in the presence of an unpredictable attack posed by a robotic predator (Lobsterbot). Simultaneously recorded ensemble activities from neurons were analyzed in reference to various behavioral indices as the animal moved freely across the foraging area (F) between the nest (N) and the goal (E) area. An artificial neural network, trained with simultaneously recorded neural activity, estimated the rats current distance from the Lobsterbot. The accuracy of distance estimation was the highest in the middle F-zone in which the dominant behavior was active navigation. The spatial encoding persisted in the N-zone when non-navigational behaviors such as grooming, rearing, and sniffing were excluded. In contrast, the accuracy decreased as the animal approached the E-zone, when the activity of the same neuronal ensembles was more correlated with events related to dynamic decision-making between food procurement and Lobsterbot evasion. A population-wide analysis confirmed highly heterogeneous encoding by the region. To further assess the decision-related activity in the E-zone, a naive Bayesian classifier was trained to predict the success and failure of avoidance behavior. The classifier predicted the avoidance outcome as much as 6 s before the head withdrawal. In addition, two sub-populations of recorded units with distinct temporal dynamics contributed differently to the prediction. These findings suggest that an overlapping population of mPFC neurons may switch between two heterogenous modes, encoding relevant locations for goal-directed navigation or an imminent situational challenge.",
+      "doi": "10.1101/2023.11.14.567066",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.7554/eLife.93994.4",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2023.11.14.567066"
+    },
+    {
+      "paper_id": "10.1101/2025.04.09.647945",
+      "title": "Subpopulations in clinical samples of M. tuberculosis can give rise to rifampicin resistance and shed light on how resistance is acquired",
+      "abstract": "ObjectivesWhole genome sequencing (WGS) has become a key tool for diagnosing Mycobacterium tuberculosis (M. tuberculosis) infections, but discrepancies between genotypic and phenotypic drug susceptibility testing can hinder effective treatment and surveillance. This study investigates the impact of resistant subpopulations and compensatory mutations in WGS-based rifampicin resistance prediction.\n\nMethodsBased on a dataset of 35,538 clinical M. tuberculosis samples the sensitivity and specificity of resistance classification were evaluated with and without considering subpopulations and compensatory mutations.\n\nResultsBy lowering the fraction of reads required to identify a resistance-associated variant in a sample from 0.90 to 0.05, the sensitivity increased significantly from 94.3% to 96.4% without a significant impact on specificity. Allowing compensatory mutations to predict resistance further lowered the false negative rate. Finally, we found that samples with resistant subpopulations were less likely to be compensated than homogeneous resistant samples. Further analysis of these samples revealed distinct clusters with differing amounts of within-sample diversity, pointing towards different mechanisms of resistance acquisition, such as within-host evolution and secondary infections.\n\nConclusionsOur results indicate that a substantial fraction of false negative calls in WGS-based rifampicin resistance prediction can be explained by masked resistant subpopulations. The genetic diversity within the heterogenous samples is consistent with at least 28% of the rifampicin resistance arising from secondary infections.",
+      "doi": "10.1101/2025.04.09.647945",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1093/jacamr/dlaf175",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "microbiology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.04.09.647945"
+    },
+    {
+      "paper_id": "10.1101/2025.09.02.673776",
+      "title": "Memory-Related Default-Executive Coupling Across the Lifespan and Associations with Changes in Cognitive Control",
+      "abstract": "Episodic memory and cognitive control declines in aging. The default-executive coupling hypothesis of aging (DECHA) suggests that a neural correlate of cognitive decline in aging is increased functional connectivity (FC) between lateral prefrontal areas and the default mode network. Here, in a lifespan sample (n=552, 6-81years), we tested FC between the left dorsolateral prefrontal cortex (dLPFC) and the default mode network (DMN) during the encoding and retrieval phases of an episodic memory fMRI task. We created two age groups based on evidence for episodic memory decline after 30 years: a youth group encompassing childhood, adolescence, and young adulthood (6-29 years) and an aging group (30-81 years). To test if the dLPFC-DMN FC was associated with changes in cognitive control, we used longitudinal change (up to 10 years) in a Stroop inhibition/switching task linked to the prefrontal cortex. Results showed (i) lower dLPFC and DMN connectivity with age in the youth group and higher connectivity in the aging group, and (ii) this FC was associated with an age-related increase in the inhibition task completion time, particularly in the aging group. However, dLPFC showed similar relationships with other networks, particularly salient attentional and control subnetworks, and despite decline in cognitive control associated with memory performance, memory-related FC between dLPFC and DMN did not. Although this link with memory performance remains unclear, the results using longitudinal cognitive data align with the DECHA mechanisms and extends the current proposal by indicating inverse relationships in development and the relevance of additional attentional and control network coupling.",
+      "doi": "10.1101/2025.09.02.673776",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1162/IMAG.a.1312",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.09.02.673776"
+    },
+    {
+      "paper_id": "10.1101/2025.08.29.672997",
+      "title": "Hierarchical Analysis of RNA Secondary Structures with Pseudoknots Based on Sections",
+      "abstract": "Predicting RNA structures containing pseudoknots remains computationally challenging due to high processing costs and complexity. While standard methods for pseudoknot prediction require O(N6) time complexity, we present a hierarchical approach that significantly reduces computational cost while maintaining prediction accuracy. Our method analyzes RNA structures by dividing them into contiguous regions of unpaired bases derived from known secondary structures (\"sections\"). We examine pseudoknot interactions between sections using a nearest-neighbor energy model and dynamic programming. The algorithm scales as O(n2{ell}4), offering substantial computational advantages over existing global prediction methods. Our analysis of 726 transfer messenger RNA and 455 Ribonuclease P RNA sequences reveals that biologically relevant pseudoknots are highly concentrated among section pairs with large minimum free energy gains. Over 90% of connected section pairs appear within just the top 3% of section pairs ranked by MFE gain. For 2-clusters, our method achieves high prediction accuracy with sensitivity exceeding 0.90 and positive predictive value above 0.80. For 3-clusters, we discovered asymmetric behavior where \"former\" section pairs (formed early in the sequence) predict accurately, while \"latter\" section pairs show different formation patterns. The hierarchical section-based approach demonstrates that local energy considerations can effectively predict pseudoknot formations between unpaired regions. Our work provides strong evidence for the effectiveness of local energy calculations in pseudoknot prediction and offers insights into the dynamic processes governing RNA structure formation.",
+      "doi": "10.1101/2025.08.29.672997",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pcbi.1013904",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.29.672997"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672951",
+      "title": "EnrichMET: R Package for Integrated Pathway and Network Analysis for Metabolomics",
+      "abstract": "Advances in metabolomics have significantly improved our understanding of cellular processes by enabling the identification of hundreds of metabolites in a single experiment. These developments provide valuable insights into complex metabolic networks. While efforts have been made to develop pathway enrichment analysis (PEA), existing implementation often require multiple steps, rely on web-based interfaces, or depend on R packages configuration that may affect reproducibility and ease of use. To overcome these limitations, we introduce EnrichMet, an R package for fast, flexible, and reproducible pathway enrichment analysis. EnrichMet modules support over-representation analysis of pathways, metabolite set enrichment analysis (MetSEA), and network-based pathway analysis. The package streamlines the workflow by combining curated pathway information from the Kyoto Encyclopedia of Genes and Genomics (KEGG) and employs Fishers Exact Test to identify significantly enriched pathways. Benchmark analyses show that enrichment on sample data completes in approximately 3 seconds. EnrichMet offers both a command-line and a user-friendly Shiny interface, enabling accessibility for users with or without programming experience. Through case studies on experimental metabolomics datasets, we demonstrated that EnrichMet delivers accurate and comprehensive pathway enrichment results while minimizing computational time and simplifying user interaction. Furthermore, its flexible framework supports extensions to other data types and knowledge bases beyond KEGG, as illustrated through a lipidomics case study. By unifying performance, reproducibility, usability, and visualization within a single package, EnrichMet facilitates deeper insights and promotes efficient, transparent, and reproducible research practices.\n\nAvailability and implementation(https://github.com/biodatalab/enrichmet.git)",
+      "doi": "10.1101/2025.08.28.672951",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672951"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672922",
+      "title": "Generation of a global freshwater algal taxonomic database by application of PCR-free rbcL gene detection and machine-learning-based taxonomic classification to public metagenome datasets",
+      "abstract": "While it has become increasingly evident that microalgae are critical components of aquatic ecosystems, comprehensive taxonomic analysis of the microalgal component of microbial communities has lagged behind recent innovations in prokaryotic sequencing and bioinformatics. Microalgae are sequenced alongside prokaryotes in metagenomic whole genome shotgun (WGS) sequencing efforts but remain overlooked. In this study, an analytic pipeline for detecting a key algal taxonomic barcode, rbcL, from WGS datasets. This approach allowed for near-perfect detection of rbcL sequences from eight major algal phyla, whereas in silico PCR utilizing popular phyla-specific rbcL primer sets for four algal phyla suggests that such approaches may miss much algal diversity. Further, a machine learning classification model was built and validated to allow for taxonomic classification of rbcL sequences of eight algal phyla to genus or species level with high accuracy and recall values (>90%). Benchmarking of this approach against microscopic algal identifications showed accurate identifications for algae with higher relative abundance values and may offer additional detections of algae not readily identified by microscopy. This pipeline was applied against over 4,000 freshwater WGS metagenomes to generate a global taxonomic occurrence and relative abundance database of freshwater algae composed of over 14,000 accessions. WGS-based algal detection offers broad, unbiased taxon-agnostic algal detection in a single sample analysis. Furthermore, it allows for simultaneous identification of the prokaryotic community, offering new opportunities for studying inter-domain relationships as evidenced by a case-study presented herein. The rbcL taxonomic classifier and metagenome-derived algal detection database are available for download and use at https://doi.org/10.6084/m9.figshare.29996962.",
+      "doi": "10.1101/2025.08.28.672922",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672922"
+    },
+    {
+      "paper_id": "10.1101/2025.01.09.632126",
+      "title": "The Demodifier: a tool for screening modification-induced alternate peptide taxonomy in palaeoproteomics",
+      "abstract": "In palaeoproteomic research, the accuracy of taxonomic matches is crucial, as research questions frequently hinge on which species were utilised by ancient people. However, protein modifications including deamidation of glutamine and asparagine, and conversion of glutamine or glutamic acid to pyroglutamic acid, can change the sequence of peptides, leading to spurious taxonomic detections and potentially inaccurate archaeological interpretations. While a handful of examples of this phenomenon have been reported in the literature, the issue is potentially much wider reaching than currently realised. In reality, any time a peptide containing a deamidated glutamine or asparagine residue, an unmodified glutamic acid or aspartic acid residue, or a pyroglutamic acid modification is detected by proteomic search software, the sequence, and therefore potentially its taxonomy, may be incorrect, which could potentially lead to unsound archaeological interpretations. The Demodifier is a fast, open source tool which solves this issue by screening for modification-induced alternate peptide taxonomy, enabling archaeologists to make informed interpretations of the taxonomies of peptides detected in ancient samples. To assess its utility, the Demodifier is tested against an archaeological dataset containing all unique peptides reported in palaeoproteomic studies of dental calculus and vessels. The results reveal that modification-induced alternate peptide taxonomies are severely under-reported, occurring 15% more frequently than previously understood. Modifications were found to produce three different types of inaccurate taxonomic matches: those which yielded completely different taxonomic lowest common ancestors to the input peptide, those which were more taxonomically specific than the input peptide, and those which were less taxonomically specific than the input peptide. The Demodifier therefore enables the rapid detection of potentially inaccurate peptide taxonomies, avoiding spurious archaeological interpretations in future studies.",
+      "doi": "10.1101/2025.01.09.632126",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1371/journal.pone.0339465",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.01.09.632126"
+    },
+    {
+      "paper_id": "10.1101/2025.08.30.673130",
+      "title": "Chlorpyrifos and tamoxifen co-pretreatment promotes stem-like phenotype and upregulation of anti-estrogen therapy resistance markers in ERα breast cancer cells",
+      "abstract": "Endocrine therapy (ET) is the standard first-line treatment for hormone receptor positive breast cancer but about 30% of patients develop resistance. Chlorpyrifos (CPF), is an endocrine disruptor pesticide that promotes a stemness phenotype and triggers molecular mechanisms involved in ET resistance. The goal of this study is to assess whether CPF induces tamoxifen (TAM) resistance by modulating estrogen receptor alpha (RE) expression through histone deacetylase 1 (HDAC1) regulation. We analyzed public databases of breast cancer patients and performed in vitro experiments using the MCF-7 cell line. We evaluated whether the co-pretreatment with CPF and TAM (CPF+TAM) modulates stemness and ET resistance markers. We found that CPF+TAM selects cells that exhibit increased clonogenicity, enhanced mammosphere-forming ability, and upregulates the stemness markers CD44, NANOG and POU5F1 while decreasing CD24. This selected cell subpopulation shows higher levels of mRNA and elevated protein expression of RE and HDAC1. Finally, we identified a resistance and stemness marker signature induced by CPF+TAM that closely resembles the profile observed in the dataset of patients who acquired tamoxifen resistance. Our findings show that CPF promotes an undifferentiated basal-like cell phenotype that contributes to TAM resistance, reinforcing the need for global restrictions to safeguard public health.",
+      "doi": "10.1101/2025.08.30.673130",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "10.1016/j.envres.2025.123447",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "cancer biology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.30.673130"
+    },
+    {
+      "paper_id": "10.1101/2025.08.28.672634",
+      "title": "Chronotherapy as a Potential Strategy to Reduce Ifosfamide-Induced Encephalopathy: A Preclinical Study in a Murine Model",
+      "abstract": "PurposeNearly five decades after its introduction into clinical oncology, ifosfamide (IFO) remains a widely used alkylating chemotherapeutic agent for the treatment of sarcomas, germ-cell tumors and selected hematological malignancies in both adult and pediatric oncology. Its use is limited by severe toxicities, particularly hemorrhagic cystitis and central nervous system complications. Recent studies have highlighted the persistence and complexity of IFO-related neurotoxicity (Idle & Beyo[g]lu, 2023 [1]), including an increased risk of encephalopathy associated with certain formulations in pediatric populations (Hillaire-Buys et al., 2019 [2]) and differences between originator and generic formulations (Chambord et al., 2023 [3]), these concerns prompted a regulatory safety review by the European Medicines Agency [4]. Circadian rhythms are increasingly recognized as key regulators of drug metabolism and toxicity. In a previous chronotolerance study, we demonstrated a marked time-of-day-dependent variation in lethal IFO toxicity at the LD50 dose (Chennoufi & Boughattas, 2025 [5]). This study aimed to determine whether sublethal IFO exposure (LD30) also exhibits circadian variation in multi-organ toxicity.\n\nMethodsOne hundred male Swiss albino mice synchronized under a 12:12 h light-dark cycle received IFO LD30 at four circadian times (1, 7, 13 and 19 hours after light onset, HALO). Hematological parameters, hepatic enzymes, histopathology and neurobehavioral performance were evaluated.\n\nResultsToxicity varied significantly according to dosing time. Administration at 7 HALO produced the most pronounced injury, whereas dosing at 13 HALO was associated with reduced hepatic, renal and bladder damage. Encephalopathy-related lesions were predominantly observed at 19 HALO.\n\nConclusionSublethal IFO toxicity exhibits clear circadian variation. Administration at 13 HALO corresponded to the previously identified peak of LD50 tolerance, supporting further exploration of time-adjusted ifosfamide administration strategies to improve treatment tolerability.",
+      "doi": "10.1101/2025.08.28.672634",
+      "pmcid": "",
+      "pub_year": 2025,
+      "published": "NA",
+      "source_db": "biorxiv-api",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "pharmacology and toxicology"
+      ],
+      "venue": "bioRxiv preprint",
+      "url": "https://doi.org/10.1101/2025.08.28.672634"
+    }
+  ]
+}

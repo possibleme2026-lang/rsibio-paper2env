@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/nrhb1-multicenter-confirmatory-analysis"
+version = "0.2.0"
+description = "Reproduce the pre-specified confirmatory analysis of a multicenter preclinical RCT of rhNRG\u03b21 in a murine NF2-schwannomatosis model: primary mixed-covariate OLS with extreme-case imputation, actin-normalised Western blot, and QC'd DIA proteomics with pathway summaries."
+keywords = ["preclinical-rct", "neuregulin", "schwannoma", "proteomics", "missing-data-imputation", "differential-abundance"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "constraint_pass_fraction"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.07.31.741963"
+source_doi = "10.64898/2026.07.31.741963"
+source_url = "https://doi.org/10.64898/2026.07.31.741963"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

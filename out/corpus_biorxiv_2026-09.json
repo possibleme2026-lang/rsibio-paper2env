@@ -1,0 +1,346 @@
+{
+  "records": [
+    {
+      "paper_id": "10.1101/2025.11.06.686983",
+      "title": "A critical evaluation of Gene Ontology priors in biologically-informed neural networks",
+      "abstract": "Biologically-informed neural networks (BINNs) embed prior knowledge such as the Gene Ontology (GO) into their architecture to produce structurally interpretable representations, yet whether and how this prior improves performance or interpretation remains unclear. Here, we introduce GONNECT, a BINN incorporating GO into an autoencoder. We evaluate GO constraints in the encoder, decoder, or both on RNA-seq tumour samples from The Cancer Genome Atlas (TCGA), comparing against published BINNs (OntoVAE and VEGA), randomized-prior controls, and an unconstrained baseline. Across metrics, GO structure adds little to reconstruction or latent-space organization, frequently matched by randomized or unconstrained models. Its value lies in node activations, particularly in the encoder, where they correlate with a gene set enrichment analysis (GSEA)-derived reference. GONNECT-SL introduces regularized connections outside GO, but these soft links are unstable across seeds and concentrate where the ontology is sparse, appearing to compensate for the priors constraints rather than reveal new biology. They recover near-unconstrained reconstruction, keeping encoder activations interpretable. We identify the soft-link encoder as most promising. Our results clarify what biological priors contribute: their value lies not in the identity of the imposed connections or in improved performance, but in organizing activations into biologically meaningful units that can be interrogated directly.",
+      "doi": "10.1101/2025.11.06.686983",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": true,
+      "has_data_link": false,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.11.06.686983"
+    },
+    {
+      "paper_id": "10.64898/2026.08.25.747119",
+      "title": "CREST: A Cortical Resting-State EEG Spatial Transformer for Chronic Pain Inference",
+      "abstract": "Chronic pain mechanisms are complex, spanning multiple brain regions and networks. We ask whether resting brain activity carries a readout of that state. From a few minutes of resting-state electroencephalography (EEG), we generate a spectrogram to represent how each region of the cortex oscillates across frequency and time and pass it through CREST (Cortical Resting-state EEG Spatial Transformer): a frozen image-recognition network that reads each region as an image--here, a spectrogram--paired with a graph model that weighs the 56 cortical regions together to classify chronic-pain status. Across 125 people (74 with chronic pain, 51 healthy controls), evaluated through a leave-one-subject-out cross-validation, CREST separates the two groups with an area under the receiver operating characteristic curve (AUROC) = 0.782 (permutation p < 0.005). Control experiments implicate each persons individual alpha rhythm.\n\nClinical relevanceA resting-state EEG readout of chronic MSK pain could clarify pathophysiology and inform treatment.",
+      "doi": "10.64898/2026.08.25.747119",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.25.747119"
+    },
+    {
+      "paper_id": "10.64898/2026.08.31.743583",
+      "title": "A family-wide atlas of human connexin docking compatibility",
+      "abstract": "Gap junction (GJ) channels mediate direct intercellular communication by allowing the exchange of ions, metabolites, and signaling molecules between neighboring cells. Humans express 21 connexin (Cx) isoforms that can assemble into homotypic or heterotypic channels, creating a large potential interaction landscape that shapes tissue-specific communication networks. However, the rules governing which connexin isoforms can compatibly dock remain incompletely defined. Extracellular loop 2 (EL2) sequence features have been implicated in docking specificity and used to classify connexins into two canonical compatibility groups, K-N and H, but these assignments remain largely predictive. Most potential heterotypic connexin pairings have never been experimentally tested. This incomplete interaction map limits our ability to predict which connexin combinations can assemble, how isoform co-expression shapes intercellular communication, and how these relationships are altered or exploited in disease and engineered systems. Here, we used the FETCH (Flow Enabled Tracking of Connexosomes in HEK Cells) assay to evaluate docking compatibility across the complete human connexin family. To support family-wide compatibility mapping, we used literature-supported heterotypic interactions to define a data-driven FETCH score threshold for high-confidence interaction compatibility. Homotypic FETCH measurements varied substantially across the 21 connexin isoforms, with 15 producing mean scores above the empirical threshold. We then extended FETCH analysis to all 210 pairwise heterotypic isoform combinations. The resulting interaction landscape largely recapitulated expected motif-class relationships, including enrichment within the two canonical compatibility groups, but also identified neighboring-group interactions and unexpected cross-group pairings that represented clear exceptions to class-based predictions. Consistent with these findings, pairwise EL2 motif similarity was only modestly associated with threshold-based interaction classification, indicating that EL2 similarity alone was insufficient to predict compatibility outcomes. Together, these findings suggest that motif class provides a broad organizing framework for connexin compatibility, but that pairwise docking specificity also depends on yet-unresolved isoform-specific determinants that produce neighboring-group relationships and clear cross-group exceptions. Notably, Cx46, a lens Cx also associated with melanoma and breast cancers, emerged as a broadly permissive isoform capable of interacting with partners from both major compatibility groups and more than half of the connexin family. Together, these findings establish the first family-wide experimental atlas of human connexin docking compatibility, defining canonical interactions, previously unrecognized pairings, and exceptions to established compatibility rules. This atlas provides a foundation for defining the molecular determinants of connexin specificity, understanding how isoform diversity shapes intercellular communication, and designing gap junction channels with controlled docking behavior.",
+      "doi": "10.64898/2026.08.31.743583",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": true,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.31.743583"
+    },
+    {
+      "paper_id": "10.1101/2025.05.15.653735",
+      "title": "Somatosensory rhythms and cerebellar-basal ganglia beta-band dynamics in Parkinson's disease",
+      "abstract": "Rhythmic cognition relies on the interplay between endogenous and exogenous temporal structures, allowing organisms to anticipate and adapt to events in time. Neural oscillations, particularly in the beta-band (14-30 Hz), have been implicated in this predictive capacity, coordinating sensorimotor networks that support timing and rhythm perception. Parkinson's disease (PD), a movement disorder characterized by disrupted basal ganglia function, offers a unique framework to probe the neural mechanisms underlying rhythmic cognition. We estimated beta-band source activity and connectivity across the cerebellum, basal ganglia, thalamus, and motor cortex during a rhythmic somatosensory timing task to compare brain activity between participants with PD (n=24) and age-matched controls (n=25). Using magnetoencephalography, participants received tactile stimuli in regular (non-jittered) and irregular (jittered) sequences, with the final stimulus omitted to probe prediction before and evaluation after the omission. We found prediction-related differences between participants with PD and controls in the cerebellum and basal ganglia before the omissions, while replicating earlier findings in controls, consistent with cerebellar evaluation responses after the omissions. In PD, basal ganglia activity showed greater activity for jittered over non-jittered somatosensory rhythms, opposite to controls. Altered cerebellar beta-band responses correlated with PD symptom severity. Connectivity analyzes showed group-by-regularity interactions in a sensory-integration network. These findings suggest that temporal prediction and evaluation in rhythmic cognition rely on coordinated beta-band dynamics across the cerebello-striatal-thalamo-cortical network. In PD, disrupted basal ganglia function may be associated with increased cerebellar engagement and altered network dynamics under irregular temporal conditions, potentially reflecting differences in the processing of rhythmic structure.",
+      "doi": "10.1101/2025.05.15.653735",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.05.15.653735"
+    },
+    {
+      "paper_id": "10.64898/2026.08.26.747109",
+      "title": "Structure-Constrained Intrinsic Timescales Across Tasks",
+      "abstract": "Intrinsic neural timescale (INT) quantifies the persistence of spontaneous neural dynamics and offers a principled metric for characterizing brain-wide temporal organization. Although a hierarchy of INTs has been established during rest, how task engagement reconfigures this organization and how it is constrained by the structural connectome (SC) remain poorly understood. Here, we systematically mapped whole-brain INT using high-resolution fMRI data from the Human Connectome Project during rest and seven tasks spanning working memory, gambling, motor, language, social, relational, and emotion domains. Task engagement induced robust, regionally heterogeneous changes in INT while largely preserving the brain-wide temporal hierarchy across cognitive states. SC-INT coupling remained strong but consistently decreased during tasks, indicating that anatomical architecture continues to constrain INT, although its influence is attenuated under task demands. To investigate these findings mechanistically, we employed a multiscale, whole-brain neuronal-network model, which revealed that INT increase and peak within a broad critical-like regime. Strong SC-INT coupling, as observed empirically, emerged in the subcritical regime, weakened progressively with increasing network excitability, and reversed in the supercritical regime. These results demonstrate that task engagement reconfigures INTs while maintaining their hierarchical organization, suggesting that both resting and task states operate largely within a common subcritical dynamical regime.",
+      "doi": "10.64898/2026.08.26.747109",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": true,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.26.747109"
+    },
+    {
+      "paper_id": "10.64898/2026.06.23.733972",
+      "title": "A Mathematical Model of Reliability-Dependent Sensory Reweighting in Quiet Standing",
+      "abstract": "Human quiet standing relies on vestibular, proprioceptive, and visual information whose contributions change with sensory context. Dynamic posturography characterizes this reweighting through responses to visual-scene and support-surface perturbations, but a compact mathematical account of how sensory reliability propagates from state estimation to postural action remains incomplete. We develop a minimal quiet-standing model in which sensory reliability is encoded by channel-specific precision parameters that weight sensory prediction errors. A one-link inverted pendulum receives vestibular, proprioceptive, and visual observations, estimates posture using an active-inference variational free-energy objective over temporally embedded states, and selects ankle torque by minimizing the same free-energy form under an upright sensory goal. Changes in sensory conditions enter the model only through the relative channel precisions; body dynamics, the action optimizer, and the upright goal prior are held fixed. A fixed-point analysis yields closed-form predictions: the perturbation-induced belief bias, each channels state-update contribution, and the resulting posture shifts are set by relative channel precisions, with a stability condition on the upright goal. Closed-loop simulations confirmed these predictions: reducing an unreliable channels precision reduced perturbation-driven postural shifts by approximately 82%, as predicted, with a matching decrease in that channels state-update contribution, identifying belief updating as the mechanism of reweighting. A graded reliability-to-precision mapping monotonically controlled sensory contribution, and reweighting required relative, channel-selective precision changes rather than a global reduction. These results provide a compact mathematical account of postural sensory reweighting as relative, context-selective precision control in a closed-loop multisensory system.",
+      "doi": "10.64898/2026.06.23.733972",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": true,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.06.23.733972"
+    },
+    {
+      "paper_id": "10.64898/2025.12.30.695445",
+      "title": "Friendship modulates physical effort and neural dynamics during group coordination in shared social networks",
+      "abstract": "Human social interactions are embedded within social networks, yet how existing interpersonal relationships influence the behavioural and neural dynamics of collective action remains unclear. We combined social network mapping with three-person EEG-hyperscanning to investigate how friendship asymmetry within shared social networks modulates physical effort allocation during real-time coordination. Triads consisting of two close friends and one non-friend performed a novel joint force task. Non-friends consistently produced greater and more vigorous force relative to friends, particularly those embedded in smaller classroom social networks. At the neural level, non-friends also showed stronger alpha- and beta-band event-related desynchronization, inter-subject correlation, and group phase synchrony, indicating greater engagement of action-related and attentional processes. These findings suggest that non-friends invest more physical effort and attention when interacting in socially asymmetric group settings, demonstrating how real-world relational context within social networks is dynamically embodied in the neural and behavioural mechanisms supporting human group coordination.",
+      "doi": "10.64898/2025.12.30.695445",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2025.12.30.695445"
+    },
+    {
+      "paper_id": "10.64898/2026.03.18.711671",
+      "title": "Inhomogeneous Tau polymerization, core-shell organization, and seed formation during Tau condensate aging",
+      "abstract": "Several proteins aggregating in neurodegenerative diseases spontaneously segregate into liquid condensates, which can catalyze protein aggregation. How liquid-solid transitions are catalyzed in the confined condensate volume is not clear. For the microtubule associated protein Tau, aggregating intra-neuronally in Alzheimer's disease, we show that, during maturation, Tau condensates convert into elastic protein networks, accompanied by inhomogeneous polymerization of the condensate interior and the formation of high-density nodes and a 'shell'. During condensation, Tau molecules extend, favoring intermolecular interactions and priming for progressive parallel Tau arrangement that can enable amyloid-like Tau oligomerization. In cells, aged condensates seed small Tau clusters in cytosol and at the nuclear envelope, precursors of larger aggregates. By bridging molecular to condensate level, we present mechanistic insight into how Tau condensates evolve into pathological, beta-structure containing seeds. The interior of aged Tau condensates remains accessible for smaller molecules, providing the opportunity to molecularly target Tau seed formation inside condensates.",
+      "doi": "10.64898/2026.03.18.711671",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biochemistry"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.03.18.711671"
+    },
+    {
+      "paper_id": "10.1101/2024.10.30.621034",
+      "title": "Single neurons detect spatiotemporal activity transitions through STP and EI imbalance",
+      "abstract": "Sensory input and internal context converge onto the hippocampus as spatio-temporal activity patterns. Transitions in these input patterns are frequently salient. We demonstrate that short-term potentiation (STP) mediates escape from EI balance to implement mismatch detection in spatiotemporally patterned activity sequences. We characterized STP in the mouse hippocampus CA3-CA1 network using optogenetic patterned stimuli in CA3 while recording from CA1 pyramidal neurons. STP modulates EI summation across patterns, first amplifying, then reducing responses. We parameterized a multiscale model of network projections onto hundreds of E and I boutons on a CA1 neuron, each including stochastic signaling to mediate STP. The model detected mismatches in trains of input patterns, which we experimentally confirmed. Mismatch selectivity depends on stimulus overlap, network weights, and connectivity. It is robust over a wide range of model parameters and assumptions about input spike timing jitter, postsynaptic spiking and stochasticity. Finally, we predict that optimal mismatch selectivity can be tuned over low to high gamma frequencies by modulating network parameters, and show that there is strong mismatch detection for gamma-frequency bursts between theta cycles, consistent with theta-tuned snapshots of novel input.",
+      "doi": "10.1101/2024.10.30.621034",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2024.10.30.621034"
+    },
+    {
+      "paper_id": "10.1101/2025.06.24.661118",
+      "title": "Allelic coverage analyses reveal a high proportion and uneven chromosomal distribution of SNPs associated with polymorphic duplications in the oyster Ostrea edulis",
+      "abstract": "Oysters are known for their high genetic diversity, potentially high genetic load, and structurally complex genomes. The European flat oyster, Ostrea edulis, is no exception. Here, we combined a reference-free analysis of pairs of k-mers differing by a single nucleotide (hereafter: het-mers) with a reference-based analysis of allelic coverage using high-coverage short-read sequencing data (70-160X) from five individuals. Up to one-third of SNPs called as heterozygous within an individual exhibited allelic coverage fractions departing from the expected 0.5 ratio. Despite no evidence of recent whole-genome duplication, 40% of het-mers displayed coverage profiles consistent with duplicated genomic segments. We classified AAB het-mers as CN3 and AAAB or AABB het-mers as CN4, corresponding to nucleotide variants located within segments present in three and four copies, respectively, and interpreted as heterozygous and homozygous duplications. These CN3 and CN4 het-mers were typically observed in only a subset of individuals and mostly switched among CN3, CN4, or absence from the het-mer catalog, providing evidence for pervasive paralogous variants associated with rampant polymorphic duplications of genomic segments that vary in copy number among individuals. Reference-based analysis of sequencing depth and allelic coverage fraction similarly showed that SNPs with deviant allelic coverage are frequently associated with duplicated genomic segments segregating within populations, predominantly at low frequencies. Despite their different principles and potential biases, both approaches converged on a minimum estimate of 15% of nucleotide variants being associated with polymorphic duplications. Duplication-associated SNPs occurred in coding and non-coding regions to a similar extent, but their distribution was heterogeneous across chromosomes, with the highest densities on three of the ten chromosomes. These three chromosomes are non-metacentric and particularly prone to chromosome loss in oysters, which are known for their high incidence of somatic aneuploidy. This pattern supports two non-exclusive hypotheses: an architecture-driven model in which chromosome properties prone to structural instability promote both duplications and somatic aneuploidy, and a compensation-driven model in which duplications evolve to buffer dosage imbalance in aneuploid cells. Finally, we discuss how extensive polymorphic duplication may bias population genomic analyses in O. edulis and other ostreids.",
+      "doi": "10.1101/2025.06.24.661118",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": true,
+      "subjects": [
+        "genomics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.06.24.661118"
+    },
+    {
+      "paper_id": "10.1101/2025.05.08.652886",
+      "title": "Hierarchical Heterogeneities in Spatiotemporal Dynamics of the Cytoplasm",
+      "abstract": "The physical properties of the cytoplasm fundamentally constrain the dynamics and fidelity of cellular processes. Endogenous fluctuations carry signatures of these properties, yet how their collective dynamics across mesoscopic spatiotemporal scales relate to cytoplasmic heterogeneity and organization remains poorly understood. Here, we use differential dynamic microscopy (DDM) to quantify these fluctuations in eukaryotic cytoplasms. In Xenopus laevis egg extracts, we identify signatures of subdiffusive fractional Brownian motion (fBm) and non-Gaussian displacement distributions, consistent with a crowded, heterogeneous environment. We introduce an empirical model combining fBm with an inverse Gaussian diffusivity distribution, enabling robust estimation of fractional diffusivities and scaling exponents across conditions. Denser cytoplasm exhibits lower fractional diffusivity and scaling exponent, while energy addition induces non-stationary dynamics. Stabilization of microtubule networks introduces a secondary timescale, rationalized by a two-state fBm model separating cytosolic and network-associated contributions. In HeLa cells, the framework reveals comparable scaling exponents but lower diffusivities than in egg extract. Upon microtubule depolymerization, the dynamics become slower yet more Brownian-like. This highlights dual roles of the cytoskeleton as confinement but also as fluidizer of the cytoplasm. These results establish label-free DDM as an interpretable, collective, multiscale readout of how composition, activity, and cytoskeletal organization shape hierarchical cytoplasmic dynamics.",
+      "doi": "10.1101/2025.05.08.652886",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biophysics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.05.08.652886"
+    },
+    {
+      "paper_id": "10.64898/2026.08.28.747800",
+      "title": "Comparative Transcriptional Responses of Human Blood to Neutron and Photon Irradiation",
+      "abstract": "Despite the well-known health risks of neutron exposures, key gaps remain in understanding neutron-induced molecular responses and identifying reliable biodosimetric markers that distinguish neutrons from photon exposure. We provide the first genome-wide analysis of the human blood transcriptional response to an accelerator-derived fission-like spectrum of neutrons versus photons, evaluating transcriptomic relative biological effectiveness (RBE) and radiation quality-discriminating gene signatures. Whole blood from healthy donors was irradiated ex vivo with X-rays (140 kV, 0-4 Gy, n = 3) or neutrons (0.1-8 MeV, 0-1 Gy, n = 2), incubated for 6 h or 24 h, and processed for RNA sequencing from peripheral blood mononuclear cells (PBMCs). Neutrons were markedly more potent than X-rays at inducing differentially expressed genes (DEGs) at equal doses, showing a peak response 6 h post-irradiation followed by a decline. In contrast, X-rays caused a continuous increase in DEGs up to 24 h (neutrons vs. X-rays at 1 Gy: 1,449 vs. 121 DEGs at 6 h; 996 vs. 621 DEGs at 24 h). A universal p53-centered 34-gene signature, including FDXR, EDA2R, GADD45A, and ZMAT3, showed highly monotonic dose responses (Spearman correlation coefficient {approx} 1) across donors, radiation qualities, and timepoints. Additionally, difference-in-differences analysis identified radiation quality-discriminating genes only at 6 h, with transcriptional convergence observed by 24 h, suggesting a very narrow time window for biodosimetric differentiation. We identified a neutron-specific gene signature driven by cGAS-STING-NF-{kappa}B signaling (RELB, NFKB1, C3, MALAT1) and suppression of B-cell and myeloid identity genes (IGHD, TCL1A, CLEC7A, TLR2), defining a biologically coherent neutron quality index with distinct immunomodulatory effects. For the first time, we assessed neutron RBEs at the gene, pathway, and global transcriptomic levels in a human blood model, reporting a global transcriptomic neutron RBE of 1.30 (95% CI: 1.14-1.49) at 6 h and 1.21 (95% CI: 1.14-1.28) at 24 h, providing a valuable basis for biodosimetry in mixed-field exposure scenarios. Our findings advance the mechanistic understanding of neutron radiation responses and support the development of biodosimetric approaches for mixed-field exposure scenarios.",
+      "doi": "10.64898/2026.08.28.747800",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biophysics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.28.747800"
+    },
+    {
+      "paper_id": "10.64898/2026.08.31.748270",
+      "title": "Topological Closure Drives Structural Stabilization and Fast Cooperative Dynamics in Crowded Circular Polysomes",
+      "abstract": "In linear polysomes, excluded-volume interactions among ribosomes can induce dimensional reduction of mRNA. Yet linear architectures allow steric stress to relax at open ends-- limiting how strongly crowding can remodel the mRNA's structure and dynamics. Using coarse-grained molecular-dynamics simulations, we compare circular and linear polysomes over a range of ribosome densities. Circular closure selects a predominantly quasi-planar global conformational ensemble, as indicated by a shape dimensionality dshape {approx} 2 over a range of ribosome densities. Crucially, circular topology and ribosome crowding act cooperatively to suppress structural fluctuations. While closure alone or linear crowding reduces relative global size fluctuations ({Delta}Rg/Rg) only to {approx} 0.16, their combined effect drives this fluctuation down to {approx} 0.07. Within this stabilized architecture, increasing ribosome density drives a distinct in-plane reorganization: the ring becomes more isotropic, global size fluctuations are strongly suppressed, and the scaling exponent increases toward {nu} [~=] 0.74 - 0.77, consistent with two-dimensional self-avoiding walk-like value over the accessible finite-size window, 1000 [&le;] N [&le;] 4969. Closure shortens the radius-of-gyration decorrelation time of circular polysomes by 40-fold relative to matched linear systems, reflecting the topological elimination of free ends. Within this closureselected ensemble, ribosome crowding further reduces the decorrelation time by up to 20% at the highest density. A fluctuation-informed crossover model links the density dependence of the global scaling exponent to inter-ribosomal subchain statistics. These results distinguish the geometric role of circular closure from the density-dependent steric response that it enables, revealing a confined yet dynamically responsive conformational regime for circular polysomes.",
+      "doi": "10.64898/2026.08.31.748270",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "biophysics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.31.748270"
+    },
+    {
+      "paper_id": "10.64898/2026.03.04.709562",
+      "title": "Distinct yet complementary roles of temporal and spectral predictions in auditory detection",
+      "abstract": "Predictive processing enables the brain to anticipate both when and what sensory events will occur. Although temporal and spectral predictions are both known to facilitate perception, their functional contributions and interaction remain poorly understood, particularly in uncertain listening conditions where predictions must be inferred from implicit statistical regularities rather than explicit cues or rhythms. Here, we orthogonalized temporal and spectral predictability in a non-rhythmic auditory detection task and used a signal-detection framework to dissociate perceptual and decisional processes in humans of either sex. Temporal predictions primarily increased response readiness: predictable target timing led to faster responses and more hits but also more false alarms, reflecting a liberal shift in response bias. Spectral predictions, in contrast, selectively enhanced perceptual sensitivity without a comparable speeding of responses. Crucially, despite their distinct behavioral effects, temporal and spectral predictions interacted synergistically, such that perceptual sensitivity was greatest when both sound timing and frequency were predictable, consistent with a spectrotemporal filter mechanism. Furthermore, temporal and spectral variability were encoded differently: performance adapted strongly to the distribution of foreperiod durations but remained largely stable across the spectral distribution, suggesting that the brain exploits temporal and spectral statistics in distinct ways when forming predictions under uncertainty. Together, these findings demonstrate that temporal and spectral predictions make complementary contributions to auditory decision-making, interact synergistically to improve perceptual sensitivity, and rely on distinct encoding strategies for temporal and spectral variability.",
+      "doi": "10.64898/2026.03.04.709562",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": true,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.03.04.709562"
+    },
+    {
+      "paper_id": "10.1101/2025.09.22.677733",
+      "title": "4'-fluorouridine is a potent inhibitor of Oropouche virus in vitro and in animal infection models",
+      "abstract": "Oropouche virus (OROV) is an orthobunyavirus that causes increasingly frequent and severe outbreaks in Central and South America. We report that 4'-fluorouridine (4'-FlU) inhibits the in vitro replication of epidemic and pre-epidemic OROV strains in multiple cell lines. In vitro polymerase assays demonstrate that 4'-FlU (as its triphosphate) targets the Peribunyaviridae L protein, is incorporated during RNA synthesis and causes premature chain termination. Following 69 consecutive days of in vitro passages of OROV in the presence of suboptimal concentrations of 4'-FlU, no drug-resistant variants were identified in the viral polymerase. In stringent mouse (AG129) or Syrian hamster OROV-infection models, oral administration of 4'-FlU completely blocked viral replication and virus-induced disease, even when administration was delayed until 72 hours after infection. Our findings support exploring the potential of 4'-FlU for the management of OROV infections in humans.",
+      "doi": "10.1101/2025.09.22.677733",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "microbiology"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.09.22.677733"
+    },
+    {
+      "paper_id": "10.1101/2025.11.09.687479",
+      "title": "Large Language Models for Accessible Reporting of Bioinformatics Analyses in Interdisciplinary Contexts",
+      "abstract": "Health and life scientists frequently rely on quantitative experts to perform complex data analyses, yet interpretation of these results often becomes a bottleneck due to communication barriers across disciplines. Large Language Models (LLMs) have the potential to act as intermediaries that translate analytical outputs into accessible scientific narratives, but their ability to reliably interpret outputs from real-world biomedical data analyses across disciplines remains unclear. In this study, we investigate how state-of-the-art LLMs behave when integrated into real bioinformatics analysis workflows as report-generation assistants for interdisciplinary teams. We evaluated LLM-generated summaries using both automated and human evaluation frameworks to ensure holistic evaluation. Automated assessment employed multiple choice questions designed using Bloom's taxonomy to assess multiple levels of understanding, while human evaluation tasked scientists to score summaries for factual consistency, lack of harmfulness, comprehensiveness, and coherence. All generally produced readable and largely safe summaries, confirming their value for first-pass translation of technical analyses, however frequently misinterpreted visualisations, produced verbose summaries and rarely offered novel insights beyond what was already contained in the analytics. Our findings suggest that LLMs are best suited for easing interdisciplinary communication rather than replacing domain expertise and human oversight remains essential to guarantee accuracy, interpretative depth, and the generation of genuinely novel scientific insights.",
+      "doi": "10.1101/2025.11.09.687479",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": true,
+      "subjects": [
+        "bioinformatics"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.11.09.687479"
+    },
+    {
+      "paper_id": "10.64898/2026.08.25.747123",
+      "title": "An egocentric map prioritizing peri-personal space in the mouse rostro-lateral visual area",
+      "abstract": "All physical interactions between an organism and its environment occur within the space immediately adjacent to and surrounding its body, its peripersonal space (PPS). This space has been extensively studied behaviorally in humans, and through sparse single-neuron recordings in primates. However, how PPS is represented and organized at cellular and circuit scales remains poorly understood. Here, using dense extracellular recordings in the mouse rostro-lateral visual cortex (VISrl; >19,000 single units), we reveal the cellular and circuit organization of PPS in mice. Visuo-tactile neurons prioritize near-body space while also representing farther space in a direction-selective manner, tracking approaching but not receding objects across the environment. VISrl PPS neurons integrate vision and touch nonlinearly, and their tactile responses are progressively facilitated as visual objects near the body. PPS neurons are embedded in structured networks characterized by \"like-to-like\" functional connectivity and remap according to recent visuo-tactile statistics. Together, these findings establish VISrl as a circuit-accessible substrate for PPS, and reveal how near-body space is represented by a dynamic, plastic, multisensory cortical network.",
+      "doi": "10.64898/2026.08.25.747123",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": false,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.25.747123"
+    },
+    {
+      "paper_id": "10.64898/2026.08.26.747247",
+      "title": "Characterization and pharmacological modulation of Alzheimers disease-associated human microglial states",
+      "abstract": "Microglia are central mediators of Alzheimers disease (AD) pathogenesis, yet the mechanisms driving disease-associated microglial states and their therapeutic modulation remain poorly understood. Here, we integrated single-nucleus transcriptomic datasets across the AD spectrum and identified disease- and lipid-associated microglia (DLaM) as a major AD-enriched population linked to genetic risk, neuropathology and cognitive decline. To model this state experimentally, we screened AD-relevant perturbations in human induced pluripotent stem cell (hiPSC)-derived microglia and found that ferric ammonium citrate (FAC) reproducibly induced a DLaM-like state characterized by lipid accumulation, lysosomal dysfunction and impaired A{beta} phagocytosis. Using a transcriptomics-based state-reversion screen, we identified LY2090314 as a potent modulator that restored microglial function and induced a distinct lysosomal-metabolic state. These findings establish a framework for transcriptomic disease-state-guided therapeutic discovery in AD.",
+      "doi": "10.64898/2026.08.26.747247",
+      "pmcid": "",
+      "pub_year": 2026,
+      "published": "2026-09-01",
+      "source_db": "biorxiv",
+      "open_access": true,
+      "license": "CC BY-NC-ND",
+      "has_code_link": false,
+      "has_data_link": true,
+      "subjects": [
+        "neuroscience"
+      ],
+      "venue": "bioRxiv",
+      "url": "https://doi.org/10.64898/2026.08.26.747247"
+    }
+  ]
+}

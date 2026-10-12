@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/hpabc-ml-directed-evolution"
+version = "0.2.0"
+description = "Fuse EVOLVEpro-style zero-shot scores with directed-evolution measurements to rank and select HpaBC combinatorial designs for L-Dopa production."
+keywords = ["enzyme-engineering", "directed-evolution", "zero-shot-ML", "spearman", "biocatalysis"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "spearman"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.31.742090"
+source_doi = "10.64898/2026.07.31.742090"
+source_url = "https://doi.org/10.64898/2026.07.31.742090"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

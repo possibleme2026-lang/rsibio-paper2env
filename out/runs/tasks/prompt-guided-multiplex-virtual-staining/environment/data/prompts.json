@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "purpose": "Semantic supervision for prompt-guided multiplex virtual staining. Each record describes one subcellular structure symbolically; for the test fields no pixel-aligned target exists.",
+  "nuclear_frame": {
+    "description": "Every cell of a field is represented by its nucleus: centroid (cy, cx) in pixel coordinates, semi-minor radius r (px), elongation e = semi-major / semi-minor, and major-axis angle theta (radians, measured from the +x axis towards +y).",
+    "coordinates": "u = (x-cx)*cos(theta) + (y-cy)*sin(theta); v = -(x-cx)*sin(theta) + (y-cy)*cos(theta); rho = sqrt((u/(r*e))^2 + (v/r)^2). rho = 0 is the nuclear centre, rho = 1 the nuclear envelope, u runs along the major axis.",
+    "composition": "Every nucleus of the field contributes independently and the contributions are summed (linear superposition, no normalisation, no clipping between cells)."
+  },
+  "structures": {
+    "actin": {
+      "prompt": "filamentous actin: a dense cortical band that follows the cell periphery, plus long stress fibres running parallel to the nucleus major axis.",
+      "components": [
+        {"name": "cortical_band", "form": "radial Gaussian in rho", "centre_rho": 1.60, "sigma_rho": 0.28, "truncate_at_rho": 2.5, "weight": 0.95},
+        {"name": "stress_fibres", "form": "Gaussian ridge in v multiplied by a Gaussian taper along u", "offsets_v_over_r": [-0.62, -0.28, 0.28, 0.62], "sigma_v_over_r": 0.20, "taper_sigma_u_over_(r*e)": 1.50, "weight_per_fibre": 0.60}
+      ]
+    },
+    "tubulin": {
+      "prompt": "microtubules: a perinuclear basket plus thin filaments radiating outwards from the nucleus.",
+      "components": [
+        {"name": "perinuclear_basket", "form": "radial Gaussian in rho", "centre_rho": 0.95, "sigma_rho": 0.30, "weight": 0.55},
+        {"name": "radiating_filaments", "form": "for m = 0..8 an anisotropic Gaussian centred at distance 1.30*r from the nuclear centre along the direction phi_m = theta + 2*pi*m/9 + 0.13*m, with long-axis half-length 0.95*r*e (along phi_m), short-axis half-width 0.15*r, and Gaussian (not truncated) profile in both directions", "weight_per_filament": 0.60}
+      ]
+    },
+    "mito": {
+      "prompt": "mitochondria: a broad perinuclear reticulum decorated with discrete puncta.",
+      "components": [
+        {"name": "reticulum", "form": "radial Gaussian in rho", "centre_rho": 1.30, "sigma_rho": 0.40, "weight": 0.90},
+        {"name": "puncta", "form": "isotropic Gaussian of sigma 0.85 px, placed on the hexagonal lattice uu = 0.55*i + 0.275*(j mod 2), vv = 0.42*j (Python modulo) for all integers i, j in [-3, 3] whose normalised lattice radius sqrt(uu^2 + vv^2) lies strictly between 1.05 and 1.85; the pixel offset of the punctum from the nuclear centre is (uu*r*e, vv*r) along (x, y)", "weight_per_punctum": 0.32}
+      ]
+    },
+    "golgi": {
+      "prompt": "Golgi apparatus: a compact ribbon on one side of the nucleus, polarised along the nucleus minor axis.",
+      "components": [
+        {"name": "ribbon", "form": "radial Gaussian in rho multiplied by the logistic gate 1/(1+exp(-v/(0.35*r)))", "centre_rho": 1.35, "sigma_rho": 0.28, "weight": 1.00}
+      ]
+    },
+    "er": {
+      "prompt": "endoplasmic reticulum: a reticular mesh filling the cytoplasm around the nucleus.",
+      "components": [
+        {"name": "reticular_envelope", "form": "0.85 * (radial Gaussian in rho with centre_rho 1.35 and sigma_rho 0.45) * (0.75 + 0.50 * mesh), where mesh = 0.5 + 0.5*sin(6*u/(r*e))*sin(5*v/r)", "weight": 1.00}
+      ]
+    }
+  },
+  "intensity": "Absolute grey levels are deliberately NOT part of the prompt. Calibrate each channel against /app/data/train so that the rendered signal reproduces the grey-level distribution of that channel inside the evaluation mask of protocol.md (at least the 50th and 95th percentiles), including the constant background level.",
+  "weak_supervision_note": "In the original framework these prompts replace pixel-aligned multiplex targets. Only the DNA channel of a test field is observed; the other five structures have to be synthesised from the prompt alone."
+}

@@ -10,9 +10,43 @@ venv/
 # local tooling binaries downloaded for builds (e.g. tectonic.exe, ~50MB)
 .tools/
 
-# pipeline runtime state (per-paper run dirs, resumable)
-runs/
-out/
+# pipeline runtime state (per-paper run dirs, resumable).
+# NOTE: git cannot re-include a file whose *parent directory* is excluded,
+# so every path component has to be walked back open explicitly.
+out/*
+!out/runs/
+out/runs/*
+# --- the synthesized benchmark IS the deliverable ---
+# 106 harbor task bundles (instruction / Dockerfile / solution / grader)
+!out/runs/tasks/
+out/runs/tasks/**/__pycache__/
+# paper corpus + synthesis bookkeeping
+!out/corpus_*.json
+!out/synth_*.json
+!out/curator_llm_verdicts.json
+!out/REPORT.md
+!out/DELIVERY_REPORT.md
+# compact oracle-verification verdicts only. The per-trial trees are
+# regenerable by re-running the sweep, and raw stdout logs reach megabytes
+# (one task alone produced a 5.8 MB oracle.txt), so they stay local.
+!out/task_validation/
+out/task_validation/*/
+!out/task_validation/oracle_results.jsonl
+!out/task_validation/summary.json
+!out/task_validation/oracle_pass.txt
+!out/task_validation/oracle_excluded.txt
+out/task_validation/**/verifier/test-stdout.txt
+out/task_validation/**/agent/oracle.txt
+out/task_validation/**/trial.log
+out/task_validation/**/job.log
+out/task_validation/**/agent/exit-code.txt
+out/task_validation/**/config.json
+out/task_validation/**/__pycache__/
+out/task_validation/_retry*.txt
+
+# harness probe scratch: holds local codex CLI state and a live API
+# credential in _probe/codex/codexhome/auth.json -- never commit it
+_probe/
 
 # paper build artifacts
 paper/build/

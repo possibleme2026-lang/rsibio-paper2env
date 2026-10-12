@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/gonnect-go-binn"
+version = "0.1.0"
+description = "Infer GO-constrained latent activations from synthetic RNA-seq expression and score them against hidden gold pathway activities."
+keywords = ["gene-ontology", "pearson"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "medium"
+metric = "pearson"
+generated_by = "bioforge-harbor"
+source_paper_id = "10.1101/2025.11.06.686983"
+source_doi = "10.1101/2025.11.06.686983"
+source_url = "https://doi.org/10.1101/2025.11.06.686983"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

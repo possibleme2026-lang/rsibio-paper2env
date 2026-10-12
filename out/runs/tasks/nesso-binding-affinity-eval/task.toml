@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/nesso-binding-affinity-eval"
+version = "0.2.0"
+description = "Reproduce benchmark evaluation of Nesso-1 vs Boltz-2 binding affinity predictions across ID/OOD assays and selectivity."
+keywords = ["binding-affinity", "coarse-grained", "virtual-screening", "benchmark", "spearman"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "spearman"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.01.742196"
+source_doi = "10.64898/2026.08.01.742196"
+source_url = "https://github.com/recursionpharma/nesso"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

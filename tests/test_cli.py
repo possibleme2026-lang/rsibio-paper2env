@@ -111,7 +111,7 @@ class TestRunCommand(unittest.TestCase):
         self.assertEqual(rc, 0, out)
         self.assertEqual(json.loads(out)["packaged"], 1)
         # the task really landed on disk under tasks/<slug>, not just in state
-        self.assertTrue((tmp / "tasks" / "mock-peak-caller" / "task.toml").is_file())
+        self.assertTrue((tmp / "tasks" / "scrna-cluster-bench" / "task.toml").is_file())
         self.assertTrue((tmp / "tasks" / "manifest.jsonl").is_file())
 
     def test_empty_mock_backend_fails_loud(self):

@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/omnpe-masked-surveillance"
+version = "0.2.0"
+description = "Fit a masked-observation effective SEIR model to heterogeneous weekly surveillance data and build an amortised R0 surrogate that generalises to unseen regions."
+keywords = ["epidemiology", "simulation-based-inference", "seir", "missing-data", "parameter-estimation"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "weighted_constraint_score"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.03.742452"
+source_doi = "10.64898/2026.08.03.742452"
+source_url = "https://doi.org/10.64898/2026.08.03.742452"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

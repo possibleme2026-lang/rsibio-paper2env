@@ -1,0 +1,19 @@
+{
+  "N": 100,
+  "dt": 1.0,
+  "T_trial": 200.0,
+  "stim_start": 10.0,
+  "stim_end": 30.0,
+  "resp_start": 30.0,
+  "resp_end": 80.0,
+  "tau_m": 10.0,
+  "tau_d": 200.0,
+  "U": 0.15,
+  "U_fs_attn": 0.30,
+  "input_gain": 1.5,
+  "attn_gain": 1.5,
+  "noise_sigma": 0.3,
+  "noise_sigma_high": 0.8,
+  "n_trials_per_condition": 100,
+  "n_discard": 10
+}

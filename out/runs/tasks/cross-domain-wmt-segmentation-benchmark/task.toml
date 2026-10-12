@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/cross-domain-wmt-segmentation-benchmark"
+version = "0.2.0"
+description = "Cross-domain evaluation of four white-matter tract segmentation models plus an EWMTS consensus and Dice/F1 benchmarking report."
+keywords = ["diffusion-mri", "white-matter-tracts", "domain-shift", "ensemble", "dice"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "dice"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.30.741597"
+source_doi = "10.64898/2026.07.30.741597"
+source_url = "https://doi.org/10.64898/2026.07.30.741597"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

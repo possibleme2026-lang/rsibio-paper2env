@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/confdock-conformal-docking"
+version = "0.2.0"
+description = "Implement atom-specific conformal prediction intervals for molecular docking poses using split conformal calibration on GNN quantile estimates."
+keywords = ["conformal-prediction", "molecular-docking", "uncertainty-quantification", "graph-neural-network", "cheminformatics"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "coverage_and_width"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.06.29.735353"
+source_doi = "10.64898/2026.06.29.735353"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

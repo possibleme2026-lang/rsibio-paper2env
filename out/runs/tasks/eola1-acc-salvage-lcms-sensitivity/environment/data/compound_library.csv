@@ -1,0 +1,13 @@
+compound,formula,expected_rt_min
+cytidine,C9H13N3O5,2.10
+uridine,C9H12N2O6,3.40
+pseudouridine,C9H12N2O6,2.70
+5-methylcytidine,C10H15N3O5,4.20
+5-fluorocytidine,C9H12FN3O5,2.80
+adenosine,C10H13N5O4,5.60
+inosine,C10H12N4O5,4.80
+guanosine,C10H13N5O5,5.00
+N6-methyladenosine,C11H15N5O4,7.90
+1-methyladenosine,C11H15N5O4,5.30
+N4-acetylcytidine,C11H15N3O6,6.30
+2'-deoxycytidine,C9H13N3O4,3.90

@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/star-suite-flex-probe-assignment"
+version = "0.2.0"
+description = "Implement 10x Flex probe assignment and UMI counting with Hamming distance and cell barcode correction."
+keywords = ["transcriptomics", "10x Flex", "Hamming distance", "UMI deduplication", "bioinformatics"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "exact_match"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.03.09.710580"
+source_doi = "10.64898/2026.03.09.710580"
+source_url = "https://doi.org/10.64898/2026.03.09.710580"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

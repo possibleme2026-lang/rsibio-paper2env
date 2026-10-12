@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/structure-constrained-intrinsic-timescales-across-tasks"
+version = "0.1.0"
+description = "Estimate synthetic fMRI intrinsic timescales and identify the rest condition from structure-constrained INT coupling."
+keywords = ["computational-biology", "fMRI", "intrinsic-timescale", "structural-connectome", "f1"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "medium"
+metric = "f1"
+generated_by = "bioforge-harbor"
+source_paper_id = "10.64898/2026.08.26.747109"
+source_doi = "10.64898/2026.08.26.747109"
+source_url = "https://doi.org/10.64898/2026.08.26.747109"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

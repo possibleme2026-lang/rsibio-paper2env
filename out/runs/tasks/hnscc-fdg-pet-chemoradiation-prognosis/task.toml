@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/hnscc-fdg-pet-chemoradiation-prognosis"
+version = "0.2.0"
+description = "Rebuild the full 18F-FDG micro-PET/CT chemoradiation-resistance pipeline (SUV derivation, mixed-effects growth models, Kaplan-Meier/log-rank, uni- and multivariable Cox models, C-index) for 121 orthotopic HNSCC mice."
+keywords = ["oncology-imaging", "survival-analysis", "pet-ct", "cox-model", "concordance"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "concordance"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.03.742521"
+source_doi = "10.64898/2026.08.03.742521"
+source_url = "https://doi.org/10.64898/2026.08.03.742521"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

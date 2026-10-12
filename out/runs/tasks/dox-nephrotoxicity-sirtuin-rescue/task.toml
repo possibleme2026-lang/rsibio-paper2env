@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/dox-nephrotoxicity-sirtuin-rescue"
+version = "0.2.0"
+description = "Integrative analysis of multi-omics and mitochondrial function data from a doxorubicin nephrotoxicity study to identify sirtuin-mediated rescue signatures."
+keywords = ["nephrotoxicity", "multi-omics", "mitochondria", "seahorse", "sirtuin"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "fraction_of_constraints_passed"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.07.29.741470"
+source_doi = "10.64898/2026.07.29.741470"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

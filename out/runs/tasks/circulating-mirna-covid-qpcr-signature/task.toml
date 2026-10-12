@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/circulating-mirna-covid-qpcr-signature"
+version = "0.2.0"
+description = "Rebuild the circulating-miRNA signature of mild COVID-19 from raw qPCR Ct data: spike-in normalisation, Welch/BH differential expression, ROC-Youden metrics and the target-gene network."
+keywords = ["microRNA", "qPCR", "ROC-AUC", "differential-expression", "SARS-CoV-2"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "auroc"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.02.742360"
+source_doi = "10.64898/2026.08.02.742360"
+source_url = "https://doi.org/10.64898/2026.08.02.742360"
+
+[agent]
+timeout_sec = 2700.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

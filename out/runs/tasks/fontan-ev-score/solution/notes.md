@@ -1,0 +1,1 @@
+Reference solution: single deterministic pass over the cohort. Filter -> CPM -> log2 -> z-score on train -> L1 logistic (C grid with the >= 11 non-zero fallback) -> top-11 panel -> statsmodels OrderedModel(bfgs) on train -> cumulative probabilities for all samples -> held-out AUC benchmark. Outputs land in /app/outputs.

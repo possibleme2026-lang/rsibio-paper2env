@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/mpn-plasma-proteome-signature"
+version = "0.2.0"
+description = "Build an MPN-vs-non-MPN plasma proteome diagnostic panel from NPX data and predict a withheld cohort"
+keywords = ["myeloproliferative-neoplasms", "plasma-proteomics", "lasso-logistic-regression", "biomarker-panel", "roc-auc"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "roc_auc"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.03.742450"
+source_doi = "10.64898/2026.08.03.742450"
+source_url = "https://doi.org/10.64898/2026.08.03.742450"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

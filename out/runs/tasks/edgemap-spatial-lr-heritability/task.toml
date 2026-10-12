@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/edgemap-spatial-lr-heritability"
+version = "0.2.0"
+description = "Re-implement an EdgeMap-style spatial ligand-receptor annotation pipeline and test it jointly with a cell-intrinsic annotation against GWAS summary statistics across five human tissues."
+keywords = ["spatial-transcriptomics", "ligand-receptor", "heritability", "ld-score-regression", "statistical-genetics"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "composite_score"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.03.29.715138"
+source_doi = "10.64898/2026.03.29.715138"
+source_url = "https://doi.org/10.64898/2026.03.29.715138"
+
+[agent]
+timeout_sec = 3600.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

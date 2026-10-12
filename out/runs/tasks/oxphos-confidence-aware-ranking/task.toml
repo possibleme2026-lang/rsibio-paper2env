@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/oxphos-confidence-aware-ranking"
+version = "0.2.0"
+description = "Confidence-aware transcriptome-based prioritisation of C. elegans OXPHOS candidate genes from bulk time-course and single-cell atlases"
+keywords = ["gene-function-prediction", "transcriptomics", "oxphos", "co-expression", "auroc"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "auroc"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.05.29.728242"
+source_doi = "10.64898/2026.05.29.728242"
+source_url = "https://doi.org/10.64898/2026.05.29.728242"
+
+[agent]
+timeout_sec = 3600.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

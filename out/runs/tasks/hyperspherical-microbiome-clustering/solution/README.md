@@ -1,0 +1,1 @@
+Reference solution: CLR + z-score + PCA(8) shared latent, home-made vMF mixture EM with BIC model selection, sklearn GaussianMixture control, one-way ANOVA + BH-FDR spike-and-slab feature scores, Spearman co-occurrence scores, posterior entropy from the vMF responsibilities.

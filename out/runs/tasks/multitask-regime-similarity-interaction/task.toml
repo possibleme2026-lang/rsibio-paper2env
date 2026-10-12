@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/multitask-regime-similarity-interaction"
+version = "0.2.0"
+description = "Re-analyse trial-level multi-task learning data: rebuild the exclusion pipeline, quantify the training-regime x structural-similarity interaction and test its dependence on task order."
+keywords = ["cognitive-computational-neuroscience", "multi-task-learning", "interaction-contrast", "behavioural-analysis"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "fraction_of_constraints_passed"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.1101/2025.09.22.677779"
+source_doi = "10.1101/2025.09.22.677779"
+source_url = "https://doi.org/10.1101/2025.09.22.677779"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

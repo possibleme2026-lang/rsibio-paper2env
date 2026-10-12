@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/hyperspherical-microbiome-clustering"
+version = "0.2.0"
+description = "Rebuild the DBayesCM hyperspherical-vs-Euclidean latent comparison on a simulated 240-subject multi-omics microbiome cohort and report clusters, uncertainty, discriminative features and taxon-host co-occurrence."
+keywords = ["microbiome", "multi-omics", "von-mises-fisher", "bayesian-clustering", "uncertainty-quantification"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "adjusted_rand_index"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.07.28.741374"
+source_doi = "10.64898/2026.07.28.741374"
+source_url = "https://doi.org/10.64898/2026.07.28.741374"
+
+[agent]
+timeout_sec = 3600.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

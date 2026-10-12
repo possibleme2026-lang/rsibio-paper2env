@@ -1,0 +1,4 @@
+#!/bin/bash
+set -uo pipefail
+python3 /tests/grade.py
+python3 /tests/_fix_reward.py 2>&1 || python3 /tests/_fix_reward.py 2>&1 || true

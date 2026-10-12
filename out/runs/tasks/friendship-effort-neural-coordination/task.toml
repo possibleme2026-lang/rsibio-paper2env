@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/friendship-effort-neural-coordination"
+version = "0.1.0"
+description = "Predict non-friend status in three-person joint force triads from social-network and neural coordination summaries."
+keywords = ["social-network", "EEG-hyperscanning", "effort-allocation", "group-coordination", "AUROC"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "medium"
+metric = "auroc"
+generated_by = "bioforge-harbor"
+source_paper_id = "10.64898/2025.12.30.695445"
+source_doi = "10.64898/2025.12.30.695445"
+source_url = "https://doi.org/10.64898/2025.12.30.695445"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/sclc-prexasertib-lurbinectedin-synergy"
+version = "0.2.0"
+description = "Compute HSA synergy, 4PL IC50s, and Chk1/Chk2 mechanism flags from SCLC drug combination viability and Western blot data."
+keywords = ["small-cell-lung-cancer", "drug-synergy", "HSA", "Chk1-Chk2", "lurbinectedin", "prexasertib"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "hsa_synergy"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.08.02.742299"
+source_doi = "10.64898/2026.08.02.742299"
+source_url = "https://doi.org/10.64898/2026.08.02.742299"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

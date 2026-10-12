@@ -1,0 +1,7 @@
+# Review notes
+
+- Data substitution: the paper's raw Omega-seq FASTQ/BAM files are not public. The task ships a deterministic generator (environment/data/gen_inputs.py, seed 20260312) that synthesises a ~20k-record UMI-tagged SAM with realistic 1-3 exon gene models on chr2L/chr3R plus 20 ERCC spike-ins; the generator is deleted from the image at build time so it cannot be read by the agent.
+- Shortcut probes considered: (a) counting raw distinct UMI strings instead of Hamming-distance-1 families fails because ~12% of reads carry a single-substitution UMI error; (b) skipping the MAPQ>=20 filter or keeping intergenic reads shifts total_reads_assigned and the dedup_rate; (c) there is no gold answer file anywhere in /app or /app/data - the verifier recomputes the reference independently from the same inputs.
+- Tool chain: the image installs samtools, bedtools, pysam and scipy so the agent can use canonical domain tooling, but the grader is stdlib-only and does not require any particular library.
+- Metric substitution: the paper reports a rarefaction-based UMI-inflation metric; here it is operationalised as a phantom-UMI index = sum over (cell,gene,5nt-bin) of max(0, n_distinct_UMI_families_in_bin - 1) / total_molecules, which is exactly checkable against an independent recomputation.
+- Known limitations: the dataset is downsampled (~20k reads, 6 libraries) so that the container stays small; absolute molecule numbers therefore differ from the paper's figures, but the pipeline steps, pitfalls and QC criteria mirror the paper's workflow.

@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/biographx-rna-localization"
+version = "0.2.0"
+description = "Implement BioGraphX-RNA graph encoding and gated fusion inference for RNA subcellular localization."
+keywords = ["RNA localization", "graph encoding", "gated fusion", "RNAfold", "rmse"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "rmse"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 45.0
+source_paper_id = "10.64898/2026.02.23.707573"
+source_doi = "10.64898/2026.02.23.707573"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 600.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

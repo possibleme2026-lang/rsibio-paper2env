@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/cytoplasm-ddm-fbm"
+version = "0.1.0"
+description = "Estimate fractional diffusivity and scaling exponent from synthetic DDM effective decay curves."
+keywords = ["biophysics", "rmse"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "medium"
+metric = "rmse"
+generated_by = "bioforge-harbor"
+source_paper_id = "10.1101/2025.05.08.652886"
+source_doi = "10.1101/2025.05.08.652886"
+source_url = "https://doi.org/10.1101/2025.05.08.652886"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

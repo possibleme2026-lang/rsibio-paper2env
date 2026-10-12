@@ -1,0 +1,29 @@
+schema_version = "1.4"
+
+[task]
+name = "bioforge/hyper-hierarchical-brain-states-doc"
+version = "0.2.0"
+description = "Reimplement a trophic-hierarchy fMRI pipeline to recover hyper-hierarchical brain states in disorders of consciousness and quantify their association with diagnosis and CRS-R."
+keywords = ["disorders-of-consciousness", "fMRI", "trophic-coherence", "brain-states", "clustering"]
+
+[metadata]
+category = "computational-biology"
+difficulty = "hard"
+metric = "constraint_pass_fraction"
+generated_by = "bioforge-harbor"
+expert_time_estimate_min = 60.0
+source_paper_id = "10.64898/2026.07.30.741772"
+source_doi = "10.64898/2026.07.30.741772"
+source_url = "https://doi.org/10.64898/2026.07.30.741772"
+
+[agent]
+timeout_sec = 1800.0
+
+[verifier]
+timeout_sec = 900.0
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

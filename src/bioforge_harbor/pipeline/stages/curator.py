@@ -27,18 +27,47 @@ from ...models.records import PaperRecord, OPEN_ACCESS_LICENSES
 from ...models.reports import SelectionReport
 
 # Subfields the paper prioritizes (section 3.4). A paper must mention at least
-# one keyword group to be considered "computable".
+# one keyword group to be considered "computable". The list was widened after a
+# 115-paper wave-3 screen rejected 71 papers that were plainly computational but
+# used vocabulary outside the original narrow set (e.g. "pangenome graph",
+# "proteomics pipeline", "spike sorting"): a screener that rejects real
+# computational work is a false-negative machine, and the deterministic rule is
+# only worth keeping if it is complete for its purpose.
 SUBFIELD_KEYWORDS: dict[str, list[str]] = {
-    "single-cell-rnaseq": ["single-cell", "single cell", "scrna", "rnaseq", "rna-seq", "scanpy", "seurat"],
-    "variant-annotation": ["variant calling", "variant annotation", "pathogenicity", "clinvar", "deepvariant"],
-    "protein-structure": ["protein structure", "structure prediction", "rmsd", "tm-score", "alphafold",
-                          "contact map", "protein folding"],
-    "phylogenetics": ["phylogenetic", "phylogenetics", "maximum-likelihood tree", "robinson-foulds"],
-    "bioimage-segmentation": ["image segmentation", "cellpose", "histology", "histolog", "whole-slide"],
+    "single-cell-rnaseq": ["single-cell", "single cell", "scrna", "sc-rna", "rnaseq", "rna-seq",
+                           "scanpy", "seurat", "transcriptom", "expression matrix", "umi"],
+    "variant-annotation": ["variant calling", "variant annotation", "pathogenicity", "clinvar",
+                           "deepvariant", "gwas", "genome-wide association", "snp", "haplotype",
+                           "pangenome", "phasing", "imputation", "allele frequency"],
+    "protein-structure": ["protein structure", "structure prediction", "rmsd", "tm-score",
+                          "alphafold", "contact map", "protein folding", "docking", "molecular dynamics",
+                          "coarse-grained", "free energy", "conformational", "cryo-em", "cryo-electron"],
+    "phylogenetics": ["phylogenetic", "phylogenetics", "maximum-likelihood tree", "robinson-foulds",
+                      "phylogenom", "tree inference", "divergence time", "lineage-specific"],
+    "bioimage-segmentation": ["image segmentation", "cellpose", "histology", "histolog", "whole-slide",
+                              "microscopy image", "fluorescence", "image analysis", "imaging",
+                              "tomography", "segmentation"],
     "grn-inference": ["gene regulatory network", "network inference", "co-expression network",
-                      "transcription factor network"],
-    "general-ml": ["machine learning", "deep learning", "classifier", "regression model", "cross-validation",
-                   "auroc", "f1 score", "adjusted rand", "rmse", "benchmark dataset", "benchmark of"],
+                      "transcription factor network", "regulatory network", "grn"],
+    "omics-pipeline": ["proteomic", "metabolomic", "mass spectrometry", "metagenom", "microbiome",
+                       "amplicon", "sequencing pipeline", "bioinformatic", "annotation pipeline",
+                       "quality control pipeline", "spatial transcriptom", "chromatin", "methylation",
+                       "epigenom", "atac-seq", "chip-seq", "expression profiling"],
+    "neural-signal": ["eeg", "electrophysiolog", "spike sorting", "calcium imaging", "neural recording",
+                      "decoding", "fmri", "mri", "connectome", "brain imaging", "neuroimaging",
+                      "resting-state", "neural dynamics"],
+    "clinical-ml": ["survival analysis", "biomarker", "drug discovery", "drug screening",
+                    "precision medicine", "diagnostic model", "risk prediction", "clinical prediction",
+                    "antimicrobial resistance", "drug resistance", "adverse event"],
+    "general-ml": ["machine learning", "deep learning", "classifier", "classification model",
+                   "regression model", "cross-validation", "auroc", "auc", "f1 score", "auprc",
+                   "adjusted rand", "rmse", "mae", "benchmark dataset", "benchmark of",
+                   "neural network", "random forest", "transformer", "autoencoder",
+                   "reinforcement learning", "clustering", "dimensionality reduction",
+                   "foundation model", "language model", "llm"],
+    "simulation-modeling": ["simulation", "kinetic model", "mathematical model", "dynamical system",
+                            "agent-based model", "computational model", "flux balance",
+                            "systems biology", "parameter estimation", "ode model"],
 }
 
 METRIC_KEYWORDS = ["f1", "auroc", "auc", "rmse", "mae", "accuracy", "precision",

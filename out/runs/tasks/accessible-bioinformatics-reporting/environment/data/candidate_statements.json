@@ -1,0 +1,10 @@
+[
+  {"id": "s1", "text": "TP53 is the most strongly up-regulated gene.", "check": {"type": "top_up_gene", "value": "TP53"}},
+  {"id": "s2", "text": "CDKN1A is down-regulated.", "check": {"type": "gene_direction", "gene": "CDKN1A", "direction": "down"}},
+  {"id": "s3", "text": "p53 signaling pathway is the top enriched pathway.", "check": {"type": "top_pathway", "value": "p53 signaling pathway"}},
+  {"id": "s4", "text": "GAPDH has the smallest p-value.", "check": {"type": "min_pvalue_gene", "value": "GAPDH"}},
+  {"id": "s5", "text": "Fig1 is a volcano plot.", "check": {"type": "figure_caption_contains", "figure": "Fig1", "keyword": "volcano"}},
+  {"id": "s6", "text": "MKI67 is down-regulated.", "check": {"type": "gene_direction", "gene": "MKI67", "direction": "down"}},
+  {"id": "s7", "text": "apoptosis is the top enriched pathway.", "check": {"type": "top_pathway", "value": "apoptosis"}},
+  {"id": "s8", "text": "The study compares treated and control samples.", "check": {"type": "study_contains", "keyword": "control"}}
+]
